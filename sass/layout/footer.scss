@@ -1,7 +1,4 @@
 .site-footer {
-	display: grid;
-	grid-template-columns: 1fr minmax(0, $containerWidth) 1fr;
-	grid-column-gap: 1.5rem;
 	@include font-size(15);
 	@include font-family(--navi-font);
 	@include color(--footer-hover-text-color);
@@ -20,7 +17,7 @@
 }
 
 .site-footer .site-info {
-	grid-column: 2 / -2;
-	padding: 1.5rem 0;
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
 	text-align: center;
 }

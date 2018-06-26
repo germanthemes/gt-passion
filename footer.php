@@ -19,7 +19,7 @@
 
 	<footer id="colophon" class="site-footer">
 
-		<div id="footer-line" class="site-info">
+		<div id="footer-line" class="site-info container">
 			<?php gt_workout_footer_text(); ?>
 		</div><!-- .site-info -->
 
