@@ -59,8 +59,11 @@
 
 /* Featured Images */
 .wp-post-image {
-	margin: 0 0 1rem;
 	vertical-align: top;
+}
+
+.post-image-archives .wp-post-image {
+	margin-bottom: 1rem;
 }
 
 /* Read More Button */

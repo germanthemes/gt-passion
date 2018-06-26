@@ -803,6 +803,17 @@ textarea {
 }
 
 /* Custom Header Image */
+.header-image {
+	margin: 1px 0 0;
+}
+
+.header-image img,
+.header-image .wp-post-image {
+	margin: 0;
+	width: 100%;
+	height: auto;
+	vertical-align: top;
+}
 
 /*--------------------------------------------------------------
 # - Navigation
@@ -1090,8 +1101,11 @@ textarea {
 
 /* Featured Images */
 .wp-post-image {
-	margin: 0 0 1rem;
 	vertical-align: top;
+}
+
+.post-image-archives .wp-post-image {
+	margin-bottom: 1rem;
 }
 
 /* Read More Button */

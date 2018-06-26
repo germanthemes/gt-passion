@@ -11,8 +11,6 @@
 
 	<header class="post-header entry-header">
 
-		<?php gt_workout_post_image_single(); ?>
-
 		<?php the_title( '<h1 class="post-title entry-title">', '</h1>' ); ?>
 
 		<?php gt_workout_entry_meta(); ?>

@@ -53,10 +53,20 @@ if ( ! function_exists( 'gt_workout_header_image' ) ) :
 	 */
 	function gt_workout_header_image() {
 
-		if ( has_header_image() ) :
-		?>
+		if ( ( is_single() && has_post_thumbnail() && true === gt_workout_get_option( 'post_image_single' ) ) || ( is_page() && has_post_thumbnail() ) ) :
+			?>
 
-			<div id="headimg" class="header-image">
+			<div id="headimg" class="header-image featured-header-image">
+
+				<?php the_post_thumbnail( 'gt-workout-header-image' ); ?>
+
+			</div>
+
+			<?php
+		elseif ( has_header_image() ) :
+			?>
+
+			<div id="headimg" class="header-image default-header-image">
 
 				<img src="<?php header_image(); ?>" srcset="<?php echo esc_attr( wp_get_attachment_image_srcset( get_custom_header()->attachment_id, 'full' ) ); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
 
@@ -116,30 +126,10 @@ if ( ! function_exists( 'gt_workout_post_image_archives' ) ) :
 		if ( true === gt_workout_get_option( 'post_image_archives' ) && has_post_thumbnail() ) :
 		?>
 
-			<div class="post-image">
+			<div class="post-image post-image-archives">
 				<a class="wp-post-image-link" href="<?php the_permalink(); ?>" rel="bookmark">
 					<?php the_post_thumbnail(); ?>
 				</a>
-			</div>
-
-		<?php
-		endif;
-	}
-endif;
-
-
-if ( ! function_exists( 'gt_workout_post_image_single' ) ) :
-	/**
-	 * Displays the featured image on single posts
-	 */
-	function gt_workout_post_image_single() {
-
-		// Display Post Thumbnail if activated.
-		if ( true === gt_workout_get_option( 'post_image_single' ) ) :
-		?>
-
-			<div class="post-image">
-				<?php the_post_thumbnail(); ?>
 			</div>
 
 		<?php
