@@ -3,7 +3,7 @@
  * The template for displaying articles in the loop with full content
  *
  * @version 1.0
- * @package GT Basic
+ * @package GT Workout
  */
 ?>
 
@@ -11,17 +11,17 @@
 
 	<header class="post-header entry-header">
 
-		<?php gt_basic_post_image_archives(); ?>
+		<?php gt_workout_post_image_archives(); ?>
 
 		<?php the_title( sprintf( '<h2 class="post-title entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-		<?php gt_basic_entry_meta(); ?>
+		<?php gt_workout_entry_meta(); ?>
 
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 
-		<?php the_content( esc_html__( 'Continue reading', 'gt-basic' ) ); ?>
+		<?php the_content( esc_html__( 'Continue reading', 'gt-workout' ) ); ?>
 
 	</div><!-- .entry-content -->
 

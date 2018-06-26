@@ -7,7 +7,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @version 1.0
- * @package GT Basic
+ * @package GT Workout
  */
 
 ?>
@@ -15,17 +15,17 @@
 		</main><!-- #main -->
 	</div><!-- #content -->
 
-	<?php do_action( 'gt_basic_before_footer' ); ?>
+	<?php do_action( 'gt_workout_before_footer' ); ?>
 
 	<footer id="colophon" class="site-footer">
 
 		<div id="footer-line" class="site-info">
-			<?php gt_basic_footer_text(); ?>
+			<?php gt_workout_footer_text(); ?>
 		</div><!-- .site-info -->
 
 	</footer><!-- #colophon -->
 
-	<?php do_action( 'gt_basic_after_footer' ); ?>
+	<?php do_action( 'gt_workout_after_footer' ); ?>
 
 </div><!-- #page -->
 

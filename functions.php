@@ -1,12 +1,12 @@
 <?php
 /**
- * GT Basic functions and definitions
+ * GT Workout functions and definitions
  *
- * @package GT Basic
+ * @package GT Workout
  */
 
 /**
- * GT Basic only works in WordPress 5.0 or later.
+ * GT Workout only works in WordPress 5.0 or later.
  */
 if ( version_compare( $GLOBALS['wp_version'], '5.0-alpha', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
@@ -14,7 +14,7 @@ if ( version_compare( $GLOBALS['wp_version'], '5.0-alpha', '<' ) ) {
 }
 
 
-if ( ! function_exists( 'gt_basic_setup' ) ) :
+if ( ! function_exists( 'gt_workout_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -22,10 +22,10 @@ if ( ! function_exists( 'gt_basic_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function gt_basic_setup() {
+	function gt_workout_setup() {
 
-		// Make theme available for translation. Translations can be filed at https://translate.wordpress.org/projects/wp-themes/gt-basic
-		load_theme_textdomain( 'gt-basic', get_template_directory() . '/languages' );
+		// Make theme available for translation. Translations can be filed at https://translate.wordpress.org/projects/wp-themes/gt-workout
+		load_theme_textdomain( 'gt-workout', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -41,7 +41,7 @@ if ( ! function_exists( 'gt_basic_setup' ) ) :
 
 		// Register Navigation Menus.
 		register_nav_menus( array(
-			'primary' => esc_html__( 'Main Navigation', 'gt-basic' ),
+			'primary' => esc_html__( 'Main Navigation', 'gt-workout' ),
 		) );
 
 		// Switch default core markup for galleries and captions to output valid HTML5.
@@ -51,7 +51,7 @@ if ( ! function_exists( 'gt_basic_setup' ) ) :
 		) );
 
 		// Set up the WordPress core custom logo feature.
-		add_theme_support( 'custom-logo', apply_filters( 'gt_basic_custom_logo_args', array(
+		add_theme_support( 'custom-logo', apply_filters( 'gt_workout_custom_logo_args', array(
 			'height'      => 60,
 			'width'       => 300,
 			'flex-height' => true,
@@ -59,7 +59,7 @@ if ( ! function_exists( 'gt_basic_setup' ) ) :
 		) ) );
 
 		// Set up the WordPress core custom header feature.
-		add_theme_support( 'custom-header', apply_filters( 'gt_basic_custom_header_args', array(
+		add_theme_support( 'custom-header', apply_filters( 'gt_workout_custom_header_args', array(
 			'header-text' => false,
 			'width'       => 1920,
 			'height'      => 300,
@@ -75,37 +75,37 @@ if ( ! function_exists( 'gt_basic_setup' ) ) :
 		// Add theme support for block color palette.
 		add_theme_support( 'editor-color-palette',
 			array(
-				'name'  => esc_html_x( 'Primary', 'block color', 'gt-basic' ),
+				'name'  => esc_html_x( 'Primary', 'block color', 'gt-workout' ),
 				'color' => '#0c557a',
 			),
 			array(
-				'name'  => esc_html_x( 'Secondary', 'block color', 'gt-basic' ),
+				'name'  => esc_html_x( 'Secondary', 'block color', 'gt-workout' ),
 				'color' => '#ff6600',
 			),
 			array(
-				'name'  => esc_html_x( 'Accent', 'block color', 'gt-basic' ),
+				'name'  => esc_html_x( 'Accent', 'block color', 'gt-workout' ),
 				'color' => '#a156b4',
 			),
 			array(
-				'name'  => esc_html_x( 'White', 'block color', 'gt-basic' ),
+				'name'  => esc_html_x( 'White', 'block color', 'gt-workout' ),
 				'color' => '#ffffff',
 			),
 			array(
-				'name'  => esc_html_x( 'Light Gray', 'block color', 'gt-basic' ),
+				'name'  => esc_html_x( 'Light Gray', 'block color', 'gt-workout' ),
 				'color' => '#e5e5e5',
 			),
 			array(
-				'name'  => esc_html_x( 'Dark Gray', 'block color', 'gt-basic' ),
+				'name'  => esc_html_x( 'Dark Gray', 'block color', 'gt-workout' ),
 				'color' => '#444444',
 			),
 			array(
-				'name'  => esc_html_x( 'Black', 'block color', 'gt-basic' ),
+				'name'  => esc_html_x( 'Black', 'block color', 'gt-workout' ),
 				'color' => '#151515',
 			)
 		);
 	}
 endif;
-add_action( 'after_setup_theme', 'gt_basic_setup' );
+add_action( 'after_setup_theme', 'gt_workout_setup' );
 
 
 /**
@@ -114,47 +114,47 @@ add_action( 'after_setup_theme', 'gt_basic_setup' );
  *
  * @global int $content_width
  */
-function gt_basic_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'gt_basic_content_width', 1040 );
+function gt_workout_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'gt_workout_content_width', 1040 );
 }
-add_action( 'after_setup_theme', 'gt_basic_content_width', 0 );
+add_action( 'after_setup_theme', 'gt_workout_content_width', 0 );
 
 
 /**
  * Enqueue scripts and styles.
  */
-function gt_basic_scripts() {
+function gt_workout_scripts() {
 
 	// Get Theme Version.
 	$theme_version = wp_get_theme()->get( 'Version' );
 
 	// Register and Enqueue Stylesheet.
-	wp_enqueue_style( 'gt-basic-stylesheet', get_stylesheet_uri(), array(), $theme_version );
+	wp_enqueue_style( 'gt-workout-stylesheet', get_stylesheet_uri(), array(), $theme_version );
 
 	// Register and enqueue navigation.js.
 	if ( has_nav_menu( 'primary' ) ) {
-		wp_enqueue_script( 'gt-basic-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '1.0', true );
-		$gt_basic_l10n = array(
-			'expand'   => esc_html__( 'Expand child menu', 'gt-basic' ),
-			'collapse' => esc_html__( 'Collapse child menu', 'gt-basic' ),
-			'icon'     => gt_basic_get_svg( 'expand' ),
+		wp_enqueue_script( 'gt-workout-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '1.0', true );
+		$gt_workout_l10n = array(
+			'expand'   => esc_html__( 'Expand child menu', 'gt-workout' ),
+			'collapse' => esc_html__( 'Collapse child menu', 'gt-workout' ),
+			'icon'     => gt_workout_get_svg( 'expand' ),
 		);
-		wp_localize_script( 'gt-basic-navigation', 'gtBasicScreenReaderText', $gt_basic_l10n );
+		wp_localize_script( 'gt-workout-navigation', 'gtWorkoutScreenReaderText', $gt_workout_l10n );
 	}
 
 	// Enqueue svgxuse to support external SVG Sprites in Internet Explorer.
 	wp_enqueue_script( 'svgxuse', get_theme_file_uri( '/assets/js/svgxuse.min.js' ), array(), '1.2.4' );
 }
-add_action( 'wp_enqueue_scripts', 'gt_basic_scripts' );
+add_action( 'wp_enqueue_scripts', 'gt_workout_scripts' );
 
 
 /**
  * Enqueue block styles for Gutenberg Editor.
  */
-function gt_basic_block_editor_styles() {
-	wp_enqueue_style( 'gt-basic-block-editor-styles', get_theme_file_uri( '/assets/css/editor.css' ), array(), '20180529', 'all' );
+function gt_workout_block_editor_styles() {
+	wp_enqueue_style( 'gt-workout-block-editor-styles', get_theme_file_uri( '/assets/css/editor.css' ), array(), '20180529', 'all' );
 }
-add_action( 'enqueue_block_editor_assets', 'gt_basic_block_editor_styles' );
+add_action( 'enqueue_block_editor_assets', 'gt_workout_block_editor_styles' );
 
 
 /**

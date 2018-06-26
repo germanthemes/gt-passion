@@ -10,7 +10,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @version 1.0
- * @package GT Basic
+ * @package GT Workout
  */
 
 get_header();
@@ -24,7 +24,7 @@ if ( have_posts() ) :
 
 	endwhile;
 
-	gt_basic_pagination();
+	gt_workout_pagination();
 
 else :
 
