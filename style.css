@@ -50,10 +50,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--button-text-color: #fff;
 	--button-hover-color: #D5001A;
 	--button-hover-text-color: #fff;
+	--header-color: #282828;
 	--site-title-color: #fff;
-	--title-color: #202020;
+	--title-color: #282828;
 	--title-hover-color: #ee1133;
-	--navi-color: #202020;
+	--navi-color: #282828;
 	--navi-text-color: #fff;
 	--navi-hover-text-color: rgba(255, 255, 255, 0.5);
 	--navi-border-color: rgba(255, 255, 255, 0.05);
@@ -61,7 +62,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--submenu-text-color: #fff;
 	--submenu-hover-text-color: rgba(255, 255, 255, 0.5);
 	--submenu-border-color: rgba(255, 255, 255, 0.075);
-	--footer-color: #202020;
+	--footer-color: #282828;
 	--footer-text-color: #fff;
 	--footer-hover-text-color: rgba(255, 255, 255, 0.5);
 	--footer-border-color: rgba(255, 255, 255, 0.035);
@@ -301,7 +302,7 @@ button,
 input,
 select,
 textarea {
-	color: #202020;
+	color: #282828;
 	font-size: 15px;
 	font-size: 0.9375rem;
 	font-family: "Open Sans", Arial, Helvetica;
@@ -428,7 +429,7 @@ body {
 blockquote {
 	margin: 0 0 1.5em;
 	padding-left: 1.25em;
-	border-left: 4px solid #202020;
+	border-left: 4px solid #282828;
 	color: #777;
 	font-size: 18px;
 	font-size: 1.125rem;
@@ -438,7 +439,7 @@ blockquote cite,
 blockquote small {
 	display: block;
 	margin-top: 1em;
-	color: #202020;
+	color: #282828;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.75;
@@ -589,7 +590,7 @@ input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
 	border: 1px solid rgba(0, 0, 0, 0.2);
-	color: #202020;
+	color: #282828;
 }
 
 textarea {
@@ -712,26 +713,34 @@ textarea {
 	margin: 0;
 	padding: 0;
 	width: 100%;
-	background: #fff;
 	overflow: hidden;
+}
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	max-width: 1260px;
 }
 
 /*--------------------------------------------------------------
 # - Header
 --------------------------------------------------------------*/
+.site-header {
+	background: #282828;
+	background: var(--header-color);
+}
+
 .header-main {
-	display: grid;
-	grid-template-columns: 1fr minmax(0, 60rem) 1fr;
-	grid-column-gap: 1.5rem;
-	background: #fff;
-	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
 	padding-top: 1.5rem;
 	padding-bottom: 1.5rem;
 }
 
 /* Site Branding */
 .site-branding {
-	grid-column: 2 / -2;
 	margin: 0;
 	padding: 0;
 	max-width: 100%;
@@ -757,8 +766,8 @@ textarea {
 .site-title {
 	margin: 0;
 	padding: 0;
-	color: #202020;
-	color: var(--title-color);
+	color: #fff;
+	color: var(--site-title-color);
 	text-decoration: none;
 	font-size: 32px;
 	font-size: 2rem;
@@ -773,8 +782,8 @@ textarea {
 
 .site-title a:link,
 .site-title a:visited {
-	color: #202020;
-	color: var(--title-color);
+	color: #fff;
+	color: var(--site-title-color);
 }
 
 .site-title a:hover,
@@ -786,75 +795,20 @@ textarea {
 	display: block;
 	margin: 0;
 	padding: 0;
-	color: #202020;
-	color: var(--title-color);
+	color: #fff;
+	color: var(--site-title-color);
 	font-size: 14px;
 	font-size: 0.875rem;
 }
 
 /* Custom Header Image */
-.header-image-added .header-main {
-	grid-template-rows: minmax(1.5rem, 1fr) auto minmax(1.5rem, 1fr);
-	padding: 0;
-}
-
-.header-image-added .header-main:before {
-	grid-row: 2;
-	grid-column: 1;
-	content: '';
-	z-index: 2;
-	align-self: stretch;
-	background: #fff;
-}
-
-.header-image-added .header-image {
-	grid-row: 1 / -1;
-	grid-column: 1 / -1;
-	margin: 0;
-	text-align: center;
-	height: 100%;
-}
-
-.header-image-added .header-image img {
-	object-fit: cover;
-	height: 100%;
-}
-
-.header-image-added .site-branding {
-	grid-row: 2;
-	z-index: 2;
-	display: grid;
-	grid-row-gap: 1rem;
-	justify-items: flex-start;
-}
-
-.header-image-added .site-title {
-	display: inline-block;
-	margin: 0;
-	padding: 0.5rem 1.25rem 0.75rem;
-	background: #fff;
-}
-
-.header-image-added .site-description {
-	display: inline-block;
-	margin: 0;
-	padding: 0.25rem 0.75rem;
-	background: #fff;
-}
 
 /*--------------------------------------------------------------
 # - Navigation
 --------------------------------------------------------------*/
 .primary-navigation {
 	position: relative;
-	background: #202020;
-	background: var(--navi-color);
-}
-
-.main-navigation {
-	display: block;
-	margin: 0 auto;
-	max-width: 63rem;
+	width: 100%;
 }
 
 .main-navigation ul {
@@ -863,8 +817,8 @@ textarea {
 	color: #fff;
 	color: var(--navi-text-color);
 	list-style: none;
-	font-size: 17px;
-	font-size: 1.0625rem;
+	font-size: 16px;
+	font-size: 1rem;
 	font-family: "Open Sans", Arial, Helvetica;
 	font-family: var(--navi-font);
 	font-weight: normal;
@@ -928,14 +882,15 @@ textarea {
 .menu-toggle {
 	display: block;
 	margin: 0;
+	margin-left: auto;
 	padding: 1.25rem 1.5rem;
 	border: none;
 	background: none;
 	color: #fff;
 	color: var(--navi-text-color);
 	text-decoration: none;
-	font-size: 17px;
-	font-size: 1.0625rem;
+	font-size: 16px;
+	font-size: 1rem;
 	font-family: "Open Sans", Arial, Helvetica;
 	font-family: var(--navi-font);
 	font-weight: normal;
@@ -943,7 +898,10 @@ textarea {
 	text-transform: none;
 	text-transform: var(--navi-text-transform);
 	text-align: left;
-	width: 100%;
+}
+
+.menu-toggle .menu-toggle-text {
+	display: none;
 }
 
 .menu-toggle:focus {
@@ -1042,8 +1000,9 @@ textarea {
 --------------------------------------------------------------*/
 .site-content {
 	display: grid;
-	grid-template-columns: 1fr minmax(0, 60rem) 1fr;
+	grid-template-columns: 1fr minmax(0, 50rem) 1fr;
 	grid-column-gap: 1.5rem;
+	background: #fff;
 }
 
 .site-main {
@@ -1065,7 +1024,7 @@ textarea {
 .entry-title {
 	margin: 0;
 	padding: 0;
-	color: #202020;
+	color: #282828;
 	color: var(--title-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
@@ -1082,7 +1041,7 @@ textarea {
 
 .entry-title a:link,
 .entry-title a:visited {
-	color: #202020;
+	color: #282828;
 	color: var(--title-color);
 	text-decoration: none;
 }
@@ -1223,7 +1182,7 @@ body.date-hidden.author-hidden.categories-hidden .entry-meta {
 --------------------------------------------------------------*/
 .site-footer {
 	display: grid;
-	grid-template-columns: 1fr minmax(0, 60rem) 1fr;
+	grid-template-columns: 1fr minmax(0, 50rem) 1fr;
 	grid-column-gap: 1.5rem;
 	font-size: 15px;
 	font-size: 0.9375rem;
@@ -1231,7 +1190,7 @@ body.date-hidden.author-hidden.categories-hidden .entry-meta {
 	font-family: var(--navi-font);
 	color: rgba(255, 255, 255, 0.5);
 	color: var(--footer-hover-text-color);
-	background: #202020;
+	background: #282828;
 	background: var(--footer-color);
 }
 
@@ -1616,13 +1575,19 @@ object {
 		display: block;
 	}
 
+	.primary-navigation {
+		display: flex;
+		margin-left: auto;
+		width: auto;
+		align-items: center;
+	}
+
 	#masthead .main-navigation > ul.menu {
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
 		-ms-flex-flow: row wrap;
 		flex-flow: row wrap;
-		padding: 0 0.25rem;
 	}
 
 	.main-navigation ul a {

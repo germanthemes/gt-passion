@@ -1,9 +1,9 @@
 // containerWidth.
-$containerWidth: 60rem;
-$contentWidth: 60rem;
+$containerWidth: 50rem;
+$contentWidth: 50rem;
 
 // Text Color
-$textColor: #202020;
+$textColor: #282828;
 
 // Theme Colors
 $themeColors: (
@@ -13,10 +13,11 @@ $themeColors: (
 	--button-text-color        : #fff,
 	--button-hover-color       : #D5001A,
 	--button-hover-text-color  : #fff,
+	--header-color             : #282828,
 	--site-title-color         : #fff,
-	--title-color              : #202020,
+	--title-color              : #282828,
 	--title-hover-color        : #ee1133,
-	--navi-color               : #202020,
+	--navi-color               : #282828,
 	--navi-text-color          : #fff,
 	--navi-hover-text-color    : rgba(255, 255, 255, 0.5),
 	--navi-border-color        : rgba(255, 255, 255, 0.05),
@@ -24,8 +25,8 @@ $themeColors: (
 	--submenu-text-color       : #fff,
 	--submenu-hover-text-color : rgba(255, 255, 255, 0.5),
 	--submenu-border-color     : rgba(255, 255, 255, 0.075),
-	--widget-title-color       : #202020,
-	--footer-color             : #202020,
+	--widget-title-color       : #282828,
+	--footer-color             : #282828,
 	--footer-text-color        : #fff,
 	--footer-hover-text-color  : rgba(255, 255, 255, 0.5),
 	--footer-border-color      : rgba(255, 255, 255, 0.035),
@@ -59,6 +60,7 @@ $textTransform: (
 	--button-text-color: map-get($themeColors, --button-text-color);
 	--button-hover-color: map-get($themeColors, --button-hover-color);
 	--button-hover-text-color: map-get($themeColors, --button-hover-text-color);
+	--header-color: map-get($themeColors, --header-color);
 	--site-title-color: map-get($themeColors, --site-title-color);
 	--title-color: map-get($themeColors, --title-color);
 	--title-hover-color: map-get($themeColors, --title-hover-color);

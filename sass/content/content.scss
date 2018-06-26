@@ -2,6 +2,7 @@
 	display: grid;
 	grid-template-columns: 1fr minmax(0, $containerWidth) 1fr;
 	grid-column-gap: 1.5rem;
+	background: #fff;
 }
 
 .site-main {

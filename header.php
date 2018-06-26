@@ -28,20 +28,20 @@
 
 		<header id="masthead" class="site-header" role="banner">
 
-			<div class="header-main">
-
-				<?php gt_workout_header_image(); ?>
+			<div class="header-main container">
 
 				<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
 
-			</div><!-- .header-main -->
+				<?php get_template_part( 'template-parts/header/site', 'navigation' ); ?>
 
-			<?php get_template_part( 'template-parts/header/site', 'navigation' ); ?>
+			</div><!-- .header-main -->
 
 		</header><!-- #masthead -->
 
 		<?php do_action( 'gt_workout_after_header' ); ?>
 
-		<div id="content" class="site-content container">
+		<?php gt_workout_header_image(); ?>
+
+		<div id="content" class="site-content">
 
 			<main id="main" class="site-main" role="main">

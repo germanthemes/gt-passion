@@ -1,12 +1,6 @@
 .primary-navigation {
 	position: relative;
-	@include background(--navi-color);
-}
-
-.main-navigation {
-	display: block;
-	margin: 0 auto;
-	max-width: $containerWidth + 3rem;
+	width: 100%;
 }
 
 .main-navigation ul {
@@ -14,7 +8,7 @@
 	padding: 0;
 	@include color(--navi-text-color);
 	list-style: none;
-	@include font-size(17);
+	@include font-size(16);
 	@include font-family(--navi-font);
 	@include font-weight(--navi-font-weight);
 	@include text-transform(--navi-text-transform);
@@ -72,17 +66,21 @@
 .menu-toggle {
 	display: block;
 	margin: 0;
+	margin-left: auto;
 	padding: 1.25rem 1.5rem;
 	border: none;
 	background: none;
 	@include color(--navi-text-color);
 	text-decoration: none;
-	@include font-size(17);
+	@include font-size(16);
 	@include font-family(--navi-font);
 	@include font-weight(--navi-font-weight);
 	@include text-transform(--navi-text-transform);
 	text-align: left;
-	width: 100%;
+}
+
+.menu-toggle .menu-toggle-text {
+	display: none;
 }
 
 .menu-toggle:focus {
