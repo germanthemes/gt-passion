@@ -1,31 +1,27 @@
 // containerWidth.
-$containerWidth: 50rem;
-$contentWidth: 50rem;
+$containerWidth: 45rem;
+$contentWidth: 45rem;
 
 // Text Color
 $textColor: #282828;
 
 // Theme Colors
 $themeColors: (
-	--link-color               : #ee1133,
-	--link-hover-color         : #D5001A,
-	--button-color             : #ee1133,
+	--link-color               : #B71A21,
+	--link-hover-color         : #5F1313,
+	--button-color             : #B71A21,
 	--button-text-color        : #fff,
-	--button-hover-color       : #D5001A,
+	--button-hover-color       : #5F1313,
 	--button-hover-text-color  : #fff,
-	--header-color             : #282828,
-	--site-title-color         : #fff,
-	--title-color              : #282828,
-	--title-hover-color        : #ee1133,
-	--navi-color               : #282828,
-	--navi-text-color          : #fff,
-	--navi-hover-text-color    : rgba(255, 255, 255, 0.5),
-	--navi-border-color        : rgba(255, 255, 255, 0.05),
-	--submenu-color            : #ee1133,
+	--header-background-color  : #282828,
+	--header-text-color        : #fff,
+	--header-hover-text-color  : rgba(255, 255, 255, 0.5),
+	--header-border-color        : rgba(255, 255, 255, 0.05),
+	--submenu-color            : #383838,
 	--submenu-text-color       : #fff,
 	--submenu-hover-text-color : rgba(255, 255, 255, 0.5),
-	--submenu-border-color     : rgba(255, 255, 255, 0.075),
-	--widget-title-color       : #282828,
+	--title-color              : #282828,
+	--title-hover-color        : #B71A21,
 	--footer-color             : #282828,
 	--footer-text-color        : #fff,
 	--footer-hover-text-color  : rgba(255, 255, 255, 0.5),
@@ -44,7 +40,7 @@ $themeFonts: (
 // Font Weight.
 $fontWeight: (
 	--title-font-weight : bold,
-	--navi-font-weight  : normal,
+	--navi-font-weight  : bold,
 );
 
 // Text Transform.
@@ -60,18 +56,15 @@ $textTransform: (
 	--button-text-color: map-get($themeColors, --button-text-color);
 	--button-hover-color: map-get($themeColors, --button-hover-color);
 	--button-hover-text-color: map-get($themeColors, --button-hover-text-color);
-	--header-color: map-get($themeColors, --header-color);
-	--site-title-color: map-get($themeColors, --site-title-color);
-	--title-color: map-get($themeColors, --title-color);
-	--title-hover-color: map-get($themeColors, --title-hover-color);
-	--navi-color: map-get($themeColors, --navi-color);
-	--navi-text-color: map-get($themeColors, --navi-text-color);
-	--navi-hover-text-color: map-get($themeColors, --navi-hover-text-color);
-	--navi-border-color: map-get($themeColors, --navi-border-color);
+	--header-background-color: map-get($themeColors, --header-background-color);
+	--header-text-color: map-get($themeColors, --header-text-color);
+	--header-hover-text-color: map-get($themeColors, --header-hover-text-color);
+	--header-border-color: map-get($themeColors, --header-border-color);
 	--submenu-color: map-get($themeColors, --submenu-color);
 	--submenu-text-color: map-get($themeColors, --submenu-text-color);
 	--submenu-hover-text-color: map-get($themeColors, --submenu-hover-text-color);
-	--submenu-border-color: map-get($themeColors, --submenu-border-color);
+	--title-color: map-get($themeColors, --title-color);
+	--title-hover-color: map-get($themeColors, --title-hover-color);
 	--footer-color: map-get($themeColors, --footer-color);
 	--footer-text-color: map-get($themeColors, --footer-text-color);
 	--footer-hover-text-color: map-get($themeColors, --footer-hover-text-color);

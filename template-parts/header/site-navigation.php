@@ -13,8 +13,8 @@
 		<?php
 		echo gt_workout_get_svg( 'menu' );
 		echo gt_workout_get_svg( 'close' );
-		esc_html_e( 'Menu', 'gt-workout' );
 		?>
+		<span class="menu-toggle-text"><?php esc_html_e( 'Menu', 'gt-workout' ); ?></span>
 	</button>
 
 	<div class="primary-navigation">

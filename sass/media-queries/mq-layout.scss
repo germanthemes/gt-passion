@@ -1,3 +1,19 @@
+@media only screen and (min-width: 30em) {
+    .container {
+    	padding-left: 1.5rem;
+    	padding-right: 1.5rem;
+    }
+
+    .header-main {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .site-content {
+    	grid-column-gap: 1.5rem;
+    }
+}
+
 @media only screen and (min-width: 50em) {
     .entry-header {
         margin: 2rem 0 1.5rem;
@@ -8,13 +24,7 @@
     }
 }
 
-
 @media only screen and (min-width: 55em) {
-    .header-main {
-    	padding-top: 2rem;
-        padding-bottom: 2rem;
-    }
-
     .site-footer .site-info {
 		text-align: left;
 	}
@@ -26,13 +36,7 @@
     }
 }
 
-
 @media only screen and (min-width: 70em) {
-    .header-main {
-    	padding-top: 2.5rem;
-        padding-bottom: 2.5rem;
-    }
-
     .entry-header {
         margin: 2.5rem 0 2rem;
     }

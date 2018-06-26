@@ -1,3 +1,10 @@
+@media only screen and (min-width: 25em) {
+	.menu-toggle .menu-toggle-text {
+		display: inline-block;
+		margin-left: 0.2em;
+	}
+}
+
 @media only screen and (min-width: 55em) {
 	.menu-toggle,
 	.dropdown-toggle {
@@ -22,10 +29,12 @@
 		display: flex;
 		-ms-flex-flow: row wrap;
 		flex-flow: row wrap;
+		margin: 0;
+		border-bottom: none;
 	}
 
 	.main-navigation ul a {
-		padding: 1.25rem;
+		padding: 1rem 1.25rem;
 		border: none;
 	}
 
@@ -33,12 +42,11 @@
 	.main-navigation ul ul {
 		position: absolute;
 		left: -999em;
-		padding: 0;
 		top: 100%;
 		z-index: 99999;
-		border: 1px solid rgba(255, 255, 255, 0.075);
-		border: 1px solid var(--submenu-border-color);
-		border-top: none;
+	}
+
+	.main-navigation ul li.menu-item-has-children:hover a {
 		@include background(--submenu-color);
 	}
 
@@ -50,19 +58,6 @@
 
 	.main-navigation ul ul a {
 		width: 16rem;
-		padding: 1rem;
-		border-top: 1px solid rgba(255, 255, 255, 0.075);
-		border-top: 1px solid var(--submenu-border-color);
-	}
-
-	.main-navigation ul ul a:link,
-	.main-navigation ul ul a:visited {
-		@include color(--submenu-text-color);
-	}
-
-	.main-navigation ul ul a:hover,
-	.main-navigation ul ul a:active {
-		@include color(--submenu-hover-text-color);
 	}
 
 	.main-navigation ul li:hover > ul,
@@ -86,12 +81,12 @@
 		top: 0.15rem;
 		width: 15px;
 		height: 15px;
-		@include fill(--navi-text-color);
+		@include fill(--header-text-color);
 	}
 
 	.main-navigation ul .menu-item-has-children > a:hover > .icon,
 	.main-navigation ul .page_item_has_children > a:hover > .icon {
-		@include fill(--navi-hover-text-color);
+		@include fill(--header-hover-text-color);
 	}
 
 	.main-navigation ul ul .menu-item-has-children > a > .icon,

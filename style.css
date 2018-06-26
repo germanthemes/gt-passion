@@ -44,24 +44,21 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # - CSS Variables
 --------------------------------------------------------------*/
 :root {
-	--link-color: #ee1133;
-	--link-hover-color: #D5001A;
-	--button-color: #ee1133;
+	--link-color: #B71A21;
+	--link-hover-color: #5F1313;
+	--button-color: #B71A21;
 	--button-text-color: #fff;
-	--button-hover-color: #D5001A;
+	--button-hover-color: #5F1313;
 	--button-hover-text-color: #fff;
-	--header-color: #282828;
-	--site-title-color: #fff;
-	--title-color: #282828;
-	--title-hover-color: #ee1133;
-	--navi-color: #282828;
-	--navi-text-color: #fff;
-	--navi-hover-text-color: rgba(255, 255, 255, 0.5);
-	--navi-border-color: rgba(255, 255, 255, 0.05);
-	--submenu-color: #ee1133;
+	--header-background-color: #282828;
+	--header-text-color: #fff;
+	--header-hover-text-color: rgba(255, 255, 255, 0.5);
+	--header-border-color: rgba(255, 255, 255, 0.05);
+	--submenu-color: #383838;
 	--submenu-text-color: #fff;
 	--submenu-hover-text-color: rgba(255, 255, 255, 0.5);
-	--submenu-border-color: rgba(255, 255, 255, 0.075);
+	--title-color: #282828;
+	--title-hover-color: #B71A21;
 	--footer-color: #282828;
 	--footer-text-color: #fff;
 	--footer-hover-text-color: rgba(255, 255, 255, 0.5);
@@ -71,7 +68,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--title-font-weight: bold;
 	--title-text-transform: none;
 	--navi-font: "Open Sans", Arial, Helvetica;
-	--navi-font-weight: normal;
+	--navi-font-weight: bold;
 	--navi-text-transform: none;
 }
 
@@ -510,7 +507,7 @@ td {
 a,
 a:link,
 a:visited {
-	color: #ee1133;
+	color: #B71A21;
 	color: var(--link-color);
 	text-decoration: underline;
 }
@@ -518,7 +515,7 @@ a:visited {
 a:hover,
 a:focus,
 a:active {
-	color: #D5001A;
+	color: #5F1313;
 	color: var(--link-hover-color);
 	text-decoration: none;
 }
@@ -544,7 +541,7 @@ input[type="submit"] {
 	border: none;
 	color: #fff;
 	color: var(--button-text-color);
-	background: #ee1133;
+	background: #B71A21;
 	background: var(--button-color);
 	text-decoration: none;
 	font-weight: normal;
@@ -566,7 +563,7 @@ input[type="reset"]:active,
 input[type="submit"]:active {
 	color: #fff;
 	color: var(--button-hover-text-color);
-	background: #D5001A;
+	background: #5F1313;
 	background: var(--button-hover-color);
 }
 
@@ -630,13 +627,13 @@ textarea {
 	bottom: 0;
 	padding: 0.6em 0.8em;
 	border: none;
-	background: #ee1133;
+	background: #B71A21;
 	background: var(--button-color);
 }
 
 .search-form .search-submit:hover,
 .search-form .search-submit:active {
-	background: #D5001A;
+	background: #5F1313;
 	background: var(--button-hover-color);
 }
 
@@ -719,8 +716,8 @@ textarea {
 .container {
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: 1rem;
-	padding-right: 1rem;
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
 	max-width: 1260px;
 }
 
@@ -729,21 +726,24 @@ textarea {
 --------------------------------------------------------------*/
 .site-header {
 	background: #282828;
-	background: var(--header-color);
+	background: var(--header-background-color);
 }
 
 .header-main {
 	display: flex;
 	flex-wrap: wrap;
-	padding-top: 1.5rem;
-	padding-bottom: 1.5rem;
+	padding-top: 1.25rem;
+	padding-bottom: 1.25rem;
 }
 
 /* Site Branding */
 .site-branding {
+	display: flex;
 	margin: 0;
 	padding: 0;
 	max-width: 100%;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .site-branding a:link,
@@ -767,10 +767,10 @@ textarea {
 	margin: 0;
 	padding: 0;
 	color: #fff;
-	color: var(--site-title-color);
+	color: var(--header-text-color);
 	text-decoration: none;
-	font-size: 32px;
-	font-size: 2rem;
+	font-size: 24px;
+	font-size: 1.5rem;
 	font-family: Montserrat, Tahoma, Arial;
 	font-family: var(--title-font);
 	font-weight: bold;
@@ -783,12 +783,13 @@ textarea {
 .site-title a:link,
 .site-title a:visited {
 	color: #fff;
-	color: var(--site-title-color);
+	color: var(--header-text-color);
 }
 
 .site-title a:hover,
 .site-title a:active {
-	text-decoration: underline;
+	color: rgba(255, 255, 255, 0.5);
+	color: var(--header-hover-text-color);
 }
 
 .site-description {
@@ -796,9 +797,9 @@ textarea {
 	margin: 0;
 	padding: 0;
 	color: #fff;
-	color: var(--site-title-color);
-	font-size: 14px;
-	font-size: 0.875rem;
+	color: var(--header-text-color);
+	font-size: 13px;
+	font-size: 0.8125rem;
 }
 
 /* Custom Header Image */
@@ -815,16 +816,20 @@ textarea {
 	margin: 0;
 	padding: 0;
 	color: #fff;
-	color: var(--navi-text-color);
+	color: var(--header-text-color);
 	list-style: none;
-	font-size: 16px;
-	font-size: 1rem;
+	font-size: 17px;
+	font-size: 1.0625rem;
 	font-family: "Open Sans", Arial, Helvetica;
 	font-family: var(--navi-font);
-	font-weight: normal;
+	font-weight: bold;
 	font-weight: var(--navi-font-weight);
 	text-transform: none;
 	text-transform: var(--navi-text-transform);
+}
+
+.main-navigation > ul {
+	margin-top: 1.5rem;
 }
 
 /* Hide the menu on small screens when JavaScript is available. */
@@ -848,34 +853,53 @@ textarea {
 .main-navigation ul a {
 	display: block;
 	margin: 0;
-	padding: 1rem 1.5rem;
+	padding: 1rem;
 	border-top: 1px solid rgba(255, 255, 255, 0.05);
-	border-top: 1px solid var(--navi-border-color);
+	border-top: 1px solid var(--header-border-color);
 	text-decoration: none;
 }
 
 .main-navigation ul a:link,
 .main-navigation ul a:visited {
 	color: #fff;
-	color: var(--navi-text-color);
+	color: var(--header-text-color);
 	text-decoration: none;
 }
 
 .main-navigation ul a:hover,
 .main-navigation ul a:active {
 	color: rgba(255, 255, 255, 0.5);
-	color: var(--navi-hover-text-color);
+	color: var(--header-hover-text-color);
 }
 
 /* Submenus */
 .main-navigation ul ul {
-	padding: 0 0 0 1.5rem;
-	font-size: 15px;
-	font-size: 0.9375rem;
+	padding: 0.5rem 0.75rem;
+	font-size: 16px;
+	font-size: 1rem;
+	background: #383838;
+	background: var(--submenu-color);
 }
 
 .main-navigation ul ul.toggled-on {
 	display: block;
+}
+
+.main-navigation ul ul a {
+	padding: 0.75rem 1rem;
+	border: none;
+}
+
+.main-navigation ul ul a:link,
+.main-navigation ul ul a:visited {
+	color: #fff;
+	color: var(--submenu-text-color);
+}
+
+.main-navigation ul ul a:hover,
+.main-navigation ul ul a:active {
+	color: rgba(255, 255, 255, 0.5);
+	color: var(--submenu-hover-text-color);
 }
 
 /* Main Navigation Toggle */
@@ -883,17 +907,17 @@ textarea {
 	display: block;
 	margin: 0;
 	margin-left: auto;
-	padding: 1.25rem 1.5rem;
+	padding: 0.75rem;
 	border: none;
 	background: none;
 	color: #fff;
-	color: var(--navi-text-color);
+	color: var(--header-text-color);
 	text-decoration: none;
-	font-size: 16px;
-	font-size: 1rem;
+	font-size: 17px;
+	font-size: 1.0625rem;
 	font-family: "Open Sans", Arial, Helvetica;
 	font-family: var(--navi-font);
-	font-weight: normal;
+	font-weight: bold;
 	font-weight: var(--navi-font-weight);
 	text-transform: none;
 	text-transform: var(--navi-text-transform);
@@ -907,31 +931,31 @@ textarea {
 .menu-toggle:focus {
 	outline: thin dotted;
 	color: #fff;
-	color: var(--navi-text-color);
+	color: var(--header-text-color);
 	background: none;
 }
 
 .menu-toggle:hover,
 .menu-toggle:active {
 	color: rgba(255, 255, 255, 0.5);
-	color: var(--navi-hover-text-color);
+	color: var(--header-hover-text-color);
 	background: none;
 	cursor: pointer;
 }
 
 .menu-toggle .icon {
-	margin: 0.25em 0.6em 0 0;
-	width: 22px;
-	height: 22px;
+	margin: 0;
+	width: 28px;
+	height: 28px;
 	vertical-align: top;
 	fill: #fff;
-	fill: var(--navi-text-color);
+	fill: var(--header-text-color);
 }
 
 .menu-toggle:hover .icon,
 .menu-toggle:active .icon {
 	fill: rgba(255, 255, 255, 0.5);
-	fill: var(--navi-hover-text-color);
+	fill: var(--header-hover-text-color);
 }
 
 .toggled-on .menu-toggle .icon-menu,
@@ -956,7 +980,7 @@ textarea {
 .dropdown-toggle:focus {
 	outline: thin dotted;
 	color: #fff;
-	color: var(--navi-text-color);
+	color: var(--header-text-color);
 	background: none;
 }
 
@@ -966,18 +990,18 @@ textarea {
 }
 
 .dropdown-toggle .icon {
-	margin: 0.3em 0 0;
+	margin: 0.35em 0 0;
 	width: 20px;
 	height: 20px;
 	vertical-align: top;
 	fill: #fff;
-	fill: var(--navi-text-color);
+	fill: var(--header-text-color);
 }
 
 .dropdown-toggle:hover .icon,
 .dropdown-toggle:active .icon {
 	fill: rgba(255, 255, 255, 0.5);
-	fill: var(--navi-hover-text-color);
+	fill: var(--header-hover-text-color);
 }
 
 .dropdown-toggle.toggled-on .icon {
@@ -987,7 +1011,7 @@ textarea {
 }
 
 .main-navigation ul ul .dropdown-toggle {
-	padding: 0.9rem 1.4rem;
+	padding: 0.8rem 1.2rem;
 }
 
 .main-navigation ul ul .dropdown-toggle .icon {
@@ -1000,8 +1024,8 @@ textarea {
 --------------------------------------------------------------*/
 .site-content {
 	display: grid;
-	grid-template-columns: 1fr minmax(0, 50rem) 1fr;
-	grid-column-gap: 1.5rem;
+	grid-template-columns: 1fr minmax(0, 45rem) 1fr;
+	grid-column-gap: 1.25rem;
 	background: #fff;
 }
 
@@ -1028,8 +1052,8 @@ textarea {
 	color: var(--title-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
-	font-size: 24px;
-	font-size: 1.5rem;
+	font-size: 28px;
+	font-size: 1.75rem;
 	font-family: Montserrat, Tahoma, Arial;
 	font-family: var(--title-font);
 	font-weight: bold;
@@ -1048,7 +1072,7 @@ textarea {
 
 .entry-title a:hover,
 .entry-title a:active {
-	color: #ee1133;
+	color: #B71A21;
 	color: var(--title-hover-color);
 }
 
@@ -1083,7 +1107,7 @@ textarea {
 	padding: 0.5em 1em;
 	color: #fff;
 	color: var(--button-text-color);
-	background: #ee1133;
+	background: #B71A21;
 	background: var(--button-color);
 	font-size: 15px;
 	font-size: 0.9375rem;
@@ -1100,7 +1124,7 @@ textarea {
 .more-link:active {
 	color: #fff;
 	color: var(--button-hover-text-color);
-	background: #D5001A;
+	background: #5F1313;
 	background: var(--button-hover-color);
 	text-decoration: none;
 }
@@ -1160,7 +1184,7 @@ body.date-hidden.author-hidden.categories-hidden .entry-meta {
 	text-decoration: none;
 	color: #fff;
 	color: var(--button-text-color);
-	background: #ee1133;
+	background: #B71A21;
 	background: var(--button-color);
 }
 
@@ -1173,7 +1197,7 @@ body.date-hidden.author-hidden.categories-hidden .entry-meta {
 .pagination a:active {
 	color: #fff;
 	color: var(--button-hover-text-color);
-	background: #D5001A;
+	background: #5F1313;
 	background: var(--button-hover-color);
 }
 
@@ -1182,7 +1206,7 @@ body.date-hidden.author-hidden.categories-hidden .entry-meta {
 --------------------------------------------------------------*/
 .site-footer {
 	display: grid;
-	grid-template-columns: 1fr minmax(0, 50rem) 1fr;
+	grid-template-columns: 1fr minmax(0, 45rem) 1fr;
 	grid-column-gap: 1.5rem;
 	font-size: 15px;
 	font-size: 0.9375rem;
@@ -1429,13 +1453,18 @@ object {
 
 @media only screen and (min-width: 30em) {
 	.site-title {
-		font-size: 36px;
-		font-size: 2.25rem;
+		font-size: 28px;
+		font-size: 1.75rem;
+	}
+
+	.site-description {
+		font-size: 14px;
+		font-size: 0.875rem;
 	}
 
 	.entry-title {
-		font-size: 28px;
-		font-size: 1.75rem;
+		font-size: 32px;
+		font-size: 2rem;
 	}
 }
 
@@ -1450,8 +1479,8 @@ object {
 	}
 
 	.site-title {
-		font-size: 40px;
-		font-size: 2.5rem;
+		font-size: 32px;
+		font-size: 2rem;
 	}
 
 	.site-description {
@@ -1460,8 +1489,8 @@ object {
 	}
 
 	.entry-title {
-		font-size: 32px;
-		font-size: 2rem;
+		font-size: 36px;
+		font-size: 2.25rem;
 	}
 
 	.entry-meta,
@@ -1480,22 +1509,10 @@ object {
 	}
 }
 
-@media only screen and (min-width: 50em) {
-	.entry-title {
-		font-size: 36px;
-		font-size: 2.25rem;
-	}
-
-	.entry-content {
-		font-size: 18px;
-		font-size: 1.125rem;
-	}
-}
-
 @media only screen and (min-width: 60em) {
 	.site-title {
-		font-size: 44px;
-		font-size: 2.75rem;
+		font-size: 36px;
+		font-size: 2.25rem;
 	}
 
 	.entry-title {
@@ -1511,14 +1528,30 @@ object {
 	}
 
 	.entry-content {
-		font-size: 19px;
-		font-size: 1.1875rem;
+		font-size: 18px;
+		font-size: 1.125rem;
 	}
 }
 
 /*--------------------------------------------------------------
 ## - Media Queries for Layout
 --------------------------------------------------------------*/
+@media only screen and (min-width: 30em) {
+	.container {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+
+	.header-main {
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
+	}
+
+	.site-content {
+		grid-column-gap: 1.5rem;
+	}
+}
+
 @media only screen and (min-width: 50em) {
 	.entry-header {
 		margin: 2rem 0 1.5rem;
@@ -1530,11 +1563,6 @@ object {
 }
 
 @media only screen and (min-width: 55em) {
-	.header-main {
-		padding-top: 2rem;
-		padding-bottom: 2rem;
-	}
-
 	.site-footer .site-info {
 		text-align: left;
 	}
@@ -1547,11 +1575,6 @@ object {
 }
 
 @media only screen and (min-width: 70em) {
-	.header-main {
-		padding-top: 2.5rem;
-		padding-bottom: 2.5rem;
-	}
-
 	.entry-header {
 		margin: 2.5rem 0 2rem;
 	}
@@ -1564,6 +1587,13 @@ object {
 /*--------------------------------------------------------------
 ## - Media Queries for Navigation
 --------------------------------------------------------------*/
+@media only screen and (min-width: 25em) {
+	.menu-toggle .menu-toggle-text {
+		display: inline-block;
+		margin-left: 0.2em;
+	}
+}
+
 @media only screen and (min-width: 55em) {
 	.menu-toggle,
 	.dropdown-toggle {
@@ -1588,10 +1618,12 @@ object {
 		display: flex;
 		-ms-flex-flow: row wrap;
 		flex-flow: row wrap;
+		margin: 0;
+		border-bottom: none;
 	}
 
 	.main-navigation ul a {
-		padding: 1.25rem;
+		padding: 1rem 1.25rem;
 		border: none;
 	}
 
@@ -1599,13 +1631,12 @@ object {
 	.main-navigation ul ul {
 		position: absolute;
 		left: -999em;
-		padding: 0;
 		top: 100%;
 		z-index: 99999;
-		border: 1px solid rgba(255, 255, 255, 0.075);
-		border: 1px solid var(--submenu-border-color);
-		border-top: none;
-		background: #ee1133;
+	}
+
+	.main-navigation ul li.menu-item-has-children:hover a {
+		background: #383838;
 		background: var(--submenu-color);
 	}
 
@@ -1617,21 +1648,6 @@ object {
 
 	.main-navigation ul ul a {
 		width: 16rem;
-		padding: 1rem;
-		border-top: 1px solid rgba(255, 255, 255, 0.075);
-		border-top: 1px solid var(--submenu-border-color);
-	}
-
-	.main-navigation ul ul a:link,
-	.main-navigation ul ul a:visited {
-		color: #fff;
-		color: var(--submenu-text-color);
-	}
-
-	.main-navigation ul ul a:hover,
-	.main-navigation ul ul a:active {
-		color: rgba(255, 255, 255, 0.5);
-		color: var(--submenu-hover-text-color);
 	}
 
 	.main-navigation ul li:hover > ul,
@@ -1656,13 +1672,13 @@ object {
 		width: 15px;
 		height: 15px;
 		fill: #fff;
-		fill: var(--navi-text-color);
+		fill: var(--header-text-color);
 	}
 
 	.main-navigation ul .menu-item-has-children > a:hover > .icon,
 	.main-navigation ul .page_item_has_children > a:hover > .icon {
 		fill: rgba(255, 255, 255, 0.5);
-		fill: var(--navi-hover-text-color);
+		fill: var(--header-hover-text-color);
 	}
 
 	.main-navigation ul ul .menu-item-has-children > a > .icon,
