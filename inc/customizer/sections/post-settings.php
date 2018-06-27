@@ -126,12 +126,6 @@ function gt_workout_customize_register_post_settings( $wp_customize ) {
 		'type'     => 'checkbox',
 		'priority' => 70,
 	) );
-
-	$wp_customize->selective_refresh->add_partial( 'gt_workout_theme_options[post_image_single]', array(
-		'selector'         => '.single-post .site-content > .site-main',
-		'render_callback'  => 'gt_workout_customize_partial_single_post',
-		'fallback_refresh' => false,
-	) );
 }
 add_action( 'customize_register', 'gt_workout_customize_register_post_settings' );
 
@@ -142,15 +136,5 @@ function gt_workout_customize_partial_blog_posts() {
 	while ( have_posts() ) {
 		the_post();
 		get_template_part( 'template-parts/post/content' );
-	}
-}
-
-/**
- * Render single posts partial
- */
-function gt_workout_customize_partial_single_post() {
-	while ( have_posts() ) {
-		the_post();
-		get_template_part( 'template-parts/post/content', 'single' );
 	}
 }

@@ -53,8 +53,9 @@ if ( ! function_exists( 'gt_workout_header_image' ) ) :
 	 */
 	function gt_workout_header_image() {
 
-		if ( ( is_single() && has_post_thumbnail() && true === gt_workout_get_option( 'post_image_single' ) ) || ( is_page() && has_post_thumbnail() ) ) :
-			?>
+		// Display featured image as header image on single posts.
+		if ( is_single() && has_post_thumbnail() && ( true === gt_workout_get_option( 'post_image_single' ) || is_customize_preview() ) ) :
+		?>
 
 			<div id="headimg" class="header-image featured-header-image">
 
@@ -62,9 +63,21 @@ if ( ! function_exists( 'gt_workout_header_image' ) ) :
 
 			</div>
 
-			<?php
+		<?php
+		// Display featured image as header image on static pages.
+		elseif ( is_page() && has_post_thumbnail() ) :
+		?>
+
+			<div id="headimg" class="header-image featured-header-image">
+
+				<?php the_post_thumbnail( 'gt-workout-header-image' ); ?>
+
+			</div>
+
+		<?php
+		// Display header image.
 		elseif ( has_header_image() ) :
-			?>
+		?>
 
 			<div id="headimg" class="header-image default-header-image">
 
