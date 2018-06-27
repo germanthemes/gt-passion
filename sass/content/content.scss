@@ -1,6 +1,7 @@
 .site-content {
 	display: grid;
 	grid-template-columns: 1fr minmax(0, $contentWidth) 1fr;
+	grid-template-columns: 1fr minmax(0, var(--contentWidth) ) 1fr;
 	grid-column-gap: 1.25rem;
 	background: #fff;
 }

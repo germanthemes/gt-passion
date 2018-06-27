@@ -44,6 +44,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # - CSS Variables
 --------------------------------------------------------------*/
 :root {
+	--containerWidth: 1260px;
+	--contentWidth: 720px;
 	--link-color: #B71A21;
 	--link-hover-color: #5F1313;
 	--button-color: #B71A21;
@@ -719,6 +721,7 @@ textarea {
 	padding-left: 1.25rem;
 	padding-right: 1.25rem;
 	max-width: 1260px;
+	max-width: var(--containerWidth);
 }
 
 /*--------------------------------------------------------------
@@ -1036,6 +1039,7 @@ textarea {
 .site-content {
 	display: grid;
 	grid-template-columns: 1fr minmax(0, 720px) 1fr;
+	grid-template-columns: 1fr minmax(0, var(--contentWidth)) 1fr;
 	grid-column-gap: 1.25rem;
 	background: #fff;
 }
