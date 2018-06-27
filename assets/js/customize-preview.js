@@ -109,12 +109,12 @@
 	} );
 
 	/* Primary Link Color Option */
-	wp.customize( 'gt_workout_theme_options[link_color_one]', function( value ) {
+	wp.customize( 'gt_workout_theme_options[link_color]', function( value ) {
 		value.bind( function( newval ) {
 			var text_color;
 
 			if( isColorLight( newval ) ) {
-				text_color = '#202020';
+				text_color = '#282828';
 			} else {
 				text_color = '#ffffff';
 			}
@@ -126,12 +126,12 @@
 	} );
 
 	/* Secondary Link Color Option */
-	wp.customize( 'gt_workout_theme_options[link_color_two]', function( value ) {
+	wp.customize( 'gt_workout_theme_options[link_hover_color]', function( value ) {
 		value.bind( function( newval ) {
 			var text_color;
 
 			if( isColorLight( newval ) ) {
-				text_color = '#202020';
+				text_color = '#282828';
 			} else {
 				text_color = '#ffffff';
 			}
@@ -142,13 +142,13 @@
 		} );
 	} );
 
-	/* Navi Color Option */
-	wp.customize( 'gt_workout_theme_options[navi_color_one]', function( value ) {
+	/* Header Color Option */
+	wp.customize( 'gt_workout_theme_options[header_color]', function( value ) {
 		value.bind( function( newval ) {
 			var text_color, text_hover_color, border_color;
 
 			if( isColorLight( newval ) ) {
-				text_color = '#202020';
+				text_color = '#282828';
 				text_hover_color = 'rgba(0, 0, 0, 0.5)';
 				border_color = 'rgba(0, 0, 0, 0.075)';
 			} else {
@@ -157,20 +157,20 @@
 				border_color = 'rgba(255, 255, 255, 0.05)';
 			}
 
-			document.documentElement.style.setProperty( '--navi-color', newval );
-			document.documentElement.style.setProperty( '--navi-text-color', text_color );
-			document.documentElement.style.setProperty( '--navi-hover-text-color', text_hover_color );
-			document.documentElement.style.setProperty( '--navi-border-color', border_color );
+			document.documentElement.style.setProperty( '--header-background-color', newval );
+			document.documentElement.style.setProperty( '--header-text-color', text_color );
+			document.documentElement.style.setProperty( '--header-hover-text-color', text_hover_color );
+			document.documentElement.style.setProperty( '--header-border-color', border_color );
 		} );
 	} );
 
-	/* Submenu Color Option */
-	wp.customize( 'gt_workout_theme_options[navi_color_two]', function( value ) {
+	/* Navigation Submenu Color Option */
+	wp.customize( 'gt_workout_theme_options[submenu_color]', function( value ) {
 		value.bind( function( newval ) {
 			var text_color, text_hover_color, border_color;
 
 			if( isColorLight( newval ) ) {
-				text_color = '#202020';
+				text_color = '#282828';
 				text_hover_color = 'rgba(0, 0, 0, 0.5)';
 				border_color = 'rgba(0, 0, 0, 0.1)';
 			} else {
@@ -193,10 +193,10 @@
 		} );
 	} );
 
-	/* Widget Title Color Option */
-	wp.customize( 'gt_workout_theme_options[widget_title_color]', function( value ) {
+	/* Title Hover Color Option */
+	wp.customize( 'gt_workout_theme_options[title_hover_color]', function( value ) {
 		value.bind( function( newval ) {
-			document.documentElement.style.setProperty( '--widget-title-color', newval );
+			document.documentElement.style.setProperty( '--title-hover-color', newval );
 		} );
 	} );
 
@@ -206,7 +206,7 @@
 			var text_color, text_hover_color, border_color;
 
 			if( isColorLight( newval ) ) {
-				text_color = '#202020';
+				text_color = '#282828';
 				text_hover_color = 'rgba(0, 0, 0, 0.5)';
 				border_color = 'rgba(0, 0, 0, 0.05)';
 			} else {
