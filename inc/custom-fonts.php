@@ -97,12 +97,12 @@ class GT_Workout_Custom_Fonts {
 		// Get selected fonts.
 		$fonts = self::get_selected_fonts();
 
-		if ( in_array( 'Arimo', $fonts, true ) ) {
-			wp_enqueue_style( 'gt-workout-arimo-font', get_theme_file_uri( '/assets/css/arimo.css' ), array(), '11.0' );
+		if ( in_array( 'Rambla', $fonts, true ) ) {
+			wp_enqueue_style( 'gt-workout-rambla-font', get_theme_file_uri( '/assets/css/rambla.css' ), array(), '5.0' );
 		}
 
-		if ( in_array( 'Nunito', $fonts, true ) ) {
-			wp_enqueue_style( 'gt-workout-nunito-font', get_theme_file_uri( '/assets/css/nunito.css' ), array(), '9.0' );
+		if ( in_array( 'Fira Sans', $fonts, true ) ) {
+			wp_enqueue_style( 'gt-workout-fira-sans-font', get_theme_file_uri( '/assets/css/fira-sans.css' ), array(), '8.0' );
 		}
 	}
 
@@ -135,7 +135,7 @@ class GT_Workout_Custom_Fonts {
 		$selected_fonts = self::get_selected_fonts();
 
 		// Remove default fonts.
-		$selected_fonts = array_diff( $selected_fonts, array( 'Arimo', 'Nunito' ) );
+		$selected_fonts = array_diff( $selected_fonts, array( 'Rambla', 'Fira Sans' ) );
 
 		add_theme_support( 'gt-typography', array(
 			'selected_fonts' => $selected_fonts,

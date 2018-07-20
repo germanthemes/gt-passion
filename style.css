@@ -66,11 +66,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--footer-text-color: #fff;
 	--footer-hover-text-color: rgba(255, 255, 255, 0.5);
 	--footer-border-color: rgba(255, 255, 255, 0.035);
-	--text-font: Arimo, Arial, Helvetica;
-	--title-font: Nunito, Tahoma, Arial;
+	--text-font: Raleway, Arial, Helvetica;
+	--title-font: "Fira Sans", Tahoma, Arial;
 	--title-font-weight: bold;
 	--title-text-transform: uppercase;
-	--navi-font: Nunito, Tahoma, Arial;
+	--navi-font: "Fira Sans", Tahoma, Arial;
 	--navi-font-weight: bold;
 	--navi-text-transform: uppercase;
 }
@@ -305,7 +305,7 @@ textarea {
 	color: #282828;
 	font-size: 16px;
 	font-size: 1rem;
-	font-family: Arimo, Arial, Helvetica;
+	font-family: Raleway, Arial, Helvetica;
 	font-family: var(--text-font);
 	line-height: 1.75;
 }
@@ -318,7 +318,7 @@ h5,
 h6 {
 	clear: both;
 	margin: 1em 0 0.75em;
-	font-family: Nunito, Tahoma, Arial;
+	font-family: "Fira Sans", Tahoma, Arial;
 	font-family: var(--title-font);
 	line-height: 1.4;
 }
@@ -775,7 +775,7 @@ textarea {
 	text-decoration: none;
 	font-size: 24px;
 	font-size: 1.5rem;
-	font-family: Nunito, Tahoma, Arial;
+	font-family: "Fira Sans", Tahoma, Arial;
 	font-family: var(--title-font);
 	font-weight: bold;
 	font-weight: var(--title-font-weight);
@@ -837,7 +837,7 @@ textarea {
 	list-style: none;
 	font-size: 16px;
 	font-size: 1rem;
-	font-family: Nunito, Tahoma, Arial;
+	font-family: "Fira Sans", Tahoma, Arial;
 	font-family: var(--navi-font);
 	font-weight: bold;
 	font-weight: var(--navi-font-weight);
@@ -936,7 +936,7 @@ textarea {
 	text-decoration: none;
 	font-size: 17px;
 	font-size: 1.0625rem;
-	font-family: Nunito, Tahoma, Arial;
+	font-family: "Fira Sans", Tahoma, Arial;
 	font-family: var(--navi-font);
 	font-weight: bold;
 	font-weight: var(--navi-font-weight);
@@ -1076,7 +1076,7 @@ textarea {
 	word-wrap: break-word;
 	font-size: 28px;
 	font-size: 1.75rem;
-	font-family: Nunito, Tahoma, Arial;
+	font-family: "Fira Sans", Tahoma, Arial;
 	font-family: var(--title-font);
 	font-weight: bold;
 	font-weight: var(--title-font-weight);
@@ -1134,7 +1134,7 @@ textarea {
 	background: var(--button-color);
 	font-size: 14px;
 	font-size: 0.875rem;
-	font-family: Nunito, Tahoma, Arial;
+	font-family: "Fira Sans", Tahoma, Arial;
 	font-family: var(--title-font);
 	font-weight: bold;
 	font-weight: var(--title-font-weight);
@@ -1236,7 +1236,7 @@ body.date-hidden.author-hidden.categories-hidden .entry-meta {
 .site-footer {
 	font-size: 15px;
 	font-size: 0.9375rem;
-	font-family: Nunito, Tahoma, Arial;
+	font-family: "Fira Sans", Tahoma, Arial;
 	font-family: var(--navi-font);
 	color: rgba(255, 255, 255, 0.5);
 	color: var(--footer-hover-text-color);
