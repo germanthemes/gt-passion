@@ -38,6 +38,12 @@
 		border: none;
 	}
 
+	.main-navigation ul li.current-menu-item > a {
+		@include color(--navi-text-color);
+		@include background(--navi-bg-color);
+		text-decoration: none;
+	}
+
 	/* Dropdown Menus */
 	.main-navigation ul ul {
 		position: absolute;
@@ -64,7 +70,7 @@
 
 	.main-navigation ul ul ul {
 		left: -999em;
-		margin-top: 0;
+		margin-top: -0.5rem;
 		top: 0;
 	}
 

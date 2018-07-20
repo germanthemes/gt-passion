@@ -8,16 +8,18 @@ $textColor: #282828;
 // Theme Colors
 $themeColors: (
 	--link-color               : #ee3333,
-	--link-hover-color         : #dd2222,
+	--link-hover-color         : #282828,
 	--button-color             : #ee3333,
 	--button-text-color        : #fff,
-	--button-hover-color       : #dd2222,
+	--button-hover-color       : #282828,
 	--button-hover-text-color  : #fff,
 	--header-background-color  : #282828,
 	--header-text-color        : #fff,
 	--header-hover-text-color  : rgba(255, 255, 255, 0.5),
 	--header-border-color      : rgba(255, 255, 255, 0.05),
-	--submenu-color            : #ee3333,
+	--navi-text-color          : #fff,
+	--navi-bg-color            : #ee3333,
+	--submenu-color            : #383838,
 	--submenu-text-color       : #fff,
 	--submenu-hover-text-color : rgba(255, 255, 255, 0.5),
 	--title-color              : #282828,
@@ -45,8 +47,8 @@ $fontWeight: (
 
 // Text Transform.
 $textTransform: (
-	--title-text-transform : none,
-	--navi-text-transform  : none,
+	--title-text-transform : uppercase,
+	--navi-text-transform  : uppercase,
 );
 
 :root {
@@ -62,6 +64,7 @@ $textTransform: (
 	--header-text-color: map-get($themeColors, --header-text-color);
 	--header-hover-text-color: map-get($themeColors, --header-hover-text-color);
 	--header-border-color: map-get($themeColors, --header-border-color);
+	--navi-bg-color: map-get($themeColors, --navi-bg-color);
 	--submenu-color: map-get($themeColors, --submenu-color);
 	--submenu-text-color: map-get($themeColors, --submenu-text-color);
 	--submenu-hover-text-color: map-get($themeColors, --submenu-hover-text-color);
