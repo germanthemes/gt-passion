@@ -39,28 +39,6 @@ class GT_Workout_Custom_Colors {
 		// Color Variables.
 		$color_variables = '';
 
-		// Set Primary Link Color.
-		if ( $theme_options['link_color'] !== $default['link_color'] ) {
-			$color_variables .= '--link-color: ' . $theme_options['link_color'] . ';';
-			$color_variables .= '--button-color: ' . $theme_options['link_color'] . ';';
-
-			// Check if a light background color was chosen.
-			if ( self::is_color_light( $theme_options['link_color'] ) ) {
-				$color_variables .= '--button-text-color: #202020;';
-			}
-		}
-
-		// Set Secondary Link Color.
-		if ( $theme_options['link_hover_color'] !== $default['link_hover_color'] ) {
-			$color_variables .= '--link-hover-color: ' . $theme_options['link_hover_color'] . ';';
-			$color_variables .= '--button-hover-color: ' . $theme_options['link_hover_color'] . ';';
-
-			// Check if a light background color was chosen.
-			if ( self::is_color_light( $theme_options['link_hover_color'] ) ) {
-				$color_variables .= '--button-hover-text-color: #202020;';
-			}
-		}
-
 		// Set Header Color.
 		if ( $theme_options['header_color'] !== $default['header_color'] ) {
 			$color_variables .= '--header-background-color: ' . $theme_options['header_color'] . ';';
@@ -73,13 +51,23 @@ class GT_Workout_Custom_Colors {
 			}
 		}
 
+		// Set Navigation Color.
+		if ( $theme_options['navi_color'] !== $default['navi_color'] ) {
+			$color_variables .= '--navi-bg-color: ' . $theme_options['navi_color'] . ';';
+
+			// Check if a light background color was chosen.
+			if ( self::is_color_light( $theme_options['navi_color'] ) ) {
+				$color_variables .= '--navi-text-color: #282828;';
+			}
+		}
+
 		// Set Navigation Submenu Color.
 		if ( $theme_options['submenu_color'] !== $default['submenu_color'] ) {
 			$color_variables .= '--submenu-color: ' . $theme_options['submenu_color'] . ';';
 
 			// Check if a light background color was chosen.
 			if ( self::is_color_light( $theme_options['submenu_color'] ) ) {
-				$color_variables .= '--submenu-text-color: #202020;';
+				$color_variables .= '--submenu-text-color: #282828;';
 				$color_variables .= '--submenu-hover-text-color: rgba(0, 0, 0, 0.5);';
 				$color_variables .= '--submenu-border-color: rgba(0, 0, 0, 0.1);';
 			}
@@ -95,13 +83,35 @@ class GT_Workout_Custom_Colors {
 			$color_variables .= '--title-hover-color: ' . $theme_options['title_hover_color'] . ';';
 		}
 
+		// Set Primary Link Color.
+		if ( $theme_options['link_color'] !== $default['link_color'] ) {
+			$color_variables .= '--link-color: ' . $theme_options['link_color'] . ';';
+			$color_variables .= '--button-color: ' . $theme_options['link_color'] . ';';
+
+			// Check if a light background color was chosen.
+			if ( self::is_color_light( $theme_options['link_color'] ) ) {
+				$color_variables .= '--button-text-color: #282828;';
+			}
+		}
+
+		// Set Secondary Link Color.
+		if ( $theme_options['link_hover_color'] !== $default['link_hover_color'] ) {
+			$color_variables .= '--link-hover-color: ' . $theme_options['link_hover_color'] . ';';
+			$color_variables .= '--button-hover-color: ' . $theme_options['link_hover_color'] . ';';
+
+			// Check if a light background color was chosen.
+			if ( self::is_color_light( $theme_options['link_hover_color'] ) ) {
+				$color_variables .= '--button-hover-text-color: #282828;';
+			}
+		}
+
 		// Set Footer Color.
 		if ( $theme_options['footer_color'] !== $default['footer_color'] ) {
 			$color_variables .= '--footer-color: ' . $theme_options['footer_color'] . ';';
 
 			// Check if a light background color was chosen.
 			if ( self::is_color_light( $theme_options['footer_color'] ) ) {
-				$color_variables .= '--footer-text-color: #202020;';
+				$color_variables .= '--footer-text-color: #282828;';
 				$color_variables .= '--footer-hover-text-color: rgba(0, 0, 0, 0.5);';
 				$color_variables .= '--footer-border-color: rgba(0, 0, 0, 0.05);';
 			}

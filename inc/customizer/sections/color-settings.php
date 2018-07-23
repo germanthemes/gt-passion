@@ -24,38 +24,6 @@ function gt_workout_customize_register_color_settings( $wp_customize ) {
 	// Get Default Colors from settings.
 	$default = gt_workout_default_options();
 
-	// Add Link Color setting.
-	$wp_customize->add_setting( 'gt_workout_theme_options[link_color]', array(
-		'default'           => $default['link_color'],
-		'type'              => 'option',
-		'transport'         => 'postMessage',
-		'sanitize_callback' => 'sanitize_hex_color',
-	) );
-	$wp_customize->add_control( new WP_Customize_Color_Control(
-		$wp_customize, 'gt_workout_theme_options[link_color]', array(
-			'label'    => esc_html_x( 'Links & Buttons (primary)', 'Color Settings', 'gt-workout' ),
-			'section'  => 'gt_workout_section_colors',
-			'settings' => 'gt_workout_theme_options[link_color]',
-			'priority' => 10,
-		)
-	) );
-
-	// Add Button Color setting.
-	$wp_customize->add_setting( 'gt_workout_theme_options[link_hover_color]', array(
-		'default'           => $default['link_hover_color'],
-		'type'              => 'option',
-		'transport'         => 'postMessage',
-		'sanitize_callback' => 'sanitize_hex_color',
-	) );
-	$wp_customize->add_control( new WP_Customize_Color_Control(
-		$wp_customize, 'gt_workout_theme_options[link_hover_color]', array(
-			'label'    => esc_html_x( 'Links & Buttons (secondary)', 'Color Settings', 'gt-workout' ),
-			'section'  => 'gt_workout_section_colors',
-			'settings' => 'gt_workout_theme_options[link_hover_color]',
-			'priority' => 20,
-		)
-	) );
-
 	// Add Navigation Primary Color setting.
 	$wp_customize->add_setting( 'gt_workout_theme_options[header_color]', array(
 		'default'           => $default['header_color'],
@@ -68,7 +36,23 @@ function gt_workout_customize_register_color_settings( $wp_customize ) {
 			'label'    => esc_html_x( 'Header', 'Color Settings', 'gt-workout' ),
 			'section'  => 'gt_workout_section_colors',
 			'settings' => 'gt_workout_theme_options[header_color]',
-			'priority' => 30,
+			'priority' => 10,
+		)
+	) );
+
+	// Add Navigation Color setting.
+	$wp_customize->add_setting( 'gt_workout_theme_options[navi_color]', array(
+		'default'           => $default['navi_color'],
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'sanitize_hex_color',
+	) );
+	$wp_customize->add_control( new WP_Customize_Color_Control(
+		$wp_customize, 'gt_workout_theme_options[navi_color]', array(
+			'label'    => esc_html_x( 'Navigation', 'Color Settings', 'gt-workout' ),
+			'section'  => 'gt_workout_section_colors',
+			'settings' => 'gt_workout_theme_options[navi_color]',
+			'priority' => 20,
 		)
 	) );
 
@@ -84,7 +68,7 @@ function gt_workout_customize_register_color_settings( $wp_customize ) {
 			'label'    => esc_html_x( 'Navigation Submenus', 'Color Settings', 'gt-workout' ),
 			'section'  => 'gt_workout_section_colors',
 			'settings' => 'gt_workout_theme_options[submenu_color]',
-			'priority' => 40,
+			'priority' => 30,
 		)
 	) );
 
@@ -100,7 +84,7 @@ function gt_workout_customize_register_color_settings( $wp_customize ) {
 			'label'    => esc_html_x( 'Titles (primary)', 'Color Settings', 'gt-workout' ),
 			'section'  => 'gt_workout_section_colors',
 			'settings' => 'gt_workout_theme_options[title_color]',
-			'priority' => 50,
+			'priority' => 40,
 		)
 	) );
 
@@ -116,7 +100,39 @@ function gt_workout_customize_register_color_settings( $wp_customize ) {
 			'label'    => esc_html_x( 'Titles (secondary)', 'Color Settings', 'gt-workout' ),
 			'section'  => 'gt_workout_section_colors',
 			'settings' => 'gt_workout_theme_options[title_hover_color]',
+			'priority' => 50,
+		)
+	) );
+
+	// Add Link Color setting.
+	$wp_customize->add_setting( 'gt_workout_theme_options[link_color]', array(
+		'default'           => $default['link_color'],
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'sanitize_hex_color',
+	) );
+	$wp_customize->add_control( new WP_Customize_Color_Control(
+		$wp_customize, 'gt_workout_theme_options[link_color]', array(
+			'label'    => esc_html_x( 'Links & Buttons (primary)', 'Color Settings', 'gt-workout' ),
+			'section'  => 'gt_workout_section_colors',
+			'settings' => 'gt_workout_theme_options[link_color]',
 			'priority' => 60,
+		)
+	) );
+
+	// Add Button Color setting.
+	$wp_customize->add_setting( 'gt_workout_theme_options[link_hover_color]', array(
+		'default'           => $default['link_hover_color'],
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'sanitize_hex_color',
+	) );
+	$wp_customize->add_control( new WP_Customize_Color_Control(
+		$wp_customize, 'gt_workout_theme_options[link_hover_color]', array(
+			'label'    => esc_html_x( 'Links & Buttons (secondary)', 'Color Settings', 'gt-workout' ),
+			'section'  => 'gt_workout_section_colors',
+			'settings' => 'gt_workout_theme_options[link_hover_color]',
+			'priority' => 70,
 		)
 	) );
 
@@ -132,7 +148,7 @@ function gt_workout_customize_register_color_settings( $wp_customize ) {
 			'label'    => esc_html_x( 'Footer', 'Color Settings', 'gt-workout' ),
 			'section'  => 'gt_workout_section_colors',
 			'settings' => 'gt_workout_theme_options[footer_color]',
-			'priority' => 70,
+			'priority' => 80,
 		)
 	) );
 }
