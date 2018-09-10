@@ -21,22 +21,22 @@ function gt_workout_gutenberg_support() {
 		array(
 			'name'  => esc_html_x( 'Primary', 'block color', 'gt-workout' ),
 			'slug'  => 'primary',
-			'color' => '#006699',
+			'color' => '#ee3333',
 		),
 		array(
 			'name'  => esc_html_x( 'Secondary', 'block color', 'gt-workout' ),
 			'slug'  => 'secondary',
-			'color' => '#ee9922',
+			'color' => '#EA8867',
 		),
 		array(
 			'name'  => esc_html_x( 'Accent', 'block color', 'gt-workout' ),
 			'slug'  => 'accent',
-			'color' => '#11bb55',
+			'color' => '#F2E97E',
 		),
 		array(
 			'name'  => esc_html_x( 'Complementary', 'block color', 'gt-workout' ),
 			'slug'  => 'complementary',
-			'color' => '#bb4411',
+			'color' => '#1B8FB8',
 		),
 		array(
 			'name'  => esc_html_x( 'White', 'block color', 'gt-workout' ),
