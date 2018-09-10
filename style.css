@@ -68,9 +68,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--footer-hover-text-color: rgba(255, 255, 255, 0.5);
 	--footer-border-color: rgba(255, 255, 255, 0.035);
 	--block-primary-color: #ee3333;
-	--block-secondary-color: #EA8867;
-	--block-accent-color: #F2E97E;
-	--block-complementary-color: #1B8FB8;
+	--block-secondary-color: #ea8867;
+	--block-accent-color: #f2e97e;
+	--block-complementary-color: #1b8fb8;
 	--text-font: Raleway, Arial, Helvetica;
 	--title-font: "Fira Sans", Tahoma, Arial;
 	--title-font-weight: bold;
@@ -1455,17 +1455,17 @@ h2.is-style-gt-heading-large {
 }
 
 .has-secondary-color {
-	color: #EA8867;
+	color: #ea8867;
 	color: var(--block-secondary-color);
 }
 
 .has-accent-color {
-	color: #F2E97E;
+	color: #f2e97e;
 	color: var(--block-accent-color);
 }
 
 .has-complementary-color {
-	color: #1B8FB8;
+	color: #1b8fb8;
 	color: var(--block-complementary-color);
 }
 
@@ -1492,17 +1492,17 @@ h2.is-style-gt-heading-large {
 }
 
 .has-secondary-background-color {
-	background-color: #EA8867;
+	background-color: #ea8867;
 	background-color: var(--block-secondary-color);
 }
 
 .has-accent-background-color {
-	background-color: #F2E97E;
+	background-color: #f2e97e;
 	background-color: var(--block-accent-color);
 }
 
 .has-complementary-background-color {
-	background-color: #1B8FB8;
+	background-color: #1b8fb8;
 	background-color: var(--block-complementary-color);
 }
 

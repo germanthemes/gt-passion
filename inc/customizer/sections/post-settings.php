@@ -17,7 +17,7 @@ function gt_workout_customize_register_post_settings( $wp_customize ) {
 	// Add Sections for Post Settings.
 	$wp_customize->add_section( 'gt_workout_section_posts', array(
 		'title'    => esc_html_x( 'Posts', 'Post Settings', 'gt-workout' ),
-		'priority' => 20,
+		'priority' => 10,
 		'panel'    => 'gt_workout_options_panel',
 	) );
 

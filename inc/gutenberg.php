@@ -13,6 +13,9 @@
  */
 function gt_workout_gutenberg_support() {
 
+	// Get theme options from database.
+	$theme_options = gt_workout_theme_options();
+
 	// Add theme support for wide and full images.
 	add_theme_support( 'align-wide' );
 
@@ -21,22 +24,22 @@ function gt_workout_gutenberg_support() {
 		array(
 			'name'  => esc_html_x( 'Primary', 'block color', 'gt-workout' ),
 			'slug'  => 'primary',
-			'color' => '#ee3333',
+			'color' => esc_html( $theme_options['block_primary_color'] ),
 		),
 		array(
 			'name'  => esc_html_x( 'Secondary', 'block color', 'gt-workout' ),
 			'slug'  => 'secondary',
-			'color' => '#EA8867',
+			'color' => esc_html( $theme_options['block_secondary_color'] ),
 		),
 		array(
 			'name'  => esc_html_x( 'Accent', 'block color', 'gt-workout' ),
 			'slug'  => 'accent',
-			'color' => '#F2E97E',
+			'color' => esc_html( $theme_options['block_accent_color'] ),
 		),
 		array(
 			'name'  => esc_html_x( 'Complementary', 'block color', 'gt-workout' ),
 			'slug'  => 'complementary',
-			'color' => '#1B8FB8',
+			'color' => esc_html( $theme_options['block_complementary_color'] ),
 		),
 		array(
 			'name'  => esc_html_x( 'White', 'block color', 'gt-workout' ),
