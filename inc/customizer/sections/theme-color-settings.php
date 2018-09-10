@@ -1,8 +1,6 @@
 <?php
 /**
- * Color Settings
- *
- * Register Color Settings
+ * Theme Color Settings
  *
  * @package GT Workout
  */
@@ -12,11 +10,11 @@
  *
  * @param object $wp_customize / Customizer Object.
  */
-function gt_workout_customize_register_color_settings( $wp_customize ) {
+function gt_workout_customize_register_theme_color_settings( $wp_customize ) {
 
 	// Add Section for Theme Colors.
-	$wp_customize->add_section( 'gt_workout_section_colors', array(
-		'title'    => esc_html_x( 'Colors', 'Color Settings', 'gt-workout' ),
+	$wp_customize->add_section( 'gt_workout_section_theme_colors', array(
+		'title'    => esc_html_x( 'Theme Colors', 'theme colors', 'gt-workout' ),
 		'priority' => 30,
 		'panel'    => 'gt_workout_options_panel',
 	) );
@@ -33,8 +31,8 @@ function gt_workout_customize_register_color_settings( $wp_customize ) {
 	) );
 	$wp_customize->add_control( new WP_Customize_Color_Control(
 		$wp_customize, 'gt_workout_theme_options[header_color]', array(
-			'label'    => esc_html_x( 'Header', 'Color Settings', 'gt-workout' ),
-			'section'  => 'gt_workout_section_colors',
+			'label'    => esc_html_x( 'Header', 'theme colors', 'gt-workout' ),
+			'section'  => 'gt_workout_section_theme_colors',
 			'settings' => 'gt_workout_theme_options[header_color]',
 			'priority' => 10,
 		)
@@ -49,8 +47,8 @@ function gt_workout_customize_register_color_settings( $wp_customize ) {
 	) );
 	$wp_customize->add_control( new WP_Customize_Color_Control(
 		$wp_customize, 'gt_workout_theme_options[navi_color]', array(
-			'label'    => esc_html_x( 'Navigation', 'Color Settings', 'gt-workout' ),
-			'section'  => 'gt_workout_section_colors',
+			'label'    => esc_html_x( 'Navigation', 'theme colors', 'gt-workout' ),
+			'section'  => 'gt_workout_section_theme_colors',
 			'settings' => 'gt_workout_theme_options[navi_color]',
 			'priority' => 20,
 		)
@@ -65,8 +63,8 @@ function gt_workout_customize_register_color_settings( $wp_customize ) {
 	) );
 	$wp_customize->add_control( new WP_Customize_Color_Control(
 		$wp_customize, 'gt_workout_theme_options[submenu_color]', array(
-			'label'    => esc_html_x( 'Navigation Submenus', 'Color Settings', 'gt-workout' ),
-			'section'  => 'gt_workout_section_colors',
+			'label'    => esc_html_x( 'Navigation Submenus', 'theme colors', 'gt-workout' ),
+			'section'  => 'gt_workout_section_theme_colors',
 			'settings' => 'gt_workout_theme_options[submenu_color]',
 			'priority' => 30,
 		)
@@ -81,8 +79,8 @@ function gt_workout_customize_register_color_settings( $wp_customize ) {
 	) );
 	$wp_customize->add_control( new WP_Customize_Color_Control(
 		$wp_customize, 'gt_workout_theme_options[title_color]', array(
-			'label'    => esc_html_x( 'Titles (primary)', 'Color Settings', 'gt-workout' ),
-			'section'  => 'gt_workout_section_colors',
+			'label'    => esc_html_x( 'Titles (primary)', 'theme colors', 'gt-workout' ),
+			'section'  => 'gt_workout_section_theme_colors',
 			'settings' => 'gt_workout_theme_options[title_color]',
 			'priority' => 40,
 		)
@@ -97,8 +95,8 @@ function gt_workout_customize_register_color_settings( $wp_customize ) {
 	) );
 	$wp_customize->add_control( new WP_Customize_Color_Control(
 		$wp_customize, 'gt_workout_theme_options[title_hover_color]', array(
-			'label'    => esc_html_x( 'Titles (secondary)', 'Color Settings', 'gt-workout' ),
-			'section'  => 'gt_workout_section_colors',
+			'label'    => esc_html_x( 'Titles (secondary)', 'theme colors', 'gt-workout' ),
+			'section'  => 'gt_workout_section_theme_colors',
 			'settings' => 'gt_workout_theme_options[title_hover_color]',
 			'priority' => 50,
 		)
@@ -113,8 +111,8 @@ function gt_workout_customize_register_color_settings( $wp_customize ) {
 	) );
 	$wp_customize->add_control( new WP_Customize_Color_Control(
 		$wp_customize, 'gt_workout_theme_options[link_color]', array(
-			'label'    => esc_html_x( 'Links & Buttons (primary)', 'Color Settings', 'gt-workout' ),
-			'section'  => 'gt_workout_section_colors',
+			'label'    => esc_html_x( 'Links & Buttons (primary)', 'theme colors', 'gt-workout' ),
+			'section'  => 'gt_workout_section_theme_colors',
 			'settings' => 'gt_workout_theme_options[link_color]',
 			'priority' => 60,
 		)
@@ -129,8 +127,8 @@ function gt_workout_customize_register_color_settings( $wp_customize ) {
 	) );
 	$wp_customize->add_control( new WP_Customize_Color_Control(
 		$wp_customize, 'gt_workout_theme_options[link_hover_color]', array(
-			'label'    => esc_html_x( 'Links & Buttons (secondary)', 'Color Settings', 'gt-workout' ),
-			'section'  => 'gt_workout_section_colors',
+			'label'    => esc_html_x( 'Links & Buttons (secondary)', 'theme colors', 'gt-workout' ),
+			'section'  => 'gt_workout_section_theme_colors',
 			'settings' => 'gt_workout_theme_options[link_hover_color]',
 			'priority' => 70,
 		)
@@ -145,11 +143,11 @@ function gt_workout_customize_register_color_settings( $wp_customize ) {
 	) );
 	$wp_customize->add_control( new WP_Customize_Color_Control(
 		$wp_customize, 'gt_workout_theme_options[footer_color]', array(
-			'label'    => esc_html_x( 'Footer', 'Color Settings', 'gt-workout' ),
-			'section'  => 'gt_workout_section_colors',
+			'label'    => esc_html_x( 'Footer', 'theme colors', 'gt-workout' ),
+			'section'  => 'gt_workout_section_theme_colors',
 			'settings' => 'gt_workout_theme_options[footer_color]',
 			'priority' => 80,
 		)
 	) );
 }
-add_action( 'customize_register', 'gt_workout_customize_register_color_settings' );
+add_action( 'customize_register', 'gt_workout_customize_register_theme_color_settings' );
