@@ -4,7 +4,7 @@
  * @package GT Workout
  */
 :root {
-	--containerWidth: 1260px;
+	--containerWidth: 1200px;
 	--contentWidth: 720px;
 	--link-color: #ee3333;
 	--link-hover-color: #282828;

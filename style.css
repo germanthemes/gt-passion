@@ -44,7 +44,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # - CSS Variables
 --------------------------------------------------------------*/
 :root {
-	--containerWidth: 1260px;
+	--containerWidth: 1200px;
 	--contentWidth: 720px;
 	--link-color: #ee3333;
 	--link-hover-color: #282828;
@@ -719,15 +719,30 @@ textarea {
 	padding: 0;
 	width: 100%;
 	overflow: hidden;
+	background: #fff;
 }
 
-.container {
-	margin-left: auto;
-	margin-right: auto;
+.site-header,
+.site-footer,
+.site-content {
 	padding-left: 1.25rem;
 	padding-right: 1.25rem;
-	max-width: 1260px;
-	max-width: var(--containerWidth);
+}
+
+.header-main,
+.footer-main,
+.site-main {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.header-main,
+.footer-main {
+	max-width: 1200px;
+}
+
+.site-main {
+	max-width: 720px;
 }
 
 /*--------------------------------------------------------------
@@ -1048,18 +1063,6 @@ textarea {
 /*--------------------------------------------------------------
 # - Posts and pages
 --------------------------------------------------------------*/
-.site-content {
-	display: grid;
-	grid-template-columns: 1fr minmax(0, 720px) 1fr;
-	grid-template-columns: 1fr minmax(0, var(--contentWidth)) 1fr;
-	grid-column-gap: 1.25rem;
-	background: #fff;
-}
-
-.site-main {
-	grid-column: 2 / -2;
-}
-
 .type-post,
 .type-page,
 .type-attachment {
@@ -1261,7 +1264,7 @@ body.date-hidden.author-hidden.categories-hidden .entry-meta {
 	text-decoration: underline;
 }
 
-.site-footer .site-info {
+.site-footer .footer-main {
 	padding-top: 1.5rem;
 	padding-bottom: 1.5rem;
 	text-align: center;
@@ -1625,7 +1628,9 @@ h2.is-style-gt-heading-large {
 ## - Media Queries for Layout
 --------------------------------------------------------------*/
 @media only screen and (min-width: 480px) {
-	.container {
+	.site-header,
+	.site-footer,
+	.site-content {
 		padding-left: 1.5rem;
 		padding-right: 1.5rem;
 	}
@@ -1633,10 +1638,6 @@ h2.is-style-gt-heading-large {
 	.header-main {
 		padding-top: 1.5rem;
 		padding-bottom: 1.5rem;
-	}
-
-	.site-content {
-		grid-column-gap: 1.5rem;
 	}
 }
 
@@ -1651,7 +1652,7 @@ h2.is-style-gt-heading-large {
 }
 
 @media only screen and (min-width: 880px) {
-	.site-footer .site-info {
+	.site-footer .footer-main {
 		text-align: left;
 	}
 }
@@ -1882,9 +1883,9 @@ h2.is-style-gt-heading-large {
 	}
 }
 
-@media only screen and (min-width: calc( 1260px - 3rem)) {
+@media only screen and (min-width: calc( 1200px - 3rem)) {
 	.entry-content > .alignwide {
-		margin-left: calc( ( -1260px + 3rem + 720px ) / 2);
-		margin-right: calc( ( -1260px + 3rem + 720px ) / 2);
+		margin-left: calc( ( -1200px + 3rem + 720px ) / 2);
+		margin-right: calc( ( -1200px + 3rem + 720px ) / 2);
 	}
 }

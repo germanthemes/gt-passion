@@ -1,16 +1,14 @@
 @media only screen and (min-width: 480px) {
-    .container {
-    	padding-left: 1.5rem;
-    	padding-right: 1.5rem;
-    }
+    .site-header,
+	.site-footer,
+	.site-content {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
 
     .header-main {
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
-    }
-
-    .site-content {
-    	grid-column-gap: 1.5rem;
     }
 }
 
@@ -25,7 +23,7 @@
 }
 
 @media only screen and (min-width: 880px) {
-    .site-footer .site-info {
+    .site-footer .footer-main {
 		text-align: left;
 	}
 }

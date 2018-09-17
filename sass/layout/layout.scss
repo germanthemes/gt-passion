@@ -4,13 +4,28 @@
 	padding: 0;
 	width: 100%;
 	overflow: hidden;
+	background: #fff;
 }
 
-.container {
-	margin-left: auto;
-	margin-right: auto;
+.site-header,
+.site-footer,
+.site-content {
 	padding-left: 1.25rem;
 	padding-right: 1.25rem;
+}
+
+.header-main,
+.footer-main,
+.site-main {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.header-main,
+.footer-main {
 	max-width: $themeWidth;
-	max-width: var(--containerWidth);
+}
+
+.site-main {
+	max-width: $contentWidth;
 }
