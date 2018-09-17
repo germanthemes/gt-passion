@@ -1106,12 +1106,8 @@ textarea {
 
 /* Entry Content */
 .entry-content {
-	font-size: 17px;
-	font-size: 1.0625rem;
-}
-
-.entry-content > p:first-child {
-	margin-top: 0;
+	font-size: 18px;
+	font-size: 1.125rem;
 }
 
 .entry-content > .alignwide,
@@ -1548,15 +1544,6 @@ h2.is-style-gt-heading-large {
 ## - Media Queries for Typography
 --------------------------------------------------------------*/
 @media only screen and (min-width: 640px) {
-	body,
-	button,
-	input,
-	select,
-	textarea {
-		font-size: 17px;
-		font-size: 1.0625rem;
-	}
-
 	.site-title {
 		font-size: 28px;
 		font-size: 1.75rem;
@@ -1570,11 +1557,6 @@ h2.is-style-gt-heading-large {
 	.entry-title {
 		font-size: 32px;
 		font-size: 2rem;
-	}
-
-	.entry-content {
-		font-size: 18px;
-		font-size: 1.125rem;
 	}
 
 	.entry-meta,
@@ -1614,11 +1596,6 @@ h2.is-style-gt-heading-large {
 	.pagination {
 		font-size: 17px;
 		font-size: 1.0625rem;
-	}
-
-	.entry-content {
-		font-size: 19px;
-		font-size: 1.1875rem;
 	}
 }
 

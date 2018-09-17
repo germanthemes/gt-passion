@@ -36,11 +36,7 @@
 
 /* Entry Content */
 .entry-content {
-	@include font-size(17);
-}
-
-.entry-content > p:first-child {
-	margin-top: 0;
+	@include font-size(18);
 }
 
 .entry-content > .alignwide,
