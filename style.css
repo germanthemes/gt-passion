@@ -1233,6 +1233,27 @@ body.date-hidden.author-hidden.categories-hidden .entry-meta {
 }
 
 /*--------------------------------------------------------------
+# - Page Layouts
+--------------------------------------------------------------*/
+
+/* Wide Page Layout */
+body.wide-page-layout .site-content .site-main {
+	max-width: 960px;
+}
+
+/* Fullwidth Page Layout */
+body.fullwidth-page-layout .site-content .site-main {
+	max-width: 1200px;
+}
+
+/* Disable Wide Blocks on Page Layouts */
+body.wide-page-layout .entry-content > .alignwide,
+body.fullwidth-page-layout .entry-content > .alignwide {
+	margin: 0;
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
 # - Footer
 --------------------------------------------------------------*/
 .site-footer {
