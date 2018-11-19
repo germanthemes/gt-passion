@@ -56,6 +56,24 @@ class GT_Workout_Custom_Colors {
 		// Color Variables.
 		$color_variables = '';
 
+		// Set Primary Color.
+		if ( $theme_options['primary_color'] !== $default['primary_color'] ) {
+			$color_variables .= '--primary-color: ' . $theme_options['primary_color'] . ';';
+			$color_variables .= '--link-color: ' . $theme_options['primary_color'] . ';';
+			$color_variables .= '--button-color: ' . $theme_options['primary_color'] . ';';
+			$color_variables .= '--title-hover-color: ' . $theme_options['primary_color'] . ';';
+
+			// Check if a light background color was chosen.
+			if ( self::is_color_light( $theme_options['primary_color'] ) ) {
+				$color_variables .= '--button-text-color: #282828;';
+			}
+		}
+
+		// Set Secondary Color.
+		if ( $theme_options['secondary_color'] !== $default['secondary_color'] ) {
+			$color_variables .= '--secondary-color: ' . $theme_options['secondary_color'] . ';';
+		}
+
 		// Set Header Color.
 		if ( $theme_options['header_color'] !== $default['header_color'] ) {
 			$color_variables .= '--header-background-color: ' . $theme_options['header_color'] . ';';
@@ -63,83 +81,14 @@ class GT_Workout_Custom_Colors {
 			// Check if a light background color was chosen.
 			if ( self::is_color_light( $theme_options['header_color'] ) ) {
 				$color_variables .= '--header-text-color: #282828;';
-				$color_variables .= '--header-hover-text-color: rgba(0, 0, 0, 0.5);';
+				$color_variables .= '--header-text-hover-color: rgba(0, 0, 0, 0.5);';
 				$color_variables .= '--header-border-color: rgba(0, 0, 0, 0.075);';
-			}
-		}
-
-		// Set Navigation Color.
-		if ( $theme_options['navi_color'] !== $default['navi_color'] ) {
-			$color_variables .= '--navi-bg-color: ' . $theme_options['navi_color'] . ';';
-
-			// Check if a light background color was chosen.
-			if ( self::is_color_light( $theme_options['navi_color'] ) ) {
-				$color_variables .= '--navi-text-color: #282828;';
-			}
-		}
-
-		// Set Navigation Submenu Color.
-		if ( $theme_options['submenu_color'] !== $default['submenu_color'] ) {
-			$color_variables .= '--submenu-color: ' . $theme_options['submenu_color'] . ';';
-
-			// Check if a light background color was chosen.
-			if ( self::is_color_light( $theme_options['submenu_color'] ) ) {
-				$color_variables .= '--submenu-text-color: #282828;';
-				$color_variables .= '--submenu-hover-text-color: rgba(0, 0, 0, 0.5);';
-				$color_variables .= '--submenu-border-color: rgba(0, 0, 0, 0.1);';
 			}
 		}
 
 		// Set Title Color.
 		if ( $theme_options['title_color'] !== $default['title_color'] ) {
 			$color_variables .= '--title-color: ' . $theme_options['title_color'] . ';';
-		}
-
-		// Set Title Hover Color.
-		if ( $theme_options['title_hover_color'] !== $default['title_hover_color'] ) {
-			$color_variables .= '--title-hover-color: ' . $theme_options['title_hover_color'] . ';';
-		}
-
-		// Set Primary Link Color.
-		if ( $theme_options['link_color'] !== $default['link_color'] ) {
-			$color_variables .= '--link-color: ' . $theme_options['link_color'] . ';';
-			$color_variables .= '--button-color: ' . $theme_options['link_color'] . ';';
-
-			// Check if a light background color was chosen.
-			if ( self::is_color_light( $theme_options['link_color'] ) ) {
-				$color_variables .= '--button-text-color: #282828;';
-			}
-		}
-
-		// Set Secondary Link Color.
-		if ( $theme_options['link_hover_color'] !== $default['link_hover_color'] ) {
-			$color_variables .= '--link-hover-color: ' . $theme_options['link_hover_color'] . ';';
-			$color_variables .= '--button-hover-color: ' . $theme_options['link_hover_color'] . ';';
-
-			// Check if a light background color was chosen.
-			if ( self::is_color_light( $theme_options['link_hover_color'] ) ) {
-				$color_variables .= '--button-hover-text-color: #282828;';
-			}
-		}
-
-		// Set Block Primary Color.
-		if ( $theme_options['block_primary_color'] !== $default['block_primary_color'] ) {
-			$color_variables .= '--block-primary-color: ' . $theme_options['block_primary_color'] . ';';
-		}
-
-		// Set Block Secondary Color.
-		if ( $theme_options['block_secondary_color'] !== $default['block_secondary_color'] ) {
-			$color_variables .= '--block-secondary-color: ' . $theme_options['block_secondary_color'] . ';';
-		}
-
-		// Set Block Accent Color.
-		if ( $theme_options['block_accent_color'] !== $default['block_accent_color'] ) {
-			$color_variables .= '--block-accent-color: ' . $theme_options['block_accent_color'] . ';';
-		}
-
-		// Set Block Complementary Color.
-		if ( $theme_options['block_complementary_color'] !== $default['block_complementary_color'] ) {
-			$color_variables .= '--block-complementary-color: ' . $theme_options['block_complementary_color'] . ';';
 		}
 
 		// Set Footer Color.

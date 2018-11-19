@@ -49,24 +49,17 @@ function gt_workout_theme_options() {
 function gt_workout_default_options() {
 
 	$default_options = array(
-		'site_title'                => true,
-		'site_description'          => true,
-		'header_color'              => '#282828',
-		'navi_color'                => '#ee3333',
-		'submenu_color'             => '#383838',
-		'title_color'               => '#282828',
-		'title_hover_color'         => '#ee3333',
-		'link_color'                => '#ee3333',
-		'link_hover_color'          => '#282828',
-		'footer_color'              => '#282828',
-		'block_primary_color'       => '#ee3333',
-		'block_secondary_color'     => '#ea8867',
-		'block_accent_color'        => '#f2e97e',
-		'block_complementary_color' => '#1b8fb8',
-		'text_font'                 => 'Rambla',
-		'title_font'                => 'Fira Sans',
-		'navi_font'                 => 'Fira Sans',
-		'footer_text'               => sprintf( '&copy; %1$s %2$s', date( 'Y' ), get_bloginfo( 'name' ) ),
+		'site_title'       => true,
+		'site_description' => true,
+		'primary_color'    => '#ee3333',
+		'secondary_color'  => '#ea8867',
+		'header_color'     => '#282828',
+		'title_color'      => '#282828',
+		'footer_color'     => '#282828',
+		'text_font'        => 'Rambla',
+		'title_font'       => 'Fira Sans',
+		'navi_font'        => 'Fira Sans',
+		'footer_text'      => sprintf( '&copy; %1$s %2$s', date( 'Y' ), get_bloginfo( 'name' ) ),
 	);
 
 	return apply_filters( 'gt_workout_default_options', $default_options );

@@ -53,7 +53,7 @@
 
 .main-navigation ul a:hover,
 .main-navigation ul a:active {
-	@include color(--header-hover-text-color);
+	@include color(--header-text-hover-color);
 }
 
 .main-navigation ul li.current-menu-item > a {
@@ -62,9 +62,8 @@
 
 /* Submenus */
 .main-navigation ul ul {
-	padding: 0.5rem 0.75rem;
 	@include font-size(15);
-	@include background(--submenu-color);
+	@include background(--header-background-color);
 }
 
 .main-navigation ul ul.toggled-on {
@@ -72,18 +71,8 @@
 }
 
 .main-navigation ul ul a {
-	padding: 0.75rem 1rem;
 	border: none;
-}
-
-.main-navigation ul ul a:link,
-.main-navigation ul ul a:visited {
-	@include color(--submenu-text-color);
-}
-
-.main-navigation ul ul a:hover,
-.main-navigation ul ul a:active {
-	@include color(--submenu-hover-text-color);
+	@include background(--submenu-background-color);
 }
 
 /* Main Navigation Toggle */
@@ -115,7 +104,7 @@
 
 .menu-toggle:hover,
 .menu-toggle:active {
-	@include color(--header-hover-text-color);
+	@include color(--header-text-hover-color);
 	background: none;
 	cursor: pointer;
 }
@@ -130,7 +119,7 @@
 
 .menu-toggle:hover .icon,
 .menu-toggle:active .icon {
-	@include fill(--header-hover-text-color);
+	@include fill(--header-text-hover-color);
 }
 
 .toggled-on .menu-toggle .icon-menu,
@@ -173,7 +162,7 @@
 
 .dropdown-toggle:hover .icon,
 .dropdown-toggle:active .icon {
-	@include fill(--header-hover-text-color);
+	@include fill(--header-text-hover-color);
 }
 
 .dropdown-toggle.toggled-on .icon {

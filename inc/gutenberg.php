@@ -24,22 +24,12 @@ function gt_workout_gutenberg_support() {
 		array(
 			'name'  => esc_html_x( 'Primary', 'block color', 'gt-workout' ),
 			'slug'  => 'primary',
-			'color' => esc_html( $theme_options['block_primary_color'] ),
+			'color' => esc_html( $theme_options['primary_color'] ),
 		),
 		array(
 			'name'  => esc_html_x( 'Secondary', 'block color', 'gt-workout' ),
 			'slug'  => 'secondary',
-			'color' => esc_html( $theme_options['block_secondary_color'] ),
-		),
-		array(
-			'name'  => esc_html_x( 'Accent', 'block color', 'gt-workout' ),
-			'slug'  => 'accent',
-			'color' => esc_html( $theme_options['block_accent_color'] ),
-		),
-		array(
-			'name'  => esc_html_x( 'Complementary', 'block color', 'gt-workout' ),
-			'slug'  => 'complementary',
-			'color' => esc_html( $theme_options['block_complementary_color'] ),
+			'color' => esc_html( $theme_options['secondary_color'] ),
 		),
 		array(
 			'name'  => esc_html_x( 'White', 'block color', 'gt-workout' ),
@@ -62,9 +52,6 @@ function gt_workout_gutenberg_support() {
 			'color' => '#242424',
 		),
 	) );
-
-	// Disable theme support for custom colors.
-	#add_theme_support( 'disable-custom-colors' );
 
 	// Add theme support for font sizes.
 	add_theme_support( 'editor-font-sizes', array(

@@ -55,7 +55,7 @@
 
 .site-title a:hover,
 .site-title a:active {
-	@include color(--header-hover-text-color);
+	@include color(--header-text-hover-color);
 }
 
 .site-description {
@@ -69,8 +69,6 @@
 /* Custom Header Image */
 .header-image {
 	margin: 0;
-	border-bottom: 10px solid #ee3333;
-	border-bottom: 10px solid var(--navi-bg-color);
 }
 
 .header-image img,

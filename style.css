@@ -44,6 +44,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # - CSS Variables
 --------------------------------------------------------------*/
 :root {
+	--primary-color: #ee3333;
+	--secondary-color: #ea8867;
 	--link-color: #ee3333;
 	--link-hover-color: #282828;
 	--button-color: #ee3333;
@@ -52,23 +54,15 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--button-hover-text-color: #fff;
 	--header-background-color: #282828;
 	--header-text-color: #fff;
-	--header-hover-text-color: rgba(255, 255, 255, 0.5);
+	--header-text-hover-color: rgba(255, 255, 255, 0.5);
 	--header-border-color: rgba(255, 255, 255, 0.05);
-	--navi-text-color: #fff;
-	--navi-bg-color: #ee3333;
-	--submenu-color: #383838;
-	--submenu-text-color: #fff;
-	--submenu-hover-text-color: rgba(255, 255, 255, 0.5);
+	--submenu-background-color: rgba(255, 255, 255, 0.05);
 	--title-color: #282828;
 	--title-hover-color: #ee3333;
 	--footer-color: #282828;
 	--footer-text-color: #fff;
 	--footer-hover-text-color: rgba(255, 255, 255, 0.5);
 	--footer-border-color: rgba(255, 255, 255, 0.035);
-	--block-primary-color: #ee3333;
-	--block-secondary-color: #ea8867;
-	--block-accent-color: #f2e97e;
-	--block-complementary-color: #1b8fb8;
 	--text-font: Raleway, Arial, Helvetica;
 	--title-font: "Fira Sans", Tahoma, Arial;
 	--title-font-weight: bold;
@@ -811,7 +805,7 @@ textarea {
 .site-title a:hover,
 .site-title a:active {
 	color: rgba(255, 255, 255, 0.5);
-	color: var(--header-hover-text-color);
+	color: var(--header-text-hover-color);
 }
 
 .site-description {
@@ -827,8 +821,6 @@ textarea {
 /* Custom Header Image */
 .header-image {
 	margin: 0;
-	border-bottom: 10px solid #ee3333;
-	border-bottom: 10px solid var(--navi-bg-color);
 }
 
 .header-image img,
@@ -904,7 +896,7 @@ textarea {
 .main-navigation ul a:hover,
 .main-navigation ul a:active {
 	color: rgba(255, 255, 255, 0.5);
-	color: var(--header-hover-text-color);
+	color: var(--header-text-hover-color);
 }
 
 .main-navigation ul li.current-menu-item > a {
@@ -913,11 +905,10 @@ textarea {
 
 /* Submenus */
 .main-navigation ul ul {
-	padding: 0.5rem 0.75rem;
 	font-size: 15px;
 	font-size: 0.9375rem;
-	background-color: #383838;
-	background-color: var(--submenu-color);
+	background-color: #282828;
+	background-color: var(--header-background-color);
 }
 
 .main-navigation ul ul.toggled-on {
@@ -925,20 +916,9 @@ textarea {
 }
 
 .main-navigation ul ul a {
-	padding: 0.75rem 1rem;
 	border: none;
-}
-
-.main-navigation ul ul a:link,
-.main-navigation ul ul a:visited {
-	color: #fff;
-	color: var(--submenu-text-color);
-}
-
-.main-navigation ul ul a:hover,
-.main-navigation ul ul a:active {
-	color: rgba(255, 255, 255, 0.5);
-	color: var(--submenu-hover-text-color);
+	background-color: rgba(255, 255, 255, 0.05);
+	background-color: var(--submenu-background-color);
 }
 
 /* Main Navigation Toggle */
@@ -977,7 +957,7 @@ textarea {
 .menu-toggle:hover,
 .menu-toggle:active {
 	color: rgba(255, 255, 255, 0.5);
-	color: var(--header-hover-text-color);
+	color: var(--header-text-hover-color);
 	background: none;
 	cursor: pointer;
 }
@@ -994,7 +974,7 @@ textarea {
 .menu-toggle:hover .icon,
 .menu-toggle:active .icon {
 	fill: rgba(255, 255, 255, 0.5);
-	fill: var(--header-hover-text-color);
+	fill: var(--header-text-hover-color);
 }
 
 .toggled-on .menu-toggle .icon-menu,
@@ -1040,7 +1020,7 @@ textarea {
 .dropdown-toggle:hover .icon,
 .dropdown-toggle:active .icon {
 	fill: rgba(255, 255, 255, 0.5);
-	fill: var(--header-hover-text-color);
+	fill: var(--header-text-hover-color);
 }
 
 .dropdown-toggle.toggled-on .icon {
@@ -1184,18 +1164,6 @@ textarea {
 
 .entry-meta .updated:not(.published) {
 	display: none;
-}
-
-/* Hide post meta if they are deactivated in settings */
-body.date-hidden .type-post .entry-meta .posted-on,
-body.author-hidden .type-post .entry-meta .posted-by,
-body.categories-hidden .type-post .entry-meta .posted-in,
-body.date-hidden.author-hidden.categories-hidden .entry-meta {
-	position: absolute;
-	overflow: hidden;
-	clip: rect(1px, 1px, 1px, 1px);
-	width: 1px;
-	height: 1px;
 }
 
 /* Theme Pagination */
@@ -1469,22 +1437,12 @@ h2.is-style-gt-heading-large {
 /* Block Text Colors */
 .has-primary-color {
 	color: #ee3333;
-	color: var(--block-primary-color);
+	color: var(--primary-color);
 }
 
 .has-secondary-color {
 	color: #ea8867;
-	color: var(--block-secondary-color);
-}
-
-.has-accent-color {
-	color: #f2e97e;
-	color: var(--block-accent-color);
-}
-
-.has-complementary-color {
-	color: #1b8fb8;
-	color: var(--block-complementary-color);
+	color: var(--secondary-color);
 }
 
 .has-white-color {
@@ -1506,22 +1464,12 @@ h2.is-style-gt-heading-large {
 /* Block Background Colors */
 .has-primary-background-color {
 	background-color: #ee3333;
-	background-color: var(--block-primary-color);
+	background-color: var(--primary-color);
 }
 
 .has-secondary-background-color {
 	background-color: #ea8867;
-	background-color: var(--block-secondary-color);
-}
-
-.has-accent-background-color {
-	background-color: #f2e97e;
-	background-color: var(--block-accent-color);
-}
-
-.has-complementary-background-color {
-	background-color: #1b8fb8;
-	background-color: var(--block-complementary-color);
+	background-color: var(--secondary-color);
 }
 
 .has-white-background-color {
@@ -1720,14 +1668,6 @@ h2.is-style-gt-heading-large {
 		border: none;
 	}
 
-	.main-navigation ul li.current-menu-item > a {
-		color: #fff;
-		color: var(--navi-text-color);
-		background-color: #ee3333;
-		background-color: var(--navi-bg-color);
-		text-decoration: none;
-	}
-
 	/* Dropdown Menus */
 	.main-navigation ul ul {
 		position: absolute;
@@ -1754,7 +1694,7 @@ h2.is-style-gt-heading-large {
 
 	.main-navigation ul ul ul {
 		left: -999em;
-		margin-top: -0.5rem;
+		margin-top: 0;
 		top: 0;
 	}
 
@@ -1774,7 +1714,7 @@ h2.is-style-gt-heading-large {
 	.main-navigation ul .menu-item-has-children > a:hover > .icon,
 	.main-navigation ul .page_item_has_children > a:hover > .icon {
 		fill: rgba(255, 255, 255, 0.5);
-		fill: var(--header-hover-text-color);
+		fill: var(--header-text-hover-color);
 	}
 
 	.main-navigation ul ul .menu-item-has-children > a > .icon,
@@ -1789,44 +1729,12 @@ h2.is-style-gt-heading-large {
 		-ms-transform: rotate(-90deg);
 		/* IE 9 */
 		transform: rotate(-90deg);
-		fill: #fff;
-		fill: var(--submenu-text-color);
-	}
-
-	.main-navigation ul ul .menu-item-has-children > a:hover > .icon,
-	.main-navigation ul ul .page_item_has_children > a:hover > .icon {
-		fill: rgba(255, 255, 255, 0.5);
-		fill: var(--submenu-hover-text-color);
 	}
 
 	/* Extra Styling for top menu items with dropdowns */
 	.main-navigation ul li.menu-item-has-children:hover a {
-		background-color: #383838;
-		background-color: var(--submenu-color);
-	}
-
-	.main-navigation ul li.menu-item-has-children:hover a:link,
-	.main-navigation ul li.menu-item-has-children:hover a:visited {
-		color: #fff;
-		color: var(--submenu-text-color);
-	}
-
-	.main-navigation ul li.menu-item-has-children:hover a:hover,
-	.main-navigation ul li.menu-item-has-children:hover a:active {
-		color: rgba(255, 255, 255, 0.5);
-		color: var(--submenu-hover-text-color);
-	}
-
-	.main-navigation ul li.menu-item-has-children:hover a > .icon,
-	.main-navigation ul li.page_item_has_children:hover a > .icon {
-		fill: #fff;
-		fill: var(--submenu-text-color);
-	}
-
-	.main-navigation ul li.menu-item-has-children:hover a:hover > .icon,
-	.main-navigation ul li.page_item_has_children:hover a:hover > .icon {
-		fill: rgba(255, 255, 255, 0.5);
-		fill: var(--submenu-hover-text-color);
+		background-color: rgba(255, 255, 255, 0.05);
+		background-color: var(--submenu-background-color);
 	}
 }
 
