@@ -51,11 +51,6 @@ function gt_workout_default_options() {
 	$default_options = array(
 		'site_title'                => true,
 		'site_description'          => true,
-		'meta_date'                 => true,
-		'meta_author'               => true,
-		'meta_category'             => true,
-		'post_image_archives'       => true,
-		'post_image_single'         => true,
 		'header_color'              => '#282828',
 		'navi_color'                => '#ee3333',
 		'submenu_color'             => '#383838',

@@ -37,11 +37,11 @@ if ( ! function_exists( 'gt_workout_site_description' ) ) :
 		$description = get_bloginfo( 'description', 'display' ); /* WPCS: xss ok. */
 
 		if ( $description || is_customize_preview() ) :
-		?>
+			?>
 
 			<p class="site-description"><?php echo $description; ?></p>
 
-		<?php
+			<?php
 		endif;
 	}
 endif;
@@ -54,8 +54,8 @@ if ( ! function_exists( 'gt_workout_header_image' ) ) :
 	function gt_workout_header_image() {
 
 		// Display featured image as header image on single posts.
-		if ( is_single() && has_post_thumbnail() && ( true === gt_workout_get_option( 'post_image_single' ) || is_customize_preview() ) ) :
-		?>
+		if ( is_single() && has_post_thumbnail() ) :
+			?>
 
 			<div id="headimg" class="header-image featured-header-image">
 
@@ -63,10 +63,9 @@ if ( ! function_exists( 'gt_workout_header_image' ) ) :
 
 			</div>
 
-		<?php
-		// Display featured image as header image on static pages.
-		elseif ( is_page() && has_post_thumbnail() ) :
-		?>
+			<?php
+		elseif ( is_page() && has_post_thumbnail() ) : // Display featured image as header image on static pages.
+			?>
 
 			<div id="headimg" class="header-image featured-header-image">
 
@@ -74,10 +73,9 @@ if ( ! function_exists( 'gt_workout_header_image' ) ) :
 
 			</div>
 
-		<?php
-		// Display header image.
-		elseif ( has_header_image() ) :
-		?>
+			<?php
+		elseif ( has_header_image() ) : // Display header image.
+			?>
 
 			<div id="headimg" class="header-image default-header-image">
 
@@ -85,7 +83,7 @@ if ( ! function_exists( 'gt_workout_header_image' ) ) :
 
 			</div>
 
-		<?php
+			<?php
 		endif;
 	}
 endif;
@@ -137,7 +135,7 @@ if ( ! function_exists( 'gt_workout_post_image_archives' ) ) :
 
 		// Display Post Thumbnail if activated.
 		if ( true === gt_workout_get_option( 'post_image_archives' ) && has_post_thumbnail() ) :
-		?>
+			?>
 
 			<div class="post-image post-image-archives">
 				<a class="wp-post-image-link" href="<?php the_permalink(); ?>" rel="bookmark">
@@ -145,7 +143,7 @@ if ( ! function_exists( 'gt_workout_post_image_archives' ) ) :
 				</a>
 			</div>
 
-		<?php
+			<?php
 		endif;
 	}
 endif;
@@ -264,10 +262,10 @@ function gt_workout_footer_text() {
 	$footer_text = gt_workout_get_option( 'footer_text' );
 
 	if ( '' !== $footer_text || is_customize_preview() ) :
-	?>
+		?>
 
 		<span class="footer-text"><?php echo wp_kses_post( $footer_text ); ?></span>
 
-	<?php
+		<?php
 	endif;
 }
