@@ -56,9 +56,9 @@ function gt_workout_default_options() {
 		'header_color'     => '#282828',
 		'title_color'      => '#282828',
 		'footer_color'     => '#282828',
-		'text_font'        => 'Rambla',
-		'title_font'       => 'Fira Sans',
-		'navi_font'        => 'Fira Sans',
+		'text_font'        => 'SystemFontStack',
+		'title_font'       => 'SystemFontStack',
+		'navi_font'        => 'SystemFontStack',
 		'footer_text'      => sprintf( '&copy; %1$s %2$s', date( 'Y' ), get_bloginfo( 'name' ) ),
 	);
 

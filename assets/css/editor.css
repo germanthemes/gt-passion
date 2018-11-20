@@ -23,11 +23,11 @@
 	--footer-text-color: #fff;
 	--footer-hover-text-color: rgba(255, 255, 255, 0.5);
 	--footer-border-color: rgba(255, 255, 255, 0.035);
-	--text-font: Raleway, Arial, Helvetica;
-	--title-font: "Fira Sans", Tahoma, Arial;
+	--text-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--title-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	--title-font-weight: bold;
 	--title-text-transform: uppercase;
-	--navi-font: "Fira Sans", Tahoma, Arial;
+	--navi-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	--navi-font-weight: bold;
 	--navi-text-transform: uppercase;
 }
@@ -36,7 +36,7 @@
 body.gutenberg-editor-page .editor-post-title__block .editor-post-title__input {
 	font-size: 36px;
 	font-size: 2.25rem;
-	font-family: "Fira Sans", Tahoma, Arial;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-family: var(--title-font);
 	font-weight: bold;
 	font-weight: var(--title-font-weight);
