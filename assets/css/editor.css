@@ -19,9 +19,10 @@
 	--submenu-background-color: rgba(255, 255, 255, 0.05);
 	--title-color: #282828;
 	--title-hover-color: #ee3333;
-	--footer-color: #282828;
+	--footer-background-color: #282828;
 	--footer-text-color: #fff;
-	--footer-hover-text-color: rgba(255, 255, 255, 0.5);
+	--footer-link-color: rgba(255, 255, 255, 0.75);
+	--footer-link-hover-color: #fff;
 	--footer-border-color: rgba(255, 255, 255, 0.035);
 	--text-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	--title-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
