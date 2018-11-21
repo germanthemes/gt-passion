@@ -175,8 +175,33 @@ add_action( 'widgets_init', 'gt_workout_widgets_init' );
 
 
 /**
+ * Set up automatic theme updates.
+ *
+ * @return void
+ */
+function gt_workout_theme_updater() {
+	if ( '' !== gt_workout_get_option( 'license_key' ) ) :
+
+		// Setup the updater.
+		$theme_updater = new GT_Workout_Plugin_Updater( GT_WORKOUT_STORE_API_URL, __FILE__, array(
+			'version' => '1.0',
+			'license' => trim( gt_workout_get_option( 'license_key' ) ),
+			'item_id' => GT_WORKOUT_PRODUCT_ID,
+			'author'  => 'GermanThemes',
+		) );
+
+	endif;
+}
+add_action( 'admin_init', 'gt_workout_theme_updater', 0 );
+
+
+/**
  * Include Files
  */
+
+// Include Admin Classes.
+require get_template_directory() . '/inc/admin/license-key.php';
+require get_template_directory() . '/inc/admin/theme-updater.php';
 
 // Include Customizer Options.
 require get_template_directory() . '/inc/customizer/customizer.php';

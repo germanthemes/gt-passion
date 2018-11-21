@@ -17,7 +17,7 @@ function gt_workout_customize_register_typography_settings( $wp_customize ) {
 	// Add Section for Theme Fonts.
 	$wp_customize->add_section( 'gt_workout_section_typography', array(
 		'title'    => esc_html__( 'Typography', 'gt-workout' ),
-		'priority' => 40,
+		'priority' => 20,
 		'panel'    => 'gt_workout_options_panel',
 	) );
 
