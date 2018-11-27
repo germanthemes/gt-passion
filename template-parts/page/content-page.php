@@ -17,6 +17,8 @@
 
 	<div class="entry-content">
 
+		<?php gt_workout_post_image(); ?>
+
 		<?php the_content(); ?>
 
 	</div><!-- .entry-content -->

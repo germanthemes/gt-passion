@@ -2,7 +2,7 @@
 $themeWidth: 1200px;
 
 // Content Width.
-$contentWidth: 720px;
+$contentWidth: 800px;
 $wideBlockWidth: 960px;
 
 // Fullwidth Template.
@@ -59,6 +59,6 @@ $fontWeight: (
 
 // Text Transform.
 $textTransform: (
-	--title-text-transform : uppercase,
+	--title-text-transform : none,
 	--navi-text-transform  : uppercase,
 );

@@ -67,7 +67,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--text-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	--title-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	--title-font-weight: bold;
-	--title-text-transform: uppercase;
+	--title-text-transform: none;
 	--navi-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	--navi-font-weight: bold;
 	--navi-text-transform: uppercase;
@@ -730,7 +730,7 @@ textarea {
 }
 
 .site-main {
-	max-width: 720px;
+	max-width: 800px;
 }
 
 /*--------------------------------------------------------------
@@ -784,11 +784,11 @@ textarea {
 	font-size: 24px;
 	font-size: 1.5rem;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-family: var(--title-font);
+	font-family: var(--navi-font);
 	font-weight: bold;
-	font-weight: var(--title-font-weight);
+	font-weight: var(--navi-font-weight);
 	text-transform: uppercase;
-	text-transform: var(--title-text-transform);
+	text-transform: var(--navi-text-transform);
 	line-height: 1.4;
 }
 
@@ -1037,16 +1037,26 @@ textarea {
 /*--------------------------------------------------------------
 # - Posts and pages
 --------------------------------------------------------------*/
+.site-content {
+	padding-top: 1.25rem;
+}
+
 .type-post,
 .type-page,
 .type-attachment {
-	margin: 0;
+	margin: 0 0 1.25rem;
 	padding: 0;
+}
+
+.blog .type-post,
+.archive .type-post {
+	padding-bottom: 1.25rem;
+	border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
 
 /* Entry Header */
 .entry-header {
-	margin: 1.5rem 0 1rem;
+	margin-bottom: 1rem;
 }
 
 .entry-title {
@@ -1056,13 +1066,13 @@ textarea {
 	color: var(--title-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
-	font-size: 28px;
-	font-size: 1.75rem;
+	font-size: 24px;
+	font-size: 1.5rem;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-family: var(--title-font);
 	font-weight: bold;
 	font-weight: var(--title-font-weight);
-	text-transform: uppercase;
+	text-transform: none;
 	text-transform: var(--title-text-transform);
 	line-height: 1.4;
 }
@@ -1082,30 +1092,30 @@ textarea {
 
 /* Entry Content */
 .entry-content {
-	font-size: 18px;
-	font-size: 1.125rem;
+	font-size: 17px;
+	font-size: 1.0625rem;
 }
 
 .entry-content > .alignwide,
 .entry-content > .alignfull {
-	margin-left: calc( -100vw / 2 + 100% / 2 + 8px);
-	margin-right: calc( -100vw / 2 + 100% / 2 + 8px);
+	margin-left: calc( -100vw / 2 + 100% / 2);
+	margin-right: calc( -100vw / 2 + 100% / 2);
 	max-width: 100vw;
 }
 
 /* Featured Images */
-.wp-post-image {
-	vertical-align: top;
+.post-image {
+	margin-bottom: 1rem;
 }
 
-.post-image-archives .wp-post-image {
-	margin-bottom: 1rem;
+.wp-post-image {
+	vertical-align: top;
 }
 
 /* Read More Button */
 .more-link {
 	display: inline-block;
-	padding: 0.75rem 1rem;
+	padding: 0.6em 1.2em;
 	color: #fff;
 	color: var(--button-text-color);
 	background-color: #ee3333;
@@ -1116,7 +1126,7 @@ textarea {
 	font-family: var(--title-font);
 	font-weight: bold;
 	font-weight: var(--title-font-weight);
-	text-transform: uppercase;
+	text-transform: none;
 	text-transform: var(--title-text-transform);
 }
 
@@ -1142,20 +1152,10 @@ textarea {
 }
 
 .entry-meta {
-	margin: 0.5rem 0 0;
+	margin: 0.35rem 0 0;
 	color: rgba(0, 0, 0, 0.5);
-	font-size: 15px;
-	font-size: 0.9375rem;
-}
-
-.entry-meta a:link,
-.entry-meta a:visited {
-	text-decoration: none;
-}
-
-.entry-meta a:hover,
-.entry-meta a:active {
-	text-decoration: underline;
+	font-size: 16px;
+	font-size: 1rem;
 }
 
 .entry-meta .updated:not(.published) {
@@ -1164,17 +1164,18 @@ textarea {
 
 /* Theme Pagination */
 .pagination {
-	margin: 1.5rem 0;
+	margin: 0 0 1.25rem;
 	padding: 0;
-	font-size: 15px;
-	font-size: 0.9375rem;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
 }
 
 .pagination .page-numbers,
 .pagination .current {
 	display: inline-block;
-	margin: 0 1px 0 0;
-	padding: 0.35em 1em;
+	margin: 0 0.5em 0 0;
+	padding: 0.6em 1.2em;
 	text-align: center;
 	text-decoration: none;
 	color: #fff;
@@ -1208,8 +1209,8 @@ body.fullwidth-page-layout .site-content .site-main {
 /* Adjust Wide Blocks */
 @media only screen and (min-width: 960px) {
 	body.fullwidth-page-layout .entry-content > .alignwide {
-		margin-left: calc( -100vw / 2 + 100% / 2 + 8px);
-		margin-right: calc( -100vw / 2 + 100% / 2 + 8px);
+		margin-left: calc( -100vw / 2 + 100% / 2);
+		margin-right: calc( -100vw / 2 + 100% / 2);
 		max-width: 100vw;
 	}
 }
@@ -1636,11 +1637,20 @@ object {
 		font-size: 2rem;
 	}
 
-	.entry-meta,
+	.entry-content {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+
+	.entry-meta {
+		font-size: 17px;
+		font-size: 1.0625rem;
+	}
+
 	.more-link,
 	.pagination {
-		font-size: 16px;
-		font-size: 1rem;
+		font-size: 15px;
+		font-size: 0.9375rem;
 	}
 
 	.widget-title,
@@ -1653,22 +1663,44 @@ object {
 }
 
 @media only screen and (min-width: 960px) {
-	.site-title {
-		font-size: 32px;
-		font-size: 2rem;
-	}
-
-	.site-description {
-		font-size: 15px;
-		font-size: 0.9375rem;
-	}
-
 	.entry-title {
-		font-size: 36px;
-		font-size: 2.25rem;
+		font-size: 40px;
+		font-size: 2.5rem;
 	}
 
-	.entry-meta,
+	.entry-content {
+		font-size: 19px;
+		font-size: 1.1875rem;
+	}
+
+	.entry-meta {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+
+	.more-link,
+	.pagination {
+		font-size: 16px;
+		font-size: 1rem;
+	}
+}
+
+@media only screen and (min-width: 1280px) {
+	.entry-title {
+		font-size: 48px;
+		font-size: 3rem;
+	}
+
+	.entry-content {
+		font-size: 20px;
+		font-size: 1.25rem;
+	}
+
+	.entry-meta {
+		font-size: 19px;
+		font-size: 1.1875rem;
+	}
+
 	.more-link,
 	.pagination {
 		font-size: 17px;
@@ -1690,6 +1722,27 @@ object {
 	.header-main {
 		padding-top: 1.5rem;
 		padding-bottom: 1.5rem;
+	}
+
+	.site-content {
+		padding-top: 1.5rem;
+	}
+
+	.type-post,
+	.type-page,
+	.type-attachment,
+	.pagination {
+		margin-bottom: 1.5rem;
+	}
+
+	.blog .type-post,
+	.archive .type-post {
+		padding-bottom: 1.5rem;
+	}
+
+	.entry-header,
+	.post-image {
+		margin-bottom: 1.25rem;
 	}
 }
 
@@ -1722,15 +1775,30 @@ object {
 	}
 }
 
-@media only screen and (min-width: 800px) {
-	.entry-header {
-		margin: 2rem 0 1.5rem;
+@media only screen and (min-width: 640px) {
+	.site-content {
+		padding-top: 2rem;
 	}
 
+	.type-post,
+	.type-page,
+	.type-attachment,
 	.pagination {
-		margin: 2rem 0;
+		margin-bottom: 2rem;
 	}
 
+	.blog .type-post,
+	.archive .type-post {
+		padding-bottom: 2rem;
+	}
+
+	.entry-header,
+	.post-image {
+		margin-bottom: 1.5rem;
+	}
+}
+
+@media only screen and (min-width: 800px) {
 	/* Three Column Footer Widgets */
 	.footer-widget-column:nth-child(1):nth-last-child(3),
 	.footer-widget-column:nth-child(2):nth-last-child(2),
@@ -1746,9 +1814,30 @@ object {
 }
 
 @media only screen and (min-width: 960px) {
+	.site-content {
+		padding-top: 3rem;
+	}
+
+	.type-post,
+	.type-page,
+	.type-attachment,
+	.pagination {
+		margin-bottom: 3rem;
+	}
+
+	.blog .type-post,
+	.archive .type-post {
+		padding-bottom: 3rem;
+	}
+
+	.entry-header,
+	.post-image {
+		margin-bottom: 1.75rem;
+	}
+
 	.entry-content > .alignwide {
-		margin-left: -120px;
-		margin-right: -120px;
+		margin-left: -80px;
+		margin-right: -80px;
 		max-width: 960px;
 	}
 }
@@ -1763,13 +1852,26 @@ object {
 	}
 }
 
-@media only screen and (min-width: 1120px) {
-	.entry-header {
-		margin: 2.5rem 0 2rem;
+@media only screen and (min-width: 1280px) {
+	.site-content {
+		padding-top: 4rem;
 	}
 
+	.type-post,
+	.type-page,
+	.type-attachment,
 	.pagination {
-		margin: 2.5rem 0;
+		margin-bottom: 4rem;
+	}
+
+	.blog .type-post,
+	.archive .type-post {
+		padding-bottom: 4rem;
+	}
+
+	.entry-header,
+	.post-image {
+		margin-bottom: 2rem;
 	}
 }
 

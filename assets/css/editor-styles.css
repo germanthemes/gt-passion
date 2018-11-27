@@ -31,7 +31,7 @@
 	--text-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	--title-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	--title-font-weight: bold;
-	--title-text-transform: uppercase;
+	--title-text-transform: none;
 	--navi-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	--navi-font-weight: bold;
 	--navi-text-transform: uppercase;
@@ -41,7 +41,7 @@
 # - Layout
 --------------------------------------------------------------*/
 .editor-styles-wrapper .wp-block {
-	max-width: calc( 720px + 30px);
+	max-width: calc( 800px + 30px);
 }
 
 .editor-styles-wrapper .wp-block[data-align=wide] {
@@ -73,7 +73,7 @@ body.block-editor-page .editor-post-title__block .editor-post-title__input {
 	font-family: var(--title-font);
 	font-weight: bold;
 	font-weight: var(--title-font-weight);
-	text-transform: uppercase;
+	text-transform: none;
 	text-transform: var(--title-text-transform);
 	line-height: 1.4;
 }

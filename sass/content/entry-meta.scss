@@ -1,17 +1,7 @@
 .entry-meta {
-	margin: 0.5rem 0 0;
+	margin: 0.35rem 0 0;
 	color: rgba(0,0,0,0.5);
-	@include font-size(15);
-}
-
-.entry-meta a:link,
-.entry-meta a:visited {
-	text-decoration: none;
-}
-
-.entry-meta a:hover,
-.entry-meta a:active {
-	text-decoration: underline;
+	@include font-size(16);
 }
 
 .entry-meta .updated:not(.published) {

@@ -36,11 +36,11 @@
 
 			</div><!-- .header-main -->
 
+			<?php gt_workout_header_image(); ?>
+
 		</header><!-- #masthead -->
 
 		<?php do_action( 'gt_workout_after_header' ); ?>
-
-		<?php gt_workout_header_image(); ?>
 
 		<div id="content" class="site-content">
 

@@ -42,9 +42,9 @@
 	@include color(--header-text-color);
 	text-decoration: none;
 	@include font-size(24);
-	@include font-family(--title-font);
-	@include font-weight(--title-font-weight);
-	@include text-transform(--title-text-transform);
+	@include font-family(--navi-font);
+	@include font-weight(--navi-font-weight);
+	@include text-transform(--navi-text-transform);
 	line-height: 1.4;
 }
 

@@ -11,10 +11,17 @@
 		@include font-size(32);
 	}
 
-	.entry-meta,
+	.entry-content {
+		@include font-size(18);
+	}	
+
+	.entry-meta {
+		@include font-size(17);
+	}
+
 	.more-link,
 	.pagination {
-		@include font-size(16);
+		@include font-size(15);
 	}
 
 	.widget-title,
@@ -26,19 +33,37 @@
 }
 
 @media only screen and (min-width: 960px) {
-	.site-title {
-		@include font-size(32);
-	}
-
-	.site-description {
-		@include font-size(15);
-	}
-
 	.entry-title {
-		@include font-size(36);
+		@include font-size(40);
 	}
 
-	.entry-meta,
+	.entry-content {
+		@include font-size(19);
+	}
+
+	.entry-meta {
+		@include font-size(18);
+	}
+
+	.more-link,
+	.pagination {
+		@include font-size(16);
+	}
+}
+
+@media only screen and (min-width: 1280px) {
+	.entry-title {
+		@include font-size(48);
+	}
+
+	.entry-content {
+		@include font-size(20);
+	}
+
+	.entry-meta {
+		@include font-size(19);
+	}
+
 	.more-link,
 	.pagination {
 		@include font-size(17);

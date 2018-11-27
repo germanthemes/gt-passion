@@ -27,10 +27,7 @@ function gt_workout_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// Set default Post Thumbnail size.
-	set_post_thumbnail_size( 720, 360, true );
-
-	// Add image size for header image on single posts and pages.
-	add_image_size( 'gt-workout-header-image', 2560, 640, true );
+	set_post_thumbnail_size( 960, 480, true );
 
 	// Register Navigation Menus.
 	register_nav_menus( array(
@@ -54,7 +51,7 @@ function gt_workout_setup() {
 	// Set up the WordPress core custom header feature.
 	add_theme_support( 'custom-header', apply_filters( 'gt_workout_custom_header_args', array(
 		'header-text' => false,
-		'width'       => 2560,
+		'width'       => 1920,
 		'height'      => 640,
 	) ) );
 
@@ -76,7 +73,7 @@ add_action( 'after_setup_theme', 'gt_workout_setup' );
  * @global int $content_width
  */
 function gt_workout_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'gt_workout_content_width', 1040 );
+	$GLOBALS['content_width'] = apply_filters( 'gt_workout_content_width', 720 );
 }
 add_action( 'after_setup_theme', 'gt_workout_content_width', 0 );
 
