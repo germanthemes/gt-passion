@@ -44,24 +44,24 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # - CSS Variables
 --------------------------------------------------------------*/
 :root {
-	--primary-color: #ee3333;
-	--secondary-color: #ea8867;
-	--link-color: #ee3333;
-	--link-hover-color: #282828;
-	--button-color: #ee3333;
+	--primary-color: #e13737;
+	--secondary-color: #a40000;
+	--link-color: #e13737;
+	--link-hover-color: #a40000;
+	--button-color: #e13737;
 	--button-text-color: #fff;
-	--button-hover-color: #282828;
+	--button-hover-color: #a40000;
 	--button-hover-text-color: #fff;
 	--header-background-color: #282828;
 	--header-text-color: #fff;
 	--header-text-hover-color: rgba(255, 255, 255, 0.5);
-	--header-border-color: rgba(255, 255, 255, 0.05);
+	--header-border-color: rgba(255, 255, 255, 0.1);
 	--submenu-background-color: rgba(255, 255, 255, 0.05);
 	--title-color: #282828;
-	--title-hover-color: #ee3333;
+	--title-hover-color: #ee2244;
 	--footer-background-color: #282828;
 	--footer-text-color: #fff;
-	--footer-link-color: rgba(255, 255, 255, 0.6);
+	--footer-link-color: rgba(255, 255, 255, 0.5);
 	--footer-link-hover-color: #fff;
 	--footer-border-color: rgba(255, 255, 255, 0.1);
 	--text-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -505,7 +505,7 @@ td {
 }
 
 a {
-	color: #ee3333;
+	color: #e13737;
 	color: var(--link-color);
 	text-decoration: underline;
 }
@@ -513,7 +513,7 @@ a {
 a:hover,
 a:focus,
 a:active {
-	color: #282828;
+	color: #a40000;
 	color: var(--link-hover-color);
 	text-decoration: none;
 }
@@ -539,7 +539,7 @@ input[type="submit"] {
 	border: none;
 	color: #fff;
 	color: var(--button-text-color);
-	background-color: #ee3333;
+	background-color: #e13737;
 	background-color: var(--button-color);
 	text-decoration: none;
 	font-weight: normal;
@@ -561,7 +561,7 @@ input[type="reset"]:active,
 input[type="submit"]:active {
 	color: #fff;
 	color: var(--button-hover-text-color);
-	background-color: #282828;
+	background-color: #a40000;
 	background-color: var(--button-hover-color);
 }
 
@@ -626,13 +626,13 @@ textarea {
 	bottom: 0;
 	padding: 0.6em 0.8em;
 	border: none;
-	background-color: #ee3333;
+	background-color: #e13737;
 	background-color: var(--button-color);
 }
 
 .search-form .search-submit:hover,
 .search-form .search-submit:active {
-	background-color: #282828;
+	background-color: #a40000;
 	background-color: var(--button-hover-color);
 }
 
@@ -1087,7 +1087,7 @@ textarea {
 
 .entry-title a:hover,
 .entry-title a:active {
-	color: #ee3333;
+	color: #ee2244;
 	color: var(--title-hover-color);
 }
 
@@ -1119,7 +1119,7 @@ textarea {
 	padding: 0.6em 1.2em;
 	color: #fff;
 	color: var(--button-text-color);
-	background-color: #ee3333;
+	background-color: #e13737;
 	background-color: var(--button-color);
 	font-size: 14px;
 	font-size: 0.875rem;
@@ -1142,7 +1142,7 @@ textarea {
 .more-link:active {
 	color: #fff;
 	color: var(--button-hover-text-color);
-	background-color: #282828;
+	background-color: #a40000;
 	background-color: var(--button-hover-color);
 	text-decoration: none;
 }
@@ -1199,7 +1199,7 @@ textarea {
 	text-decoration: none;
 	color: #fff;
 	color: var(--button-text-color);
-	background-color: #ee3333;
+	background-color: #e13737;
 	background-color: var(--button-color);
 }
 
@@ -1212,7 +1212,7 @@ textarea {
 .pagination a:active {
 	color: #fff;
 	color: var(--button-hover-text-color);
-	background-color: #282828;
+	background-color: #a40000;
 	background-color: var(--button-hover-color);
 }
 
@@ -1256,7 +1256,7 @@ body.fullwidth-page-layout .site-content .site-main {
 
 .site-footer a:link,
 .site-footer a:visited {
-	color: rgba(255, 255, 255, 0.6);
+	color: rgba(255, 255, 255, 0.5);
 	color: var(--footer-link-color);
 }
 
@@ -1578,12 +1578,12 @@ object {
 
 /* Block Text Colors */
 .has-primary-color {
-	color: #ee3333;
+	color: #e13737;
 	color: var(--primary-color);
 }
 
 .has-secondary-color {
-	color: #ea8867;
+	color: #a40000;
 	color: var(--secondary-color);
 }
 
@@ -1605,12 +1605,12 @@ object {
 
 /* Block Background Colors */
 .has-primary-background-color {
-	background-color: #ee3333;
+	background-color: #e13737;
 	background-color: var(--primary-color);
 }
 
 .has-secondary-background-color {
-	background-color: #ea8867;
+	background-color: #a40000;
 	background-color: var(--secondary-color);
 }
 

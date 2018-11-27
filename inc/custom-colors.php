@@ -60,8 +60,8 @@ class GT_Workout_Custom_Colors {
 		if ( $theme_options['primary_color'] !== $default['primary_color'] ) {
 			$color_variables .= '--primary-color: ' . $theme_options['primary_color'] . ';';
 			$color_variables .= '--link-color: ' . $theme_options['primary_color'] . ';';
-			$color_variables .= '--button-color: ' . $theme_options['primary_color'] . ';';
 			$color_variables .= '--title-hover-color: ' . $theme_options['primary_color'] . ';';
+			$color_variables .= '--button-color: ' . $theme_options['primary_color'] . ';';
 
 			// Check if a light background color was chosen.
 			if ( self::is_color_light( $theme_options['primary_color'] ) ) {
@@ -72,6 +72,13 @@ class GT_Workout_Custom_Colors {
 		// Set Secondary Color.
 		if ( $theme_options['secondary_color'] !== $default['secondary_color'] ) {
 			$color_variables .= '--secondary-color: ' . $theme_options['secondary_color'] . ';';
+			$color_variables .= '--link-hover-color: ' . $theme_options['secondary_color'] . ';';
+			$color_variables .= '--button-hover-color: ' . $theme_options['secondary_color'] . ';';
+
+			// Check if a light background color was chosen.
+			if ( self::is_color_light( $theme_options['secondary_color'] ) ) {
+				$color_variables .= '--button-hover-text-color: #282828;';
+			}
 		}
 
 		// Set Header Color.
@@ -93,13 +100,14 @@ class GT_Workout_Custom_Colors {
 
 		// Set Footer Color.
 		if ( $theme_options['footer_color'] !== $default['footer_color'] ) {
-			$color_variables .= '--footer-color: ' . $theme_options['footer_color'] . ';';
+			$color_variables .= '--footer-background-color: ' . $theme_options['footer_color'] . ';';
 
 			// Check if a light background color was chosen.
 			if ( self::is_color_light( $theme_options['footer_color'] ) ) {
 				$color_variables .= '--footer-text-color: #282828;';
-				$color_variables .= '--footer-hover-text-color: rgba(0, 0, 0, 0.5);';
-				$color_variables .= '--footer-border-color: rgba(0, 0, 0, 0.05);';
+				$color_variables .= '--footer-link-color: rgba(0, 0, 0, 0.5);';
+				$color_variables .= '--footer-link-hover-color: #282828;';
+				$color_variables .= '--footer-border-color: rgba(0, 0, 0, 0.1);';
 			}
 		}
 

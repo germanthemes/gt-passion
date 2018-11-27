@@ -8,24 +8,24 @@
 # - Variables
 --------------------------------------------------------------*/
 :root {
-	--primary-color: #ee3333;
-	--secondary-color: #ea8867;
-	--link-color: #ee3333;
-	--link-hover-color: #282828;
-	--button-color: #ee3333;
+	--primary-color: #e13737;
+	--secondary-color: #a40000;
+	--link-color: #e13737;
+	--link-hover-color: #a40000;
+	--button-color: #e13737;
 	--button-text-color: #fff;
-	--button-hover-color: #282828;
+	--button-hover-color: #a40000;
 	--button-hover-text-color: #fff;
 	--header-background-color: #282828;
 	--header-text-color: #fff;
 	--header-text-hover-color: rgba(255, 255, 255, 0.5);
-	--header-border-color: rgba(255, 255, 255, 0.05);
+	--header-border-color: rgba(255, 255, 255, 0.1);
 	--submenu-background-color: rgba(255, 255, 255, 0.05);
 	--title-color: #282828;
-	--title-hover-color: #ee3333;
+	--title-hover-color: #ee2244;
 	--footer-background-color: #282828;
 	--footer-text-color: #fff;
-	--footer-link-color: rgba(255, 255, 255, 0.6);
+	--footer-link-color: rgba(255, 255, 255, 0.5);
 	--footer-link-hover-color: #fff;
 	--footer-border-color: rgba(255, 255, 255, 0.1);
 	--text-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -425,12 +425,12 @@ body.block-editor-page .editor-styles-wrapper p.wp-block-cover-text {
 
 /* Block Text Colors */
 .has-primary-color {
-	color: #ee3333;
+	color: #e13737;
 	color: var(--primary-color);
 }
 
 .has-secondary-color {
-	color: #ea8867;
+	color: #a40000;
 	color: var(--secondary-color);
 }
 
@@ -452,12 +452,12 @@ body.block-editor-page .editor-styles-wrapper p.wp-block-cover-text {
 
 /* Block Background Colors */
 .has-primary-background-color {
-	background-color: #ee3333;
+	background-color: #e13737;
 	background-color: var(--primary-color);
 }
 
 .has-secondary-background-color {
-	background-color: #ea8867;
+	background-color: #a40000;
 	background-color: var(--secondary-color);
 }
 

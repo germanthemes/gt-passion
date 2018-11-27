@@ -51,8 +51,8 @@ function gt_workout_default_options() {
 	$default_options = array(
 		'site_title'       => true,
 		'site_description' => true,
-		'primary_color'    => '#ee3333',
-		'secondary_color'  => '#ea8867',
+		'primary_color'    => '#e13737',
+		'secondary_color'  => '#a40000',
 		'header_color'     => '#282828',
 		'title_color'      => '#282828',
 		'footer_color'     => '#282828',
