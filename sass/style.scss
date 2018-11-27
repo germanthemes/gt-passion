@@ -96,7 +96,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # - Posts and pages
 --------------------------------------------------------------*/
 @import 'content/content';
+@import 'content/more-link';
 @import 'content/entry-meta';
+@import 'content/archives';
 @import 'content/pagination';
 
 /*--------------------------------------------------------------

@@ -24,11 +24,9 @@
 		@include font-size(15);
 	}
 
-	.widget-title,
-	.archive-title,
-	.comments-title,
-	.comment-reply-title {
-		@include font-size(20);
+	.archive-header .archive-title,
+	.search-header .search-title {
+		@include font-size(18);
 	}
 }
 
@@ -67,5 +65,10 @@
 	.more-link,
 	.pagination {
 		@include font-size(17);
+	}
+
+	.archive-header .archive-title,
+	.search-header .search-title {
+		@include font-size(20);
 	}
 }
