@@ -50,10 +50,6 @@
 		flex-direction: column;
 	}
 
-	.footer-widget-column .widget:last-child {
-		flex-grow: 1;
-	}
-
 	/* Three Column Footer Widgets */
 	.footer-widget-column:nth-child(1):nth-last-child(3),
 	.footer-widget-column:nth-child(2):nth-last-child(2),
@@ -110,12 +106,6 @@
 	.footer-widget-column:nth-child(2):nth-last-child(2),
 	.footer-widget-column:nth-child(3):nth-last-child(1) {
 		width: 33.3333333333333%;
-	}
-}
-
-@media only screen and (min-width: 880px) {
-    .site-footer .footer-main {
-		text-align: left;
 	}
 }
 
