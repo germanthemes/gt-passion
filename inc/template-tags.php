@@ -5,14 +5,14 @@
  * This file contains several template functions which are used to print out specific HTML markup
  * in the theme. You can override these template functions within your child theme.
  *
- * @package GT Workout
+ * @package GT Passion
  */
 
-if ( ! function_exists( 'gt_workout_site_title' ) ) :
+if ( ! function_exists( 'gt_passion_site_title' ) ) :
 	/**
 	 * Displays the site title in the header area
 	 */
-	function gt_workout_site_title() {
+	function gt_passion_site_title() {
 
 		if ( is_home() ) : ?>
 
@@ -28,11 +28,11 @@ if ( ! function_exists( 'gt_workout_site_title' ) ) :
 endif;
 
 
-if ( ! function_exists( 'gt_workout_site_description' ) ) :
+if ( ! function_exists( 'gt_passion_site_description' ) ) :
 	/**
 	 * Displays the site description in the header area
 	 */
-	function gt_workout_site_description() {
+	function gt_passion_site_description() {
 
 		$description = get_bloginfo( 'description', 'display' ); /* WPCS: xss ok. */
 
@@ -47,11 +47,11 @@ if ( ! function_exists( 'gt_workout_site_description' ) ) :
 endif;
 
 
-if ( ! function_exists( 'gt_workout_header_image' ) ) :
+if ( ! function_exists( 'gt_passion_header_image' ) ) :
 	/**
 	 * Displays the custom header image below the navigation menu
 	 */
-	function gt_workout_header_image() {
+	function gt_passion_header_image() {
 		if ( ! has_header_image() ) {
 			return;
 		}
@@ -68,11 +68,11 @@ if ( ! function_exists( 'gt_workout_header_image' ) ) :
 endif;
 
 
-if ( ! function_exists( 'gt_workout_archive_header' ) ) :
+if ( ! function_exists( 'gt_passion_archive_header' ) ) :
 	/**
 	 * Displays the header title on archive pages.
 	 */
-	function gt_workout_archive_header() {
+	function gt_passion_archive_header() {
 		?>
 
 		<header class="archive-header entry-header">
@@ -87,16 +87,16 @@ if ( ! function_exists( 'gt_workout_archive_header' ) ) :
 endif;
 
 
-if ( ! function_exists( 'gt_workout_search_header' ) ) :
+if ( ! function_exists( 'gt_passion_search_header' ) ) :
 	/**
 	 * Displays the header title on search results.
 	 */
-	function gt_workout_search_header() {
+	function gt_passion_search_header() {
 		?>
 
 		<header class="search-header entry-header">
 
-			<h1 class="search-title entry-title"><?php printf( esc_html__( 'Search Results for: %s', 'gt-workout' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+			<h1 class="search-title entry-title"><?php printf( esc_html__( 'Search Results for: %s', 'gt-passion' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 			<?php get_search_form(); ?>
 
 		</header><!-- .search-header -->
@@ -106,11 +106,11 @@ if ( ! function_exists( 'gt_workout_search_header' ) ) :
 endif;
 
 
-if ( ! function_exists( 'gt_workout_post_image' ) ) :
+if ( ! function_exists( 'gt_passion_post_image' ) ) :
 	/**
 	 * Displays the featured image.
 	 */
-	function gt_workout_post_image() {
+	function gt_passion_post_image() {
 		if ( ! has_post_thumbnail() ) {
 			return;
 		}
@@ -138,26 +138,26 @@ if ( ! function_exists( 'gt_workout_post_image' ) ) :
 endif;
 
 
-if ( ! function_exists( 'gt_workout_entry_meta' ) ) :
+if ( ! function_exists( 'gt_passion_entry_meta' ) ) :
 	/**
 	 * Displays the date and author of a post
 	 */
-	function gt_workout_entry_meta() {
+	function gt_passion_entry_meta() {
 
-		$postmeta  = gt_workout_entry_date();
-		$postmeta .= gt_workout_entry_author();
-		$postmeta .= gt_workout_entry_categories();
+		$postmeta  = gt_passion_entry_date();
+		$postmeta .= gt_passion_entry_author();
+		$postmeta .= gt_passion_entry_categories();
 
 		echo '<div class="entry-meta">' . $postmeta . '</div>';
 	}
 endif;
 
 
-if ( ! function_exists( 'gt_workout_entry_date' ) ) :
+if ( ! function_exists( 'gt_passion_entry_date' ) ) :
 	/**
 	 * Returns the post date
 	 */
-	function gt_workout_entry_date() {
+	function gt_passion_entry_date() {
 
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
@@ -173,7 +173,7 @@ if ( ! function_exists( 'gt_workout_entry_date' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'gt-workout' ),
+			esc_html_x( 'Posted on %s', 'post date', 'gt-passion' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
@@ -182,21 +182,21 @@ if ( ! function_exists( 'gt_workout_entry_date' ) ) :
 endif;
 
 
-if ( ! function_exists( 'gt_workout_entry_author' ) ) :
+if ( ! function_exists( 'gt_passion_entry_author' ) ) :
 	/**
 	 * Returns the post author
 	 */
-	function gt_workout_entry_author() {
+	function gt_passion_entry_author() {
 
 		$author_string = sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>',
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			esc_attr( sprintf( esc_html__( 'View all posts by %s', 'gt-workout' ), get_the_author() ) ),
+			esc_attr( sprintf( esc_html__( 'View all posts by %s', 'gt-passion' ), get_the_author() ) ),
 			esc_html( get_the_author() )
 		);
 
 		$posted_by = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( 'by %s', 'post author', 'gt-workout' ),
+			esc_html_x( 'by %s', 'post author', 'gt-passion' ),
 			$author_string
 		);
 
@@ -205,11 +205,11 @@ if ( ! function_exists( 'gt_workout_entry_author' ) ) :
 endif;
 
 
-if ( ! function_exists( 'gt_workout_entry_categories' ) ) :
+if ( ! function_exists( 'gt_passion_entry_categories' ) ) :
 	/**
 	 * Displays the post categories
 	 */
-	function gt_workout_entry_categories() {
+	function gt_passion_entry_categories() {
 
 		// Return early if post has no category.
 		if ( ! has_category() ) {
@@ -218,7 +218,7 @@ if ( ! function_exists( 'gt_workout_entry_categories' ) ) :
 
 		$posted_in = sprintf(
 			/* translators: %s: post category. */
-			esc_html_x( 'in %s', 'post category', 'gt-workout' ),
+			esc_html_x( 'in %s', 'post category', 'gt-passion' ),
 			get_the_category_list( ', ' )
 		);
 
@@ -227,16 +227,16 @@ if ( ! function_exists( 'gt_workout_entry_categories' ) ) :
 endif;
 
 
-if ( ! function_exists( 'gt_workout_pagination' ) ) :
+if ( ! function_exists( 'gt_passion_pagination' ) ) :
 	/**
 	 * Displays pagination on archive pages
 	 */
-	function gt_workout_pagination() {
+	function gt_passion_pagination() {
 
 		the_posts_pagination( array(
 			'mid_size'  => 2,
-			'prev_text' => '&laquo<span class="screen-reader-text">' . esc_html_x( 'Previous Posts', 'pagination', 'gt-workout' ) . '</span>',
-			'next_text' => '<span class="screen-reader-text">' . esc_html_x( 'Next Posts', 'pagination', 'gt-workout' ) . '</span>&raquo;',
+			'prev_text' => '&laquo<span class="screen-reader-text">' . esc_html_x( 'Previous Posts', 'pagination', 'gt-passion' ) . '</span>',
+			'next_text' => '<span class="screen-reader-text">' . esc_html_x( 'Next Posts', 'pagination', 'gt-passion' ) . '</span>&raquo;',
 		) );
 	}
 endif;

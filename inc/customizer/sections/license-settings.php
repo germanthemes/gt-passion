@@ -4,7 +4,7 @@
  *
  * Register License Settings
  *
- * @package GT Workout
+ * @package GT Passion
  */
 
 /**
@@ -12,31 +12,31 @@
  *
  * @param object $wp_customize / Customizer Object.
  */
-function gt_workout_customize_register_license_settings( $wp_customize ) {
+function gt_passion_customize_register_license_settings( $wp_customize ) {
 
 	// Add Section for License.
-	$wp_customize->add_section( 'gt_workout_section_license', array(
-		'title'       => esc_html__( 'License', 'gt-workout' ),
-		'description' => esc_html__( 'Please enter your license key. An active license key is necessary for automatic theme updates and support.', 'gt-workout' ),
+	$wp_customize->add_section( 'gt_passion_section_license', array(
+		'title'       => esc_html__( 'License', 'gt-passion' ),
+		'description' => esc_html__( 'Please enter your license key. An active license key is necessary for automatic theme updates and support.', 'gt-passion' ),
 		'priority'    => 30,
-		'panel'       => 'gt_workout_options_panel',
+		'panel'       => 'gt_passion_options_panel',
 	) );
 
 	// Add License Key setting.
-	$wp_customize->add_setting( 'gt_workout_theme_options[license_key]', array(
+	$wp_customize->add_setting( 'gt_passion_theme_options[license_key]', array(
 		'default'           => '',
 		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'sanitize_text_field',
 	) );
 
-	$wp_customize->add_control( new GT_Workout_Customize_License_Control(
+	$wp_customize->add_control( new GT_Passion_Customize_License_Control(
 		$wp_customize, 'license_key', array(
-			'label'    => esc_html__( 'License Key', 'gt-workout' ),
-			'section'  => 'gt_workout_section_license',
-			'settings' => 'gt_workout_theme_options[license_key]',
+			'label'    => esc_html__( 'License Key', 'gt-passion' ),
+			'section'  => 'gt_passion_section_license',
+			'settings' => 'gt_passion_theme_options[license_key]',
 			'priority' => 10,
 		)
 	) );
 }
-add_action( 'customize_register', 'gt_workout_customize_register_license_settings' );
+add_action( 'customize_register', 'gt_passion_customize_register_license_settings' );

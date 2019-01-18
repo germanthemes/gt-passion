@@ -4,13 +4,13 @@
  *
  * Generates Custom CSS code for Color Settings
  *
- * @package GT Workout
+ * @package GT Passion
  */
 
 /**
  * Custom Colors Class
  */
-class GT_Workout_Custom_Colors {
+class GT_Passion_Custom_Colors {
 
 	/**
 	 * Actions Setup
@@ -30,14 +30,14 @@ class GT_Workout_Custom_Colors {
 	 * Add Font Family CSS styles in the head area of the theme.
 	 */
 	static function add_custom_colors_in_frontend() {
-		wp_add_inline_style( 'gt-workout-stylesheet', self::get_custom_colors_css() );
+		wp_add_inline_style( 'gt-passion-stylesheet', self::get_custom_colors_css() );
 	}
 
 	/**
 	 * Add Font Family CSS styles in the head area of the Gutenberg editor.
 	 */
 	static function add_custom_colors_in_editor() {
-		wp_add_inline_style( 'gt-workout-editor-styles', self::get_custom_colors_css() );
+		wp_add_inline_style( 'gt-passion-editor-styles', self::get_custom_colors_css() );
 	}
 
 	/**
@@ -48,10 +48,10 @@ class GT_Workout_Custom_Colors {
 	static function get_custom_colors_css() {
 
 		// Get theme options from database.
-		$theme_options = gt_workout_theme_options();
+		$theme_options = gt_passion_theme_options();
 
 		// Get default colors.
-		$default = gt_workout_default_options();
+		$default = gt_passion_default_options();
 
 		// Color Variables.
 		$color_variables = '';
@@ -164,4 +164,4 @@ class GT_Workout_Custom_Colors {
 }
 
 // Run Class.
-GT_Workout_Custom_Colors::setup();
+GT_Passion_Custom_Colors::setup();

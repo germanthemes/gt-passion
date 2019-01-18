@@ -2,7 +2,7 @@
 /**
  * Add theme support for the Gutenberg Editor
  *
- * @package GT Workout
+ * @package GT Passion
  */
 
 
@@ -11,10 +11,10 @@
  *
  * @return void
  */
-function gt_workout_gutenberg_support() {
+function gt_passion_gutenberg_support() {
 
 	// Get theme options from database.
-	$theme_options = gt_workout_theme_options();
+	$theme_options = gt_passion_theme_options();
 
 	// Add theme support for wide and full images.
 	add_theme_support( 'align-wide' );
@@ -22,32 +22,32 @@ function gt_workout_gutenberg_support() {
 	// Add theme support for block color palette.
 	add_theme_support( 'editor-color-palette', array(
 		array(
-			'name'  => esc_html_x( 'Primary', 'block color', 'gt-workout' ),
+			'name'  => esc_html_x( 'Primary', 'block color', 'gt-passion' ),
 			'slug'  => 'primary',
 			'color' => esc_html( $theme_options['primary_color'] ),
 		),
 		array(
-			'name'  => esc_html_x( 'Secondary', 'block color', 'gt-workout' ),
+			'name'  => esc_html_x( 'Secondary', 'block color', 'gt-passion' ),
 			'slug'  => 'secondary',
 			'color' => esc_html( $theme_options['secondary_color'] ),
 		),
 		array(
-			'name'  => esc_html_x( 'White', 'block color', 'gt-workout' ),
+			'name'  => esc_html_x( 'White', 'block color', 'gt-passion' ),
 			'slug'  => 'white',
 			'color' => '#ffffff',
 		),
 		array(
-			'name'  => esc_html_x( 'Light Gray', 'block color', 'gt-workout' ),
+			'name'  => esc_html_x( 'Light Gray', 'block color', 'gt-passion' ),
 			'slug'  => 'light-gray',
 			'color' => '#e5e5e5',
 		),
 		array(
-			'name'  => esc_html_x( 'Dark Gray', 'block color', 'gt-workout' ),
+			'name'  => esc_html_x( 'Dark Gray', 'block color', 'gt-passion' ),
 			'slug'  => 'dark-gray',
 			'color' => '#555555',
 		),
 		array(
-			'name'  => esc_html_x( 'Black', 'block color', 'gt-workout' ),
+			'name'  => esc_html_x( 'Black', 'block color', 'gt-passion' ),
 			'slug'  => 'black',
 			'color' => '#242424',
 		),
@@ -56,58 +56,58 @@ function gt_workout_gutenberg_support() {
 	// Add theme support for font sizes.
 	add_theme_support( 'editor-font-sizes', array(
 		array(
-			'name' => esc_html_x( 'Small', 'block font size', 'gt-workout' ),
+			'name' => esc_html_x( 'Small', 'block font size', 'gt-passion' ),
 			'size' => 16,
 			'slug' => 'small',
 		),
 		array(
-			'name' => esc_html_x( 'Medium', 'block font size', 'gt-workout' ),
+			'name' => esc_html_x( 'Medium', 'block font size', 'gt-passion' ),
 			'size' => 20,
 			'slug' => 'medium',
 		),
 		array(
-			'name' => esc_html_x( 'Large', 'block font size', 'gt-workout' ),
+			'name' => esc_html_x( 'Large', 'block font size', 'gt-passion' ),
 			'size' => 24,
 			'slug' => 'large',
 		),
 		array(
-			'name' => esc_html_x( 'Extra Large', 'block font size', 'gt-workout' ),
+			'name' => esc_html_x( 'Extra Large', 'block font size', 'gt-passion' ),
 			'size' => 36,
 			'slug' => 'extra-large',
 		),
 	) );
 }
-add_action( 'after_setup_theme', 'gt_workout_gutenberg_support' );
+add_action( 'after_setup_theme', 'gt_passion_gutenberg_support' );
 
 
 /**
  * Enqueue block styles and scripts for Gutenberg Editor.
  */
-function gt_workout_block_editor_assets() {
+function gt_passion_block_editor_assets() {
 
 	// Enqueue Editor Styling.
-	wp_enqueue_style( 'gt-workout-editor-styles', get_theme_file_uri( '/assets/css/editor-styles.css' ), array(), '20181122', 'all' );
+	wp_enqueue_style( 'gt-passion-editor-styles', get_theme_file_uri( '/assets/css/editor-styles.css' ), array(), '20181122', 'all' );
 
 	// Enqueue Theme Settings Sidebar plugin.
-	wp_enqueue_script( 'gt-workout-editor-theme-settings', get_theme_file_uri( '/assets/js/editor-theme-settings.js' ), array( 'wp-blocks', 'wp-element', 'wp-edit-post' ), '20181121' );
+	wp_enqueue_script( 'gt-passion-editor-theme-settings', get_theme_file_uri( '/assets/js/editor-theme-settings.js' ), array( 'wp-blocks', 'wp-element', 'wp-edit-post' ), '20181121' );
 
 	$theme_settings_l10n = array(
-		'plugin_title'   => esc_html__( 'Theme Settings', 'gt-workout' ),
-		'page_options'   => esc_html__( 'Page Options', 'gt-workout' ),
-		'page_layout'    => esc_html__( 'Page Layout', 'gt-workout' ),
-		'default_layout' => esc_html__( 'Default', 'gt-workout' ),
-		'full_layout'    => esc_html__( 'Full-width', 'gt-workout' ),
-		'hide_title'     => esc_html__( 'Hide Title', 'gt-workout' ),
+		'plugin_title'   => esc_html__( 'Theme Settings', 'gt-passion' ),
+		'page_options'   => esc_html__( 'Page Options', 'gt-passion' ),
+		'page_layout'    => esc_html__( 'Page Layout', 'gt-passion' ),
+		'default_layout' => esc_html__( 'Default', 'gt-passion' ),
+		'full_layout'    => esc_html__( 'Full-width', 'gt-passion' ),
+		'hide_title'     => esc_html__( 'Hide Title', 'gt-passion' ),
 	);
-	wp_localize_script( 'gt-workout-editor-theme-settings', 'gtThemeSettingsL10n', $theme_settings_l10n );
+	wp_localize_script( 'gt-passion-editor-theme-settings', 'gtThemeSettingsL10n', $theme_settings_l10n );
 }
-add_action( 'enqueue_block_editor_assets', 'gt_workout_block_editor_assets' );
+add_action( 'enqueue_block_editor_assets', 'gt_passion_block_editor_assets' );
 
 
 /**
  * Register Post Meta
  */
-function gt_workout_register_post_meta() {
+function gt_passion_register_post_meta() {
 	register_post_meta( 'page', 'gt_hide_page_title', array(
 		'type'         => 'boolean',
 		'single'       => true,
@@ -121,13 +121,13 @@ function gt_workout_register_post_meta() {
 		'sanitize_callback' => 'sanitize_text_field',
 	) );
 }
-add_action( 'init', 'gt_workout_register_post_meta' );
+add_action( 'init', 'gt_passion_register_post_meta' );
 
 
 /**
  * Add body classes in Gutenberg Editor.
  */
-function gt_workout_gutenberg_add_admin_body_class( $classes ) {
+function gt_passion_gutenberg_add_admin_body_class( $classes ) {
 	global $post;
 	$current_screen = get_current_screen();
 
@@ -148,7 +148,7 @@ function gt_workout_gutenberg_add_admin_body_class( $classes ) {
 
 	return $classes;
 }
-add_filter( 'admin_body_class', 'gt_workout_gutenberg_add_admin_body_class' );
+add_filter( 'admin_body_class', 'gt_passion_gutenberg_add_admin_body_class' );
 
 
 /**
@@ -156,7 +156,7 @@ add_filter( 'admin_body_class', 'gt_workout_gutenberg_add_admin_body_class' );
  *
  * @return array $editor_settings
  */
-function gt_workout_block_editor_settings( $editor_settings ) {
+function gt_passion_block_editor_settings( $editor_settings ) {
 	// Remove editor styling.
 	if ( ! current_theme_supports( 'editor-styles' ) ) {
 		$editor_settings['styles'] = '';
@@ -164,4 +164,4 @@ function gt_workout_block_editor_settings( $editor_settings ) {
 
 	return $editor_settings;
 }
-add_filter( 'block_editor_settings', 'gt_workout_block_editor_settings', 11 );
+add_filter( 'block_editor_settings', 'gt_passion_block_editor_settings', 11 );

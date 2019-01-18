@@ -7,7 +7,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @version 1.0
- * @package GT Workout
+ * @package GT Passion
  */
 
 ?>
@@ -15,7 +15,7 @@
 		</main><!-- #main -->
 	</div><!-- #content -->
 
-	<?php do_action( 'gt_workout_before_footer' ); ?>
+	<?php do_action( 'gt_passion_before_footer' ); ?>
 
 	<footer id="colophon" class="site-footer">
 
@@ -26,7 +26,7 @@
 
 	</footer>
 
-	<?php do_action( 'gt_workout_after_footer' ); ?>
+	<?php do_action( 'gt_passion_after_footer' ); ?>
 
 </div><!-- #page -->
 

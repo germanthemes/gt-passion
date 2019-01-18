@@ -1,8 +1,8 @@
 <?php
 /**
- * GT Workout functions and definitions
+ * GT Passion functions and definitions
  *
- * @package GT Workout
+ * @package GT Passion
  */
 
 /**
@@ -12,10 +12,10 @@
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function gt_workout_setup() {
+function gt_passion_setup() {
 
 	// Make theme available for translation.
-	load_theme_textdomain( 'gt-workout', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'gt-passion', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -31,7 +31,7 @@ function gt_workout_setup() {
 
 	// Register Navigation Menus.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Main Navigation', 'gt-workout' ),
+		'primary' => esc_html__( 'Main Navigation', 'gt-passion' ),
 	) );
 
 	// Switch default core markup for galleries and captions to output valid HTML5.
@@ -41,7 +41,7 @@ function gt_workout_setup() {
 	) );
 
 	// Set up the WordPress core custom logo feature.
-	add_theme_support( 'custom-logo', apply_filters( 'gt_workout_custom_logo_args', array(
+	add_theme_support( 'custom-logo', apply_filters( 'gt_passion_custom_logo_args', array(
 		'height'      => 60,
 		'width'       => 300,
 		'flex-height' => true,
@@ -49,21 +49,21 @@ function gt_workout_setup() {
 	) ) );
 
 	// Set up the WordPress core custom header feature.
-	add_theme_support( 'custom-header', apply_filters( 'gt_workout_custom_header_args', array(
+	add_theme_support( 'custom-header', apply_filters( 'gt_passion_custom_header_args', array(
 		'header-text' => false,
 		'width'       => 1920,
 		'height'      => 640,
 	) ) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'gt_workout_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'gt_passion_custom_background_args', array(
 		'default-color' => 'ffffff',
 	) ) );
 
 	// Add Theme Support for Selective Refresh in Customizer.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 }
-add_action( 'after_setup_theme', 'gt_workout_setup' );
+add_action( 'after_setup_theme', 'gt_passion_setup' );
 
 
 /**
@@ -72,38 +72,38 @@ add_action( 'after_setup_theme', 'gt_workout_setup' );
  *
  * @global int $content_width
  */
-function gt_workout_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'gt_workout_content_width', 720 );
+function gt_passion_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'gt_passion_content_width', 720 );
 }
-add_action( 'after_setup_theme', 'gt_workout_content_width', 0 );
+add_action( 'after_setup_theme', 'gt_passion_content_width', 0 );
 
 
 /**
  * Enqueue scripts and styles.
  */
-function gt_workout_scripts() {
+function gt_passion_scripts() {
 
 	// Get Theme Version.
 	$theme_version = wp_get_theme()->get( 'Version' );
 
 	// Register and Enqueue Stylesheet.
-	wp_enqueue_style( 'gt-workout-stylesheet', get_stylesheet_uri(), array(), $theme_version );
+	wp_enqueue_style( 'gt-passion-stylesheet', get_stylesheet_uri(), array(), $theme_version );
 
 	// Register and enqueue navigation.js.
 	if ( has_nav_menu( 'primary' ) ) {
-		wp_enqueue_script( 'gt-workout-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '1.0', true );
-		$gt_workout_l10n = array(
-			'expand'   => esc_html__( 'Expand child menu', 'gt-workout' ),
-			'collapse' => esc_html__( 'Collapse child menu', 'gt-workout' ),
-			'icon'     => gt_workout_get_svg( 'expand' ),
+		wp_enqueue_script( 'gt-passion-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '1.0', true );
+		$gt_passion_l10n = array(
+			'expand'   => esc_html__( 'Expand child menu', 'gt-passion' ),
+			'collapse' => esc_html__( 'Collapse child menu', 'gt-passion' ),
+			'icon'     => gt_passion_get_svg( 'expand' ),
 		);
-		wp_localize_script( 'gt-workout-navigation', 'gtWorkoutScreenReaderText', $gt_workout_l10n );
+		wp_localize_script( 'gt-passion-navigation', 'gtPassionScreenReaderText', $gt_passion_l10n );
 	}
 
 	// Enqueue svgxuse to support external SVG Sprites in Internet Explorer.
 	wp_enqueue_script( 'svgxuse', get_theme_file_uri( '/assets/js/svgxuse.min.js' ), array(), '1.2.4' );
 }
-add_action( 'wp_enqueue_scripts', 'gt_workout_scripts' );
+add_action( 'wp_enqueue_scripts', 'gt_passion_scripts' );
 
 
 /**
@@ -111,13 +111,13 @@ add_action( 'wp_enqueue_scripts', 'gt_workout_scripts' );
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
-function gt_workout_widgets_init() {
+function gt_passion_widgets_init() {
 
 	// Register Footer Column 1 widget area.
 	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Column 1', 'gt-workout' ),
+		'name'          => esc_html__( 'Footer Column 1', 'gt-passion' ),
 		'id'            => 'footer-column-1',
-		'description'   => esc_html_x( 'Appears in the first column in footer.', 'widget area description', 'gt-workout' ),
+		'description'   => esc_html_x( 'Appears in the first column in footer.', 'widget area description', 'gt-passion' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h4 class = "widget-title">',
@@ -126,9 +126,9 @@ function gt_workout_widgets_init() {
 
 	// Register Footer Column 2 widget area.
 	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Column 2', 'gt-workout' ),
+		'name'          => esc_html__( 'Footer Column 2', 'gt-passion' ),
 		'id'            => 'footer-column-2',
-		'description'   => esc_html_x( 'Appears in the second column in footer.', 'widget area description', 'gt-workout' ),
+		'description'   => esc_html_x( 'Appears in the second column in footer.', 'widget area description', 'gt-passion' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h4 class = "widget-title">',
@@ -137,9 +137,9 @@ function gt_workout_widgets_init() {
 
 	// Register Footer Column 3 widget area.
 	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Column 3', 'gt-workout' ),
+		'name'          => esc_html__( 'Footer Column 3', 'gt-passion' ),
 		'id'            => 'footer-column-3',
-		'description'   => esc_html_x( 'Appears in the third column in footer.', 'widget area description', 'gt-workout' ),
+		'description'   => esc_html_x( 'Appears in the third column in footer.', 'widget area description', 'gt-passion' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h4 class = "widget-title">',
@@ -148,9 +148,9 @@ function gt_workout_widgets_init() {
 
 	// Register Footer Column 4 widget area.
 	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Column 4', 'gt-workout' ),
+		'name'          => esc_html__( 'Footer Column 4', 'gt-passion' ),
 		'id'            => 'footer-column-4',
-		'description'   => esc_html_x( 'Appears in the fourth column in footer.', 'widget area description', 'gt-workout' ),
+		'description'   => esc_html_x( 'Appears in the fourth column in footer.', 'widget area description', 'gt-passion' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h4 class = "widget-title">',
@@ -159,16 +159,16 @@ function gt_workout_widgets_init() {
 
 	// Register Footer Copyright widget area.
 	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Copyright', 'gt-workout' ),
+		'name'          => esc_html__( 'Footer Copyright', 'gt-passion' ),
 		'id'            => 'footer-copyright',
-		'description'   => esc_html_x( 'Appears in the bottom footer line.', 'widget area description', 'gt-workout' ),
+		'description'   => esc_html_x( 'Appears in the bottom footer line.', 'widget area description', 'gt-passion' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h4 class = "widget-title">',
 		'after_title'   => '</h4>',
 	) );
 }
-add_action( 'widgets_init', 'gt_workout_widgets_init' );
+add_action( 'widgets_init', 'gt_passion_widgets_init' );
 
 
 /**
@@ -176,20 +176,20 @@ add_action( 'widgets_init', 'gt_workout_widgets_init' );
  *
  * @return void
  */
-function gt_workout_theme_updater() {
-	if ( '' !== gt_workout_get_option( 'license_key' ) ) :
+function gt_passion_theme_updater() {
+	if ( '' !== gt_passion_get_option( 'license_key' ) ) :
 
 		// Setup the updater.
-		$theme_updater = new GT_Workout_Plugin_Updater( GT_WORKOUT_STORE_API_URL, __FILE__, array(
+		$theme_updater = new GT_Passion_Plugin_Updater( GT_PASSION_STORE_API_URL, __FILE__, array(
 			'version' => '1.0',
-			'license' => trim( gt_workout_get_option( 'license_key' ) ),
-			'item_id' => GT_WORKOUT_PRODUCT_ID,
+			'license' => trim( gt_passion_get_option( 'license_key' ) ),
+			'item_id' => GT_PASSION_PRODUCT_ID,
 			'author'  => 'GermanThemes',
 		) );
 
 	endif;
 }
-add_action( 'admin_init', 'gt_workout_theme_updater', 0 );
+add_action( 'admin_init', 'gt_passion_theme_updater', 0 );
 
 
 /**

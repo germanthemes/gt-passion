@@ -3,7 +3,7 @@
  *
  * Adds Javascript for Customizer Controls.
  *
- * @package GT Workout
+ * @package GT Passion
  */
 
 ( function( wp, $ ) {
@@ -11,7 +11,7 @@
 	 * The Customizer looks for wp.customizer.controlConstructor[type] functions
 	 * where type == the type member of a WP_Customize_Control
 	 */
-	wp.customize.controlConstructor.gt_workout_custom_font = wp.customize.Control.extend({
+	wp.customize.controlConstructor.gt_passion_custom_font = wp.customize.Control.extend({
 		/**
 		 * This method is called when the control is ready to run.
 		 */
@@ -105,7 +105,7 @@
 	 * The Customizer looks for wp.customizer.controlConstructor[type] functions
 	 * where type == the type member of a WP_Customize_Control
 	 */
-	wp.customize.controlConstructor.gt_workout_license_key = wp.customize.Control.extend({
+	wp.customize.controlConstructor.gt_passion_license_key = wp.customize.Control.extend({
 		/**
 		 * This method is called when the control is ready to run.
 		 */

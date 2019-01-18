@@ -2,7 +2,7 @@
 /**
  * License Control for the Customizer
  *
- * @package GT Workout
+ * @package GT Passion
  */
 
 /**
@@ -13,14 +13,14 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 	/**
 	 * Displays a custom License control. Allows to switch fonts for particular elements on the theme.
 	 */
-	class GT_Workout_Customize_License_Control extends WP_Customize_Control {
+	class GT_Passion_Customize_License_Control extends WP_Customize_Control {
 
 		/**
 		 * Declare the control type. Critical for JS constructor.
 		 *
 		 * @var string
 		 */
-		public $type = 'gt_workout_license_key';
+		public $type = 'gt_passion_license_key';
 
 		/**
 		 * Localization Strings.
@@ -48,20 +48,20 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 
 			// Make Buttons translateable.
 			$this->l10n = array(
-				'activate'     => esc_html__( 'Activate License', 'gt-workout' ),
-				'deactivate'   => esc_html__( 'Deactivate License', 'gt-workout' ),
-				'loading'      => esc_html__( 'Loading...', 'gt-workout' ),
-				'valid'        => esc_html__( 'Active', 'gt-workout' ),
-				'invalid'      => esc_html__( 'Invalid', 'gt-workout' ),
-				'expired'      => esc_html__( 'Expired', 'gt-workout' ),
-				'inactive'     => esc_html__( 'Inactive', 'gt-workout' ),
-				'valid_desc'   => esc_html__( 'You are receiving updates.', 'gt-workout' ),
-				'invalid_desc' => esc_html__( 'Please make sure you have not reached site limits and/or expiration date.', 'gt-workout' ),
-				'expired_desc' => esc_html__( 'Your license has expired, renew today to continue getting updates and support!', 'gt-workout' ),
+				'activate'     => esc_html__( 'Activate License', 'gt-passion' ),
+				'deactivate'   => esc_html__( 'Deactivate License', 'gt-passion' ),
+				'loading'      => esc_html__( 'Loading...', 'gt-passion' ),
+				'valid'        => esc_html__( 'Active', 'gt-passion' ),
+				'invalid'      => esc_html__( 'Invalid', 'gt-passion' ),
+				'expired'      => esc_html__( 'Expired', 'gt-passion' ),
+				'inactive'     => esc_html__( 'Inactive', 'gt-passion' ),
+				'valid_desc'   => esc_html__( 'You are receiving updates.', 'gt-passion' ),
+				'invalid_desc' => esc_html__( 'Please make sure you have not reached site limits and/or expiration date.', 'gt-passion' ),
+				'expired_desc' => esc_html__( 'Your license has expired, renew today to continue getting updates and support!', 'gt-passion' ),
 			);
 
 			// Set License status.
-			$this->status = gt_workout_get_option( 'license_status' );
+			$this->status = gt_passion_get_option( 'license_status' );
 
 			parent::__construct( $manager, $id, $args );
 		}
@@ -78,7 +78,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 
 			<div class="customize-license-control" data-l10n="<?php echo esc_attr( $l10n ); ?>" data-status="<?php echo esc_attr( $this->status ); ?>">
 
-				<span class="customize-control-title"><?php echo esc_html__( 'License Status', 'gt-workout' ); ?></span>
+				<span class="customize-control-title"><?php echo esc_html__( 'License Status', 'gt-passion' ); ?></span>
 				<div class="license-status"></div>
 				<div class="license-description description"></div>
 

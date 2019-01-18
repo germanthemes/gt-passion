@@ -3,7 +3,7 @@
  * The template used for displaying page content in page.php
  *
  * @version 1.0
- * @package GT Workout
+ * @package GT Passion
  */
 ?>
 
@@ -17,7 +17,7 @@
 
 	<div class="entry-content">
 
-		<?php gt_workout_post_image(); ?>
+		<?php gt_passion_post_image(); ?>
 
 		<?php the_content(); ?>
 
