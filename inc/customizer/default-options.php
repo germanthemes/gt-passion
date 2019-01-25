@@ -49,19 +49,23 @@ function gt_passion_theme_options() {
 function gt_passion_default_options() {
 
 	$default_options = array(
-		'site_title'       => true,
-		'site_description' => true,
-		'primary_color'    => '#e13737',
-		'secondary_color'  => '#a40000',
-		'accent_color'     => '#37e18c',
-		'header_color'     => '#282828',
-		'title_color'      => '#282828',
-		'footer_color'     => '#282828',
-		'text_font'        => 'SystemFontStack',
-		'title_font'       => 'SystemFontStack',
-		'navi_font'        => 'SystemFontStack',
-		'license_key'      => '',
-		'license_status'   => 'inactive',
+		'site_title'         => true,
+		'site_description'   => true,
+		'primary_color'      => '#e13737',
+		'secondary_color'    => '#a40000',
+		'accent_color'       => '#37e18c',
+		'header_color'       => '#282828',
+		'title_color'        => '#282828',
+		'footer_color'       => '#282828',
+		'text_font'          => 'SystemFontStack',
+		'title_font'         => 'SystemFontStack',
+		'title_is_bold'      => true,
+		'title_is_uppercase' => false,
+		'navi_font'          => 'SystemFontStack',
+		'navi_is_bold'       => true,
+		'navi_is_uppercase'  => true,
+		'license_key'        => '',
+		'license_status'     => 'inactive',
 	);
 
 	return apply_filters( 'gt_passion_default_options', $default_options );
