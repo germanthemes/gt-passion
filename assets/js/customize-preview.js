@@ -81,6 +81,13 @@
 		} );
 	} );
 
+	/* Accent Color Option */
+	wp.customize( 'gt_passion_theme_options[accent_color]', function( value ) {
+		value.bind( function( newval ) {
+			document.documentElement.style.setProperty( '--accent-color', newval );
+		} );
+	} );
+
 	/* Header Color Option */
 	wp.customize( 'gt_passion_theme_options[header_color]', function( value ) {
 		value.bind( function( newval ) {

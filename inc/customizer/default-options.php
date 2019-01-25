@@ -53,6 +53,7 @@ function gt_passion_default_options() {
 		'site_description' => true,
 		'primary_color'    => '#e13737',
 		'secondary_color'  => '#a40000',
+		'accent_color'     => '#37e18c',
 		'header_color'     => '#282828',
 		'title_color'      => '#282828',
 		'footer_color'     => '#282828',

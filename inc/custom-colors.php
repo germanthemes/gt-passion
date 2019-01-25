@@ -81,6 +81,11 @@ class GT_Passion_Custom_Colors {
 			}
 		}
 
+		// Set Accent Color.
+		if ( $theme_options['accent_color'] !== $default['accent_color'] ) {
+			$color_variables .= '--accent-color: ' . $theme_options['accent_color'] . ';';
+		}
+
 		// Set Header Color.
 		if ( $theme_options['header_color'] !== $default['header_color'] ) {
 			$color_variables .= '--header-background-color: ' . $theme_options['header_color'] . ';';
