@@ -36,9 +36,9 @@
 
 			</div><!-- .header-main -->
 
-			<?php gt_passion_header_image(); ?>
-
 		</header><!-- #masthead -->
+
+		<?php gt_passion_header_image(); ?>
 
 		<?php do_action( 'gt_passion_after_header' ); ?>
 
