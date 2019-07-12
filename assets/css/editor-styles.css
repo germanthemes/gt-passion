@@ -11,6 +11,10 @@
 	--primary-color: #e13737;
 	--secondary-color: #a40000;
 	--accent-color: #37e18c;
+	--highlight-color: #37bbe1;
+	--light-gray-color: #e8e8e8;
+	--gray-color: #787878;
+	--dark-gray-color: #282828;
 	--link-color: #e13737;
 	--link-hover-color: #a40000;
 	--button-color: #e13737;
@@ -536,20 +540,32 @@ body.block-editor-page .editor-styles-wrapper p.wp-block-cover-text {
 	color: var(--accent-color);
 }
 
+.has-highlight-color {
+	color: #37bbe1;
+	color: var(--highlight-color);
+}
+
 .has-white-color {
 	color: #ffffff;
 }
 
 .has-light-gray-color {
-	color: #e5e5e5;
+	color: #e8e8e8;
+	color: var(--light-gray-color);
+}
+
+.has-gray-color {
+	color: #787878;
+	color: var(--gray-color);
 }
 
 .has-dark-gray-color {
-	color: #555555;
+	color: #282828;
+	color: var(--dark-gray-color);
 }
 
 .has-black-color {
-	color: #242424;
+	color: #000000;
 }
 
 /* Block Background Colors */
@@ -568,20 +584,32 @@ body.block-editor-page .editor-styles-wrapper p.wp-block-cover-text {
 	background-color: var(--accent-color);
 }
 
+.has-highlight-background-color {
+	background-color: #37bbe1;
+	background-color: var(--highlight-color);
+}
+
 .has-white-background-color {
 	background-color: #ffffff;
 }
 
 .has-light-gray-background-color {
-	background-color: #e5e5e5;
+	background-color: #e8e8e8;
+	background-color: var(--light-gray-color);
+}
+
+.has-gray-background-color {
+	background-color: #787878;
+	background-color: var(--gray-color);
 }
 
 .has-dark-gray-background-color {
-	background-color: #555555;
+	background-color: #282828;
+	background-color: var(--dark-gray-color);
 }
 
 .has-black-background-color {
-	background-color: #242424;
+	background-color: #000000;
 }
 
 /*--------------------------------------------------------------
