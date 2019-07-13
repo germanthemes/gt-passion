@@ -52,7 +52,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--gray-color: #787878;
 	--dark-gray-color: #282828;
 	--link-color: #e13737;
-	--link-hover-color: #a40000;
+	--link-hover-color: #282828;
 	--button-color: #e13737;
 	--button-text-color: #fff;
 	--button-hover-color: #a40000;
@@ -522,7 +522,7 @@ a {
 a:hover,
 a:focus,
 a:active {
-	color: #a40000;
+	color: #282828;
 	color: var(--link-hover-color);
 	text-decoration: none;
 }
