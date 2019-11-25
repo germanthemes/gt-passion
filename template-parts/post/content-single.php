@@ -23,6 +23,7 @@
 
 		<?php the_content(); ?>
 		<?php wp_link_pages(); ?>
+		<?php gt_passion_entry_tags(); ?>
 
 	</div><!-- .entry-content -->
 

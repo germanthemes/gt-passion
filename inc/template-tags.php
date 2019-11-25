@@ -227,6 +227,23 @@ if ( ! function_exists( 'gt_passion_entry_categories' ) ) :
 endif;
 
 
+if ( ! function_exists( 'gt_passion_entry_tags' ) ) :
+	/**
+	 * Displays the post tags on single post view
+	 */
+	function gt_passion_entry_tags() {
+		// Get tags.
+		$tag_list = get_the_tag_list( esc_html__( 'Tags: ', 'gt-passion' ), ', ' );
+
+		// Display tags.
+		if ( $tag_list ) :
+			echo '<p class="entry-tags">' . $tag_list . '</p>';
+		endif;
+	}
+endif;
+
+
+
 if ( ! function_exists( 'gt_passion_pagination' ) ) :
 	/**
 	 * Displays pagination on archive pages
