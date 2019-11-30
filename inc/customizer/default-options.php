@@ -51,6 +51,10 @@ function gt_passion_default_options() {
 	$default_options = array(
 		'site_title'         => true,
 		'site_description'   => true,
+		'meta_date'          => true,
+		'meta_author'        => true,
+		'meta_categories'    => true,
+		'meta_tags'          => false,
 		'primary_color'      => '#e13737',
 		'secondary_color'    => '#a40000',
 		'accent_color'       => '#37e18c',
