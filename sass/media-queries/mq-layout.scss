@@ -1,20 +1,20 @@
 @media only screen and (min-width: 480px) {
-    .site-header,
+	.site-header,
 	.site-footer,
 	.site-content {
 		padding-left: 1.5rem;
 		padding-right: 1.5rem;
 	}
 
-    .header-main {
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
+	.header-main {
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
 	}
 
 	.site-content {
 		padding-top: 1.5rem;
 	}
-	
+
 	.type-post,
 	.type-page,
 	.type-attachment,
@@ -34,6 +34,7 @@
 }
 
 @media only screen and (min-width: 560px) {
+
 	/* Footer Widgets */
 	.footer-widgets-columns {
 		display: flex;
@@ -63,7 +64,7 @@
 	.site-footer {
 		padding-top: 2rem;
 	}
-	
+
 	.type-post,
 	.type-page,
 	.type-attachment,
@@ -101,6 +102,7 @@
 }
 
 @media only screen and (min-width: 800px) {
+
 	/* Three Column Footer Widgets */
 	.footer-widget-column:nth-child(1):nth-last-child(3),
 	.footer-widget-column:nth-child(2):nth-last-child(2),
@@ -114,7 +116,7 @@
 	.site-footer {
 		padding-top: 3rem;
 	}
-	
+
 	.type-post,
 	.type-page,
 	.type-attachment,
@@ -149,11 +151,10 @@
 		padding-top: 1.75rem;
 		margin-bottom: 1.75rem;
 	}
-	
+
 	.entry-content > .alignwide {
 		margin-left: -80px;
 		margin-right: -80px;
-		max-width: $wideBlockWidth;
 	}
 }
 
@@ -173,7 +174,7 @@
 	.site-footer {
 		padding-top: 4rem;
 	}
-	
+
 	.type-post,
 	.type-page,
 	.type-attachment,
@@ -199,7 +200,7 @@
 	.footer-widget-column {
 		padding-right: 4rem;
 	}
-	
+
 	.footer-widgets .widget {
 		margin-bottom: 4rem;
 	}
