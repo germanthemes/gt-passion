@@ -198,7 +198,7 @@ function gt_passion_theme_updater() {
 		$theme_updater = new GT_Passion_Theme_Updater(
 			array(
 				'remote_api_url' => GT_PASSION_STORE_API_URL,
-				'version'        => '1.3',
+				'version'        => '1.4',
 				'license'        => trim( gt_passion_get_option( 'license_key' ) ),
 				'item_id'        => GT_PASSION_PRODUCT_ID,
 				'item_name'      => 'GT Passion',
