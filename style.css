@@ -1634,6 +1634,10 @@ object {
 }
 
 /* Button Block */
+.wp-block-button {
+	color: inherit;
+}
+
 .wp-block-button.aligncenter {
 	text-align: center;
 }
@@ -1687,9 +1691,7 @@ object {
 }
 
 .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color),
-.wp-block-button__link.is-style-outline:not(.has-text-color),
-.wp-block-cover .wp-block-button.is-style-outline .wp-block-button__link,
-.wp-block-media-text .wp-block-button.is-style-outline .wp-block-button__link {
+.wp-block-button__link.is-style-outline:not(.has-text-color) {
 	color: inherit;
 }
 
