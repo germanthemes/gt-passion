@@ -91,6 +91,20 @@ function gt_passion_gutenberg_support() {
 			'slug' => 'extra-large',
 		),
 	) ) );
+
+	// Register Small Buttons Block style.
+	register_block_style( 'core/buttons', array(
+		'name'         => 'gt-small',
+		'label'        => esc_html__( 'GT Small', 'gt-passion' ),
+		'style_handle' => 'gt-passion-stylesheet',
+	) );
+
+	// Register Large Buttons Block style.
+	register_block_style( 'core/buttons', array(
+		'name'         => 'gt-large',
+		'label'        => esc_html__( 'GT Large', 'gt-passion' ),
+		'style_handle' => 'gt-passion-stylesheet',
+	) );
 }
 add_action( 'after_setup_theme', 'gt_passion_gutenberg_support' );
 
