@@ -105,6 +105,34 @@ function gt_passion_gutenberg_support() {
 		'label'        => esc_html__( 'GT Large', 'gt-passion' ),
 		'style_handle' => 'gt-passion-stylesheet',
 	) );
+
+	// Register block pattern category.
+	register_block_pattern_category( 'gt-passion', array( 'label' => esc_html__( 'GT Passion', 'gt-passion' ) ) );
+
+	// Register Block patterns.
+	register_block_pattern( 'gt-passion/hero-section', array(
+		'title'      => esc_html__( 'Hero Section', 'gt-passion' ),
+		'content'    => "<!-- wp:cover {\"dimRatio\":0,\"overlayColor\":\"black\",\"align\":\"full\"} --><div class=\"wp-block-cover alignfull has-black-background-color\"><div class=\"wp-block-cover__inner-container\"><!-- wp:spacer --><div style=\"height:100px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div><!-- /wp:spacer --><!-- wp:columns --><div class=\"wp-block-columns\"><!-- wp:column {\"width\":40} --><div class=\"wp-block-column\" style=\"flex-basis:40%\"><!-- wp:group {\"backgroundColor\":\"dark-gray\",\"textColor\":\"white\"} --><div class=\"wp-block-group has-white-color has-dark-gray-background-color has-text-color has-background\"><div class=\"wp-block-group__inner-container\"><!-- wp:heading {\"level\":1} --><h1>Hero Heading</h1><!-- /wp:heading --><!-- wp:paragraph --><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p><!-- /wp:paragraph --><!-- wp:buttons {\"className\":\"is-style-default\"} --><div class=\"wp-block-buttons is-style-default\"><!-- wp:button --><div class=\"wp-block-button\"><a class=\"wp-block-button__link\">Button 1</a></div><!-- /wp:button --><!-- wp:button --><div class=\"wp-block-button\"><a class=\"wp-block-button__link\">Button 2</a></div><!-- /wp:button --></div><!-- /wp:buttons --></div></div><!-- /wp:group --></div><!-- /wp:column --><!-- wp:column --><div class=\"wp-block-column\"></div><!-- /wp:column --></div><!-- /wp:columns --></div></div><!-- /wp:cover -->",
+		'categories' => array( 'gt-passion' ),
+	) );
+
+	register_block_pattern( 'gt-passion/services', array(
+		'title'      => esc_html__( 'Services', 'gt-passion' ),
+		'content'    => "<!-- wp:media-text {\"align\":\"full\"} --><div class=\"wp-block-media-text alignfull is-stacked-on-mobile\"><figure class=\"wp-block-media-text__media\"></figure><div class=\"wp-block-media-text__content\"><!-- wp:paragraph {\"fontSize\":\"large\"} --><p class=\"has-large-font-size\">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p><!-- /wp:paragraph --></div></div><!-- /wp:media-text --><!-- wp:media-text {\"align\":\"full\",\"mediaPosition\":\"right\"} --><div class=\"wp-block-media-text alignfull has-media-on-the-right is-stacked-on-mobile\"><figure class=\"wp-block-media-text__media\"></figure><div class=\"wp-block-media-text__content\"><!-- wp:paragraph {\"fontSize\":\"large\"} --><p class=\"has-large-font-size\">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p><!-- /wp:paragraph --></div></div><!-- /wp:media-text --><!-- wp:media-text {\"align\":\"full\"} --><div class=\"wp-block-media-text alignfull is-stacked-on-mobile\"><figure class=\"wp-block-media-text__media\"></figure><div class=\"wp-block-media-text__content\"><!-- wp:paragraph {\"fontSize\":\"large\"} --><p class=\"has-large-font-size\">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p><!-- /wp:paragraph --></div></div><!-- /wp:media-text -->",
+		'categories' => array( 'gt-passion' ),
+	) );
+
+	register_block_pattern( 'gt-passion/call-to-action', array(
+		'title'      => esc_html__( 'Call to Action', 'gt-passion' ),
+		'content'    => "<!-- wp:group {\"align\":\"full\",\"backgroundColor\":\"primary\",\"textColor\":\"white\"} --><div class=\"wp-block-group alignfull has-white-color has-primary-background-color has-text-color has-background\"><div class=\"wp-block-group__inner-container\"><!-- wp:paragraph {\"align\":\"center\",\"fontSize\":\"extra-large\"} --><p class=\"has-text-align-center has-extra-large-font-size\">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p><!-- /wp:paragraph --></div></div><!-- /wp:group -->",
+		'categories' => array( 'gt-passion' ),
+	) );
+
+	register_block_pattern( 'gt-passion/portfolio', array(
+		'title'      => esc_html__( 'Portfolio', 'gt-passion' ),
+		'content'    => "<!-- wp:columns {\"align\":\"wide\"} --><div class=\"wp-block-columns alignwide\"><!-- wp:column --><div class=\"wp-block-column\"><!-- wp:image {\"className\":\"is-style-default\"} --><figure class=\"wp-block-image is-style-default\"><img alt=\"\"/></figure><!-- /wp:image --><!-- wp:heading {\"align\":\"center\",\"level\":3} --><h3 class=\"has-text-align-center\">Project 1</h3><!-- /wp:heading --><!-- wp:paragraph {\"align\":\"center\"} --><p class=\"has-text-align-center\">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p><!-- /wp:paragraph --></div><!-- /wp:column --><!-- wp:column --><div class=\"wp-block-column\"><!-- wp:image {\"className\":\"is-style-default\"} --><figure class=\"wp-block-image is-style-default\"><img alt=\"\"/></figure><!-- /wp:image --><!-- wp:heading {\"align\":\"center\",\"level\":3} --><h3 class=\"has-text-align-center\">Project 2</h3><!-- /wp:heading --><!-- wp:paragraph {\"align\":\"center\"} --><p class=\"has-text-align-center\">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p><!-- /wp:paragraph --></div><!-- /wp:column --><!-- wp:column --><div class=\"wp-block-column\"><!-- wp:image {\"className\":\"is-style-default\"} --><figure class=\"wp-block-image is-style-default\"><img alt=\"\"/></figure><!-- /wp:image --><!-- wp:heading {\"align\":\"center\",\"level\":3} --><h3 class=\"has-text-align-center\">Project 3</h3><!-- /wp:heading --><!-- wp:paragraph {\"align\":\"center\"} --><p class=\"has-text-align-center\">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p><!-- /wp:paragraph --></div><!-- /wp:column --></div><!-- /wp:columns -->",
+		'categories' => array( 'gt-passion' ),
+	) );
 }
 add_action( 'after_setup_theme', 'gt_passion_gutenberg_support' );
 
