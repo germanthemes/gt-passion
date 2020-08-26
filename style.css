@@ -8,7 +8,7 @@ Version: 1.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: gt-passion
-Tags: custom-background, custom-logo, custom-header, custom-menu, grid-layout, editor-style, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, translation-ready, theme-options, one-column
+Tags: custom-background, custom-logo, custom-header, custom-menu, grid-layout, editor-style, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, translation-ready, theme-options, one-column, wide-blocks, block-styles, block-patterns
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool and share what you've learned with others.
@@ -70,10 +70,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--footer-link-hover-color: #fff;
 	--footer-border-color: rgba(255, 255, 255, 0.1);
 	--text-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	--title-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--title-font: "Fira Sans", arial, helvetica, sans-serif;
 	--title-font-weight: bold;
 	--title-text-transform: none;
-	--navi-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--navi-font: "Fira Sans", arial, helvetica, sans-serif;
 	--navi-font-weight: bold;
 	--navi-text-transform: uppercase;
 }
@@ -321,7 +321,7 @@ h5,
 h6 {
 	clear: both;
 	margin: 1em 0 0.75em;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: "Fira Sans", arial, helvetica, sans-serif;
 	font-family: var(--title-font);
 	font-weight: bold;
 	font-weight: var(--title-font-weight);
@@ -825,7 +825,7 @@ textarea {
 	text-decoration: none;
 	font-size: 24px;
 	font-size: 1.5rem;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: "Fira Sans", arial, helvetica, sans-serif;
 	font-family: var(--navi-font);
 	font-weight: bold;
 	font-weight: var(--navi-font-weight);
@@ -887,7 +887,7 @@ textarea {
 	list-style: none;
 	font-size: 16px;
 	font-size: 1rem;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: "Fira Sans", arial, helvetica, sans-serif;
 	font-family: var(--navi-font);
 	font-weight: bold;
 	font-weight: var(--navi-font-weight);
@@ -974,7 +974,7 @@ textarea {
 	text-decoration: none;
 	font-size: 17px;
 	font-size: 1.0625rem;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: "Fira Sans", arial, helvetica, sans-serif;
 	font-family: var(--navi-font);
 	font-weight: bold;
 	font-weight: var(--navi-font-weight);
@@ -1112,7 +1112,7 @@ textarea {
 	word-wrap: break-word;
 	font-size: 24px;
 	font-size: 1.5rem;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: "Fira Sans", arial, helvetica, sans-serif;
 	font-family: var(--title-font);
 	font-weight: bold;
 	font-weight: var(--title-font-weight);
@@ -1159,7 +1159,7 @@ textarea {
 	background-color: var(--button-color);
 	font-size: 14px;
 	font-size: 0.875rem;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: "Fira Sans", arial, helvetica, sans-serif;
 	font-family: var(--title-font);
 	font-weight: bold;
 	font-weight: var(--title-font-weight);
@@ -1217,7 +1217,7 @@ body.tags-hidden.single-post .type-post .entry-tags {
 .search-header .search-title {
 	font-size: 16px;
 	font-size: 1rem;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: "Fira Sans", arial, helvetica, sans-serif;
 	font-family: var(--navi-font);
 	font-weight: bold;
 	font-weight: var(--navi-font-weight);
@@ -1352,7 +1352,7 @@ body.tags-hidden.single-post .type-post .entry-tags {
 	margin-bottom: 1em;
 	font-size: 18px;
 	font-size: 1.125rem;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: "Fira Sans", arial, helvetica, sans-serif;
 	font-family: var(--navi-font);
 	font-weight: bold;
 	font-weight: var(--navi-font-weight);
