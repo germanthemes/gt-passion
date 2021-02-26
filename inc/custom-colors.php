@@ -58,97 +58,97 @@ class GT_Passion_Custom_Colors {
 
 		// Set Primary Color.
 		if ( $theme_options['primary_color'] !== $default['primary_color'] ) {
-			$color_variables .= '--primary-color: ' . $theme_options['primary_color'] . ';';
+			$color_variables .= '--gt-passion--primary-color: ' . $theme_options['primary_color'] . ';';
 		}
 
 		// Set Secondary Color.
 		if ( $theme_options['secondary_color'] !== $default['secondary_color'] ) {
-			$color_variables .= '--secondary-color: ' . $theme_options['secondary_color'] . ';';
+			$color_variables .= '--gt-passion--secondary-color: ' . $theme_options['secondary_color'] . ';';
 		}
 
 		// Set Accent Color.
 		if ( $theme_options['accent_color'] !== $default['accent_color'] ) {
-			$color_variables .= '--accent-color: ' . $theme_options['accent_color'] . ';';
+			$color_variables .= '--gt-passion--accent-color: ' . $theme_options['accent_color'] . ';';
 		}
 
 		// Set Highlight Color.
 		if ( $theme_options['highlight_color'] !== $default['highlight_color'] ) {
-			$color_variables .= '--highlight-color: ' . $theme_options['highlight_color'] . ';';
+			$color_variables .= '--gt-passion--highlight-color: ' . $theme_options['highlight_color'] . ';';
 		}
 
 		// Set Light Gray Color.
 		if ( $theme_options['light_gray_color'] !== $default['light_gray_color'] ) {
-			$color_variables .= '--light-gray-color: ' . $theme_options['light_gray_color'] . ';';
+			$color_variables .= '--gt-passion--light-gray-color: ' . $theme_options['light_gray_color'] . ';';
 		}
 
 		// Set Gray Color.
 		if ( $theme_options['gray_color'] !== $default['gray_color'] ) {
-			$color_variables .= '--gray-color: ' . $theme_options['gray_color'] . ';';
+			$color_variables .= '--gt-passion--gray-color: ' . $theme_options['gray_color'] . ';';
 		}
 
 		// Set Dark Gray Color.
 		if ( $theme_options['dark_gray_color'] !== $default['dark_gray_color'] ) {
-			$color_variables .= '--dark-gray-color: ' . $theme_options['dark_gray_color'] . ';';
+			$color_variables .= '--gt-passion--dark-gray-color: ' . $theme_options['dark_gray_color'] . ';';
 		}
 
 		// Set Link Color.
 		if ( $theme_options['link_color'] !== $default['link_color'] ) {
-			$color_variables .= '--link-color: ' . $theme_options['link_color'] . ';';
-			$color_variables .= '--link-hover-color: ' . $theme_options['link_color'] . ';';
+			$color_variables .= '--gt-passion--link-color: ' . $theme_options['link_color'] . ';';
+			$color_variables .= '--gt-passion--link-hover-color: ' . $theme_options['link_color'] . ';';
 		}
 
 		// Set Button Color.
 		if ( $theme_options['button_color'] !== $default['button_color'] ) {
-			$color_variables .= '--button-color: ' . $theme_options['button_color'] . ';';
+			$color_variables .= '--gt-passion--button-color: ' . $theme_options['button_color'] . ';';
 
 			// Check if a light background color was chosen.
 			if ( self::is_color_light( $theme_options['button_color'] ) ) {
-				$color_variables .= '--button-text-color: #151515;';
+				$color_variables .= '--gt-passion--button-text-color: #151515;';
 			}
 		}
 
 		// Set Button Hover Color.
 		if ( $theme_options['button_hover_color'] !== $default['button_hover_color'] ) {
-			$color_variables .= '--button-hover-color: ' . $theme_options['button_hover_color'] . ';';
+			$color_variables .= '--gt-passion--button-hover-color: ' . $theme_options['button_hover_color'] . ';';
 
 			// Check if a light background color was chosen.
 			if ( self::is_color_light( $theme_options['button_hover_color'] ) ) {
-				$color_variables .= '--button-hover-text-color: #151515;';
+				$color_variables .= '--gt-passion--button-hover-text-color: #151515;';
 			}
 		}
 
 		// Set Header Color.
 		if ( $theme_options['header_color'] !== $default['header_color'] ) {
-			$color_variables .= '--header-background-color: ' . $theme_options['header_color'] . ';';
+			$color_variables .= '--gt-passion--header-background-color: ' . $theme_options['header_color'] . ';';
 
 			// Check if a light background color was chosen.
 			if ( self::is_color_light( $theme_options['header_color'] ) ) {
-				$color_variables .= '--header-text-color: #282828;';
-				$color_variables .= '--header-text-hover-color: rgba(0, 0, 0, 0.5);';
-				$color_variables .= '--header-border-color: rgba(0, 0, 0, 0.075);';
+				$color_variables .= '--gt-passion--header-text-color: #282828;';
+				$color_variables .= '--gt-passion--header-text-hover-color: rgba(0, 0, 0, 0.5);';
+				$color_variables .= '--gt-passion--header-border-color: rgba(0, 0, 0, 0.075);';
 			}
 		}
 
 		// Set Title Color.
 		if ( $theme_options['title_color'] !== $default['title_color'] ) {
-			$color_variables .= '--title-color: ' . $theme_options['title_color'] . ';';
+			$color_variables .= '--gt-passion--title-color: ' . $theme_options['title_color'] . ';';
 		}
 
 		// Set Title Hover Color.
 		if ( $theme_options['title_hover_color'] !== $default['title_hover_color'] ) {
-			$color_variables .= '--title-hover-color: ' . $theme_options['title_hover_color'] . ';';
+			$color_variables .= '--gt-passion--title-hover-color: ' . $theme_options['title_hover_color'] . ';';
 		}
 
 		// Set Footer Color.
 		if ( $theme_options['footer_color'] !== $default['footer_color'] ) {
-			$color_variables .= '--footer-background-color: ' . $theme_options['footer_color'] . ';';
+			$color_variables .= '--gt-passion--footer-background-color: ' . $theme_options['footer_color'] . ';';
 
 			// Check if a light background color was chosen.
 			if ( self::is_color_light( $theme_options['footer_color'] ) ) {
-				$color_variables .= '--footer-text-color: #282828;';
-				$color_variables .= '--footer-link-color: rgba(0, 0, 0, 0.5);';
-				$color_variables .= '--footer-link-hover-color: #282828;';
-				$color_variables .= '--footer-border-color: rgba(0, 0, 0, 0.1);';
+				$color_variables .= '--gt-passion--footer-text-color: #282828;';
+				$color_variables .= '--gt-passion--footer-link-color: rgba(0, 0, 0, 0.5);';
+				$color_variables .= '--gt-passion--footer-link-hover-color: #282828;';
+				$color_variables .= '--gt-passion--footer-border-color: rgba(0, 0, 0, 0.1);';
 			}
 		}
 

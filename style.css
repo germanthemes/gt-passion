@@ -47,38 +47,38 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # - CSS Variables
 --------------------------------------------------------------*/
 :root {
-	--primary-color: #e13737;
-	--secondary-color: #a40000;
-	--accent-color: #37e18c;
-	--highlight-color: #37bbe1;
-	--light-gray-color: #e8e8e8;
-	--gray-color: #787878;
-	--dark-gray-color: #282828;
-	--link-color: #e13737;
-	--link-hover-color: #282828;
-	--button-color: #e13737;
-	--button-text-color: #fff;
-	--button-hover-color: #a40000;
-	--button-hover-text-color: #fff;
-	--header-background-color: #282828;
-	--header-text-color: #fff;
-	--header-text-hover-color: rgba(255, 255, 255, 0.5);
-	--header-border-color: rgba(255, 255, 255, 0.1);
-	--submenu-background-color: rgba(255, 255, 255, 0.05);
-	--title-color: #282828;
-	--title-hover-color: #ee2244;
-	--footer-background-color: #282828;
-	--footer-text-color: #fff;
-	--footer-link-color: rgba(255, 255, 255, 0.5);
-	--footer-link-hover-color: #fff;
-	--footer-border-color: rgba(255, 255, 255, 0.1);
-	--text-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	--title-font: "Fira Sans", arial, helvetica, sans-serif;
-	--title-font-weight: bold;
-	--title-text-transform: none;
-	--navi-font: "Fira Sans", arial, helvetica, sans-serif;
-	--navi-font-weight: bold;
-	--navi-text-transform: uppercase;
+	--gt-passion--primary-color: #e13737;
+	--gt-passion--secondary-color: #a40000;
+	--gt-passion--accent-color: #37e18c;
+	--gt-passion--highlight-color: #37bbe1;
+	--gt-passion--light-gray-color: #e8e8e8;
+	--gt-passion--gray-color: #787878;
+	--gt-passion--dark-gray-color: #282828;
+	--gt-passion--link-color: #e13737;
+	--gt-passion--link-hover-color: #282828;
+	--gt-passion--button-color: #e13737;
+	--gt-passion--button-text-color: #fff;
+	--gt-passion--button-hover-color: #a40000;
+	--gt-passion--button-hover-text-color: #fff;
+	--gt-passion--header-background-color: #282828;
+	--gt-passion--header-text-color: #fff;
+	--gt-passion--header-text-hover-color: rgba(255, 255, 255, 0.5);
+	--gt-passion--header-border-color: rgba(255, 255, 255, 0.1);
+	--gt-passion--submenu-background-color: rgba(255, 255, 255, 0.05);
+	--gt-passion--title-color: #282828;
+	--gt-passion--title-hover-color: #ee2244;
+	--gt-passion--footer-background-color: #282828;
+	--gt-passion--footer-text-color: #fff;
+	--gt-passion--footer-link-color: rgba(255, 255, 255, 0.5);
+	--gt-passion--footer-link-hover-color: #fff;
+	--gt-passion--footer-border-color: rgba(255, 255, 255, 0.1);
+	--gt-passion--text-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--gt-passion--title-font: "Fira Sans", arial, helvetica, sans-serif;
+	--gt-passion--title-font-weight: bold;
+	--gt-passion--title-text-transform: none;
+	--gt-passion--navi-font: "Fira Sans", arial, helvetica, sans-serif;
+	--gt-passion--navi-font-weight: bold;
+	--gt-passion--navi-text-transform: uppercase;
 }
 
 /*--------------------------------------------------------------
@@ -312,7 +312,7 @@ textarea {
 	font-size: 16px;
 	font-size: 1rem;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-family: var(--text-font);
+	font-family: var(--gt-passion--text-font);
 	line-height: 1.75;
 }
 
@@ -325,11 +325,11 @@ h6 {
 	clear: both;
 	margin: 1em 0 0.75em;
 	font-family: "Fira Sans", arial, helvetica, sans-serif;
-	font-family: var(--title-font);
+	font-family: var(--gt-passion--title-font);
 	font-weight: bold;
-	font-weight: var(--title-font-weight);
+	font-weight: var(--gt-passion--title-font-weight);
 	text-transform: none;
-	text-transform: var(--title-text-transform);
+	text-transform: var(--gt-passion--title-text-transform);
 	line-height: 1.4;
 }
 
@@ -518,7 +518,7 @@ td {
 
 a {
 	color: #e13737;
-	color: var(--link-color);
+	color: var(--gt-passion--link-color);
 	text-decoration: underline;
 }
 
@@ -526,7 +526,7 @@ a:hover,
 a:focus,
 a:active {
 	color: #282828;
-	color: var(--link-hover-color);
+	color: var(--gt-passion--link-hover-color);
 	text-decoration: none;
 }
 
@@ -550,9 +550,9 @@ input[type="submit"] {
 	padding: 0.6em 1.2em;
 	border: none;
 	color: #fff;
-	color: var(--button-text-color);
+	color: var(--gt-passion--button-text-color);
 	background-color: #e13737;
-	background-color: var(--button-color);
+	background-color: var(--gt-passion--button-color);
 	text-decoration: none;
 	font-weight: normal;
 	font-size: 17px;
@@ -572,9 +572,9 @@ input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
 	color: #fff;
-	color: var(--button-hover-text-color);
+	color: var(--gt-passion--button-hover-text-color);
 	background-color: #a40000;
-	background-color: var(--button-hover-color);
+	background-color: var(--gt-passion--button-hover-color);
 }
 
 input[type="text"],
@@ -639,13 +639,13 @@ textarea {
 	padding: 0.6em 0.8em;
 	border: none;
 	background-color: #e13737;
-	background-color: var(--button-color);
+	background-color: var(--gt-passion--button-color);
 }
 
 .search-form .search-submit:hover,
 .search-form .search-submit:active {
 	background-color: #a40000;
-	background-color: var(--button-hover-color);
+	background-color: var(--gt-passion--button-hover-color);
 }
 
 .search-form .search-submit .icon-search {
@@ -653,13 +653,13 @@ textarea {
 	width: 22px;
 	height: 22px;
 	fill: #fff;
-	fill: var(--button-text-color);
+	fill: var(--gt-passion--button-text-color);
 }
 
 .search-form .search-submit:hover .icon-search,
 .search-form .search-submit:active .icon-search {
 	fill: #fff;
-	fill: var(--button-hover-text-color);
+	fill: var(--gt-passion--button-hover-text-color);
 }
 
 /*--------------------------------------------------------------
@@ -783,7 +783,7 @@ textarea {
 --------------------------------------------------------------*/
 .site-header {
 	background-color: #282828;
-	background-color: var(--header-background-color);
+	background-color: var(--gt-passion--header-background-color);
 }
 
 .header-main {
@@ -824,29 +824,29 @@ textarea {
 	margin: 0;
 	padding: 0;
 	color: #fff;
-	color: var(--header-text-color);
+	color: var(--gt-passion--header-text-color);
 	text-decoration: none;
 	font-size: 24px;
 	font-size: 1.5rem;
 	font-family: "Fira Sans", arial, helvetica, sans-serif;
-	font-family: var(--navi-font);
+	font-family: var(--gt-passion--navi-font);
 	font-weight: bold;
-	font-weight: var(--navi-font-weight);
+	font-weight: var(--gt-passion--navi-font-weight);
 	text-transform: uppercase;
-	text-transform: var(--navi-text-transform);
+	text-transform: var(--gt-passion--navi-text-transform);
 	line-height: 1.4;
 }
 
 .site-title a:link,
 .site-title a:visited {
 	color: #fff;
-	color: var(--header-text-color);
+	color: var(--gt-passion--header-text-color);
 }
 
 .site-title a:hover,
 .site-title a:active {
 	color: rgba(255, 255, 255, 0.5);
-	color: var(--header-text-hover-color);
+	color: var(--gt-passion--header-text-hover-color);
 }
 
 .site-description {
@@ -854,7 +854,7 @@ textarea {
 	margin: 0;
 	padding: 0;
 	color: #fff;
-	color: var(--header-text-color);
+	color: var(--gt-passion--header-text-color);
 	font-size: 13px;
 	font-size: 0.8125rem;
 }
@@ -886,16 +886,16 @@ textarea {
 	margin: 0;
 	padding: 0;
 	color: #fff;
-	color: var(--header-text-color);
+	color: var(--gt-passion--header-text-color);
 	list-style: none;
 	font-size: 16px;
 	font-size: 1rem;
 	font-family: "Fira Sans", arial, helvetica, sans-serif;
-	font-family: var(--navi-font);
+	font-family: var(--gt-passion--navi-font);
 	font-weight: bold;
-	font-weight: var(--navi-font-weight);
+	font-weight: var(--gt-passion--navi-font-weight);
 	text-transform: uppercase;
-	text-transform: var(--navi-text-transform);
+	text-transform: var(--gt-passion--navi-text-transform);
 }
 
 .main-navigation > ul {
@@ -932,14 +932,14 @@ textarea {
 .main-navigation ul a:link,
 .main-navigation ul a:visited {
 	color: #fff;
-	color: var(--header-text-color);
+	color: var(--gt-passion--header-text-color);
 	text-decoration: none;
 }
 
 .main-navigation ul a:hover,
 .main-navigation ul a:active {
 	color: rgba(255, 255, 255, 0.5);
-	color: var(--header-text-hover-color);
+	color: var(--gt-passion--header-text-hover-color);
 }
 
 .main-navigation ul li.current-menu-item > a {
@@ -951,7 +951,7 @@ textarea {
 	font-size: 15px;
 	font-size: 0.9375rem;
 	background-color: #282828;
-	background-color: var(--header-background-color);
+	background-color: var(--gt-passion--header-background-color);
 }
 
 .main-navigation ul ul.toggled-on {
@@ -961,7 +961,7 @@ textarea {
 .main-navigation ul ul a {
 	border: none;
 	background-color: rgba(255, 255, 255, 0.05);
-	background-color: var(--submenu-background-color);
+	background-color: var(--gt-passion--submenu-background-color);
 }
 
 /* Main Navigation Toggle */
@@ -973,16 +973,16 @@ textarea {
 	border: none;
 	background: none;
 	color: #fff;
-	color: var(--header-text-color);
+	color: var(--gt-passion--header-text-color);
 	text-decoration: none;
 	font-size: 17px;
 	font-size: 1.0625rem;
 	font-family: "Fira Sans", arial, helvetica, sans-serif;
-	font-family: var(--navi-font);
+	font-family: var(--gt-passion--navi-font);
 	font-weight: bold;
-	font-weight: var(--navi-font-weight);
+	font-weight: var(--gt-passion--navi-font-weight);
 	text-transform: uppercase;
-	text-transform: var(--navi-text-transform);
+	text-transform: var(--gt-passion--navi-text-transform);
 	text-align: left;
 }
 
@@ -993,14 +993,14 @@ textarea {
 .menu-toggle:focus {
 	outline: thin dotted;
 	color: #fff;
-	color: var(--header-text-color);
+	color: var(--gt-passion--header-text-color);
 	background: none;
 }
 
 .menu-toggle:hover,
 .menu-toggle:active {
 	color: rgba(255, 255, 255, 0.5);
-	color: var(--header-text-hover-color);
+	color: var(--gt-passion--header-text-hover-color);
 	background: none;
 	cursor: pointer;
 }
@@ -1011,13 +1011,13 @@ textarea {
 	height: 28px;
 	vertical-align: top;
 	fill: #fff;
-	fill: var(--header-text-color);
+	fill: var(--gt-passion--header-text-color);
 }
 
 .menu-toggle:hover .icon,
 .menu-toggle:active .icon {
 	fill: rgba(255, 255, 255, 0.5);
-	fill: var(--header-text-hover-color);
+	fill: var(--gt-passion--header-text-hover-color);
 }
 
 .toggled-on .menu-toggle .icon-menu,
@@ -1042,7 +1042,7 @@ textarea {
 .dropdown-toggle:focus {
 	outline: thin dotted;
 	color: #fff;
-	color: var(--header-text-color);
+	color: var(--gt-passion--header-text-color);
 	background: none;
 }
 
@@ -1057,13 +1057,13 @@ textarea {
 	height: 20px;
 	vertical-align: top;
 	fill: #fff;
-	fill: var(--header-text-color);
+	fill: var(--gt-passion--header-text-color);
 }
 
 .dropdown-toggle:hover .icon,
 .dropdown-toggle:active .icon {
 	fill: rgba(255, 255, 255, 0.5);
-	fill: var(--header-text-hover-color);
+	fill: var(--gt-passion--header-text-hover-color);
 }
 
 .dropdown-toggle.toggled-on .icon {
@@ -1110,31 +1110,31 @@ textarea {
 	margin: 0;
 	padding: 0;
 	color: #282828;
-	color: var(--title-color);
+	color: var(--gt-passion--title-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 	font-size: 24px;
 	font-size: 1.5rem;
 	font-family: "Fira Sans", arial, helvetica, sans-serif;
-	font-family: var(--title-font);
+	font-family: var(--gt-passion--title-font);
 	font-weight: bold;
-	font-weight: var(--title-font-weight);
+	font-weight: var(--gt-passion--title-font-weight);
 	text-transform: none;
-	text-transform: var(--title-text-transform);
+	text-transform: var(--gt-passion--title-text-transform);
 	line-height: 1.4;
 }
 
 .entry-title a:link,
 .entry-title a:visited {
 	color: #282828;
-	color: var(--title-color);
+	color: var(--gt-passion--title-color);
 	text-decoration: none;
 }
 
 .entry-title a:hover,
 .entry-title a:active {
 	color: #ee2244;
-	color: var(--title-hover-color);
+	color: var(--gt-passion--title-hover-color);
 }
 
 /* Entry Content */
@@ -1157,32 +1157,32 @@ textarea {
 	display: inline-block;
 	padding: 0.6em 1.2em;
 	color: #fff;
-	color: var(--button-text-color);
+	color: var(--gt-passion--button-text-color);
 	background-color: #e13737;
-	background-color: var(--button-color);
+	background-color: var(--gt-passion--button-color);
 	font-size: 14px;
 	font-size: 0.875rem;
 	font-family: "Fira Sans", arial, helvetica, sans-serif;
-	font-family: var(--title-font);
+	font-family: var(--gt-passion--title-font);
 	font-weight: bold;
-	font-weight: var(--title-font-weight);
+	font-weight: var(--gt-passion--title-font-weight);
 	text-transform: none;
-	text-transform: var(--title-text-transform);
+	text-transform: var(--gt-passion--title-text-transform);
 }
 
 .more-link:link,
 .more-link:visited {
 	color: #fff;
-	color: var(--button-text-color);
+	color: var(--gt-passion--button-text-color);
 	text-decoration: none;
 }
 
 .more-link:hover,
 .more-link:active {
 	color: #fff;
-	color: var(--button-hover-text-color);
+	color: var(--gt-passion--button-hover-text-color);
 	background-color: #a40000;
-	background-color: var(--button-hover-color);
+	background-color: var(--gt-passion--button-hover-color);
 	text-decoration: none;
 }
 
@@ -1221,11 +1221,11 @@ body.tags-hidden.single-post .type-post .entry-tags {
 	font-size: 16px;
 	font-size: 1rem;
 	font-family: "Fira Sans", arial, helvetica, sans-serif;
-	font-family: var(--navi-font);
+	font-family: var(--gt-passion--navi-font);
 	font-weight: bold;
-	font-weight: var(--navi-font-weight);
+	font-weight: var(--gt-passion--navi-font-weight);
 	text-transform: uppercase;
-	text-transform: var(--navi-text-transform);
+	text-transform: var(--gt-passion--navi-text-transform);
 }
 
 .search-header .search-form {
@@ -1249,9 +1249,9 @@ body.tags-hidden.single-post .type-post .entry-tags {
 	text-align: center;
 	text-decoration: none;
 	color: #fff;
-	color: var(--button-text-color);
+	color: var(--gt-passion--button-text-color);
 	background-color: #e13737;
-	background-color: var(--button-color);
+	background-color: var(--gt-passion--button-color);
 }
 
 .pagination .page-numbers.dots {
@@ -1262,9 +1262,9 @@ body.tags-hidden.single-post .type-post .entry-tags {
 .pagination a:hover,
 .pagination a:active {
 	color: #fff;
-	color: var(--button-hover-text-color);
+	color: var(--gt-passion--button-hover-text-color);
 	background-color: #a40000;
-	background-color: var(--button-hover-color);
+	background-color: var(--gt-passion--button-hover-color);
 }
 
 /* Comments */
@@ -1305,21 +1305,21 @@ body.tags-hidden.single-post .type-post .entry-tags {
 	padding-top: 1.5rem;
 	padding-bottom: 1px;
 	color: #fff;
-	color: var(--footer-text-color);
+	color: var(--gt-passion--footer-text-color);
 	background-color: #282828;
-	background-color: var(--footer-background-color);
+	background-color: var(--gt-passion--footer-background-color);
 }
 
 .site-footer a:link,
 .site-footer a:visited {
 	color: rgba(255, 255, 255, 0.5);
-	color: var(--footer-link-color);
+	color: var(--gt-passion--footer-link-color);
 }
 
 .site-footer a:hover,
 .site-footer a:active {
 	color: #fff;
-	color: var(--footer-link-hover-color);
+	color: var(--gt-passion--footer-link-hover-color);
 }
 
 .site-footer input[type="text"],
@@ -1332,7 +1332,7 @@ body.tags-hidden.single-post .type-post .entry-tags {
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	border: 1px solid var(--footer-border-color);
 	color: #fff;
-	color: var(--footer-link-hover-color);
+	color: var(--gt-passion--footer-link-hover-color);
 }
 
 .site-footer input[type="text"]:focus,
@@ -1342,7 +1342,7 @@ body.tags-hidden.single-post .type-post .entry-tags {
 .site-footer input[type="search"]:focus,
 .site-footer textarea:focus {
 	color: #fff;
-	color: var(--footer-text-color);
+	color: var(--gt-passion--footer-text-color);
 }
 
 /* Footer Widgets */
@@ -1356,11 +1356,11 @@ body.tags-hidden.single-post .type-post .entry-tags {
 	font-size: 18px;
 	font-size: 1.125rem;
 	font-family: "Fira Sans", arial, helvetica, sans-serif;
-	font-family: var(--navi-font);
+	font-family: var(--gt-passion--navi-font);
 	font-weight: bold;
-	font-weight: var(--navi-font-weight);
+	font-weight: var(--gt-passion--navi-font-weight);
 	text-transform: uppercase;
-	text-transform: var(--navi-text-transform);
+	text-transform: var(--gt-passion--navi-text-transform);
 }
 
 .footer-widgets .widget ul li a {
@@ -1551,7 +1551,7 @@ object {
 .wp-block-quote.is-style-large cite {
 	text-align: inherit;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-family: var(--text-font);
+	font-family: var(--gt-passion--text-font);
 }
 
 /* Pullquote Block */
@@ -1580,7 +1580,7 @@ object {
 .wp-block-pullquote blockquote cite {
 	color: #282828;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-family: var(--text-font);
+	font-family: var(--gt-passion--text-font);
 	font-style: normal;
 }
 
@@ -1666,18 +1666,18 @@ object {
 .wp-block-button:not(.is-style-outline) .wp-block-button__link:not(.has-text-color):link,
 .wp-block-button:not(.is-style-outline) .wp-block-button__link:not(.has-text-color):visited {
 	color: #fff;
-	color: var(--button-text-color);
+	color: var(--gt-passion--button-text-color);
 }
 
 .wp-block-button:not(.is-style-outline) .wp-block-button__link:not(.has-background) {
 	background-color: #e13737;
-	background-color: var(--button-color);
+	background-color: var(--gt-passion--button-color);
 }
 
 .wp-block-button:not(.is-style-outline) .wp-block-button__link:not(.has-text-color):not(.has-background):hover,
 .wp-block-button:not(.is-style-outline) .wp-block-button__link:not(.has-text-color):not(.has-background):active {
 	background-color: #a40000;
-	background-color: var(--button-hover-color);
+	background-color: var(--gt-passion--button-hover-color);
 }
 
 .wp-block-button:not(.is-style-outline) .wp-block-button__link.has-text-color:hover,
@@ -1805,22 +1805,22 @@ object {
 /* Block Text Colors */
 .has-primary-color {
 	color: #e13737;
-	color: var(--primary-color);
+	color: var(--gt-passion--primary-color);
 }
 
 .has-secondary-color {
 	color: #a40000;
-	color: var(--secondary-color);
+	color: var(--gt-passion--secondary-color);
 }
 
 .has-accent-color {
 	color: #37e18c;
-	color: var(--accent-color);
+	color: var(--gt-passion--accent-color);
 }
 
 .has-highlight-color {
 	color: #37bbe1;
-	color: var(--highlight-color);
+	color: var(--gt-passion--highlight-color);
 }
 
 .has-white-color {
@@ -1829,17 +1829,17 @@ object {
 
 .has-light-gray-color {
 	color: #e8e8e8;
-	color: var(--light-gray-color);
+	color: var(--gt-passion--light-gray-color);
 }
 
 .has-gray-color {
 	color: #787878;
-	color: var(--gray-color);
+	color: var(--gt-passion--gray-color);
 }
 
 .has-dark-gray-color {
 	color: #282828;
-	color: var(--dark-gray-color);
+	color: var(--gt-passion--dark-gray-color);
 }
 
 .has-black-color {
@@ -1849,22 +1849,22 @@ object {
 /* Block Background Colors */
 .has-primary-background-color {
 	background-color: #e13737;
-	background-color: var(--primary-color);
+	background-color: var(--gt-passion--primary-color);
 }
 
 .has-secondary-background-color {
 	background-color: #a40000;
-	background-color: var(--secondary-color);
+	background-color: var(--gt-passion--secondary-color);
 }
 
 .has-accent-background-color {
 	background-color: #37e18c;
-	background-color: var(--accent-color);
+	background-color: var(--gt-passion--accent-color);
 }
 
 .has-highlight-background-color {
 	background-color: #37bbe1;
-	background-color: var(--highlight-color);
+	background-color: var(--gt-passion--highlight-color);
 }
 
 .has-white-background-color {
@@ -1873,17 +1873,17 @@ object {
 
 .has-light-gray-background-color {
 	background-color: #e8e8e8;
-	background-color: var(--light-gray-color);
+	background-color: var(--gt-passion--light-gray-color);
 }
 
 .has-gray-background-color {
 	background-color: #787878;
-	background-color: var(--gray-color);
+	background-color: var(--gt-passion--gray-color);
 }
 
 .has-dark-gray-background-color {
 	background-color: #282828;
-	background-color: var(--dark-gray-color);
+	background-color: var(--gt-passion--dark-gray-color);
 }
 
 .has-black-background-color {
@@ -2301,13 +2301,13 @@ object {
 		width: 15px;
 		height: 15px;
 		fill: #fff;
-		fill: var(--header-text-color);
+		fill: var(--gt-passion--header-text-color);
 	}
 
 	.main-navigation ul .menu-item-has-children > a:hover > .icon,
 	.main-navigation ul .page_item_has_children > a:hover > .icon {
 		fill: rgba(255, 255, 255, 0.5);
-		fill: var(--header-text-hover-color);
+		fill: var(--gt-passion--header-text-hover-color);
 	}
 
 	.main-navigation ul ul .menu-item-has-children > a > .icon,
@@ -2327,7 +2327,7 @@ object {
 	/* Extra Styling for top menu items with dropdowns */
 	.main-navigation ul li.menu-item-has-children:hover a {
 		background-color: rgba(255, 255, 255, 0.05);
-		background-color: var(--submenu-background-color);
+		background-color: var(--gt-passion--submenu-background-color);
 	}
 }
 
