@@ -76,8 +76,6 @@ function gt_passion_default_options() {
 		'navi_font'          => 'Fira Sans',
 		'navi_is_bold'       => true,
 		'navi_is_uppercase'  => true,
-		'license_key'        => '',
-		'license_status'     => 'inactive',
 	);
 
 	return apply_filters( 'gt_passion_default_options', $default_options );
