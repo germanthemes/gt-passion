@@ -4,9 +4,9 @@ Theme URI: https://germanthemes.de/themes/gt-passion/
 Author: germanthemes
 Author URI: https://germanthemes.de
 Description: GT Passion is a modern Business WordPress Theme.
-Version: 1.5.2
+Version: 1.6
 Requires at least: 5.3
-Tested up to: 5.6
+Tested up to: 5.8
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -924,8 +924,9 @@ textarea {
 	display: block;
 	margin: 0;
 	padding: 1rem;
-	border-top: 1px solid rgba(255, 255, 255, 0.05);
-	border-top: 1px solid var(--header-border-color);
+	border-top: 1px solid;
+	border-color: rgba(255, 255, 255, 0.1);
+	border-color: var(--gt-passion--header-border-color);
 	text-decoration: none;
 }
 
@@ -1143,6 +1144,10 @@ textarea {
 	font-size: 1.0625rem;
 }
 
+.sticky {
+	display: block;
+}
+
 /* Featured Images */
 .post-image {
 	margin-bottom: 1rem;
@@ -1329,8 +1334,9 @@ body.tags-hidden.single-post .type-post .entry-tags {
 .site-footer input[type="search"],
 .site-footer input[type="submit"],
 .site-footer textarea {
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	border: 1px solid var(--footer-border-color);
+	border: 1px solid;
+	border-color: rgba(255, 255, 255, 0.1);
+	border-color: var(--gt-passion--footer-border-color);
 	color: #fff;
 	color: var(--gt-passion--footer-link-hover-color);
 }
@@ -1371,8 +1377,9 @@ body.tags-hidden.single-post .type-post .entry-tags {
 .footer-copyright {
 	margin-bottom: 1.25rem;
 	padding-top: 1.25rem;
-	border-top: 2px solid rgba(255, 255, 255, 0.1);
-	border-top: 2px solid var(--footer-border-color);
+	border-top: 2px solid;
+	border-color: rgba(255, 255, 255, 0.1);
+	border-color: var(--gt-passion--footer-border-color);
 	font-size: 15px;
 	font-size: 0.9375rem;
 }
